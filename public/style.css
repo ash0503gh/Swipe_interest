@@ -208,6 +208,8 @@ svg { display: block; }
 .pill:active { transform: scale(0.94); }
 .pill svg { width: 15px; height: 15px; }
 .pill.matches svg { color: var(--like); }
+.pill.icon-only { width: 38px; padding: 0; justify-content: center; }
+.pill.icon-only svg { width: 18px; height: 18px; }
 .pill.code { letter-spacing: 0.12em; font-variant-numeric: tabular-nums; }
 .pill.people { padding-left: 5px; gap: 8px; font-variant-numeric: tabular-nums; }
 .pill.people .avatars { padding-left: 7px; }

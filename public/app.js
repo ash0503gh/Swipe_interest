@@ -29,6 +29,7 @@ const ICONS = {
   play: '<path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/>',
   check: '<path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>',
   sliders: '<path d="M4 7h10M18 7h2M4 17h2M10 17h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.3" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="8" cy="17" r="2.3" fill="none" stroke="currentColor" stroke-width="2.2"/>',
+  home: '<path d="M4 11.5L12 4.5l8 7M6.5 9.5V19a1 1 0 0 0 1 1H10v-5.5h4V20h2.5a1 1 0 0 0 1-1V9.5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>',
   ticket: '<path d="M4 8a2 2 0 0 0 2-2h12a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H6a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 9v6" stroke="currentColor" stroke-width="2" stroke-dasharray="1.5 2"/>',
 };
 function icon(name) {
@@ -535,6 +536,7 @@ function swipePage(code, token, info) {
 
   // --- layout ---
   const amb = [h('div', { class: 'amb' }), h('div', { class: 'amb' })];
+  const homeBtn = h('button', { class: 'pill glass icon-only', 'aria-label': 'Home', onclick: () => location.assign('/') }, icon('home'));
   const inviteBtn = h('button', { class: 'pill glass code', onclick: invite, 'aria-label': `Invite people. Session code ${code}` }, icon('share'), code);
   const people = h('button', { class: 'pill glass people', onclick: showMembers });
   const matchesBtn = h('button', { class: 'pill glass matches', onclick: showMatches });
@@ -545,7 +547,7 @@ function swipePage(code, token, info) {
   $app.replaceChildren(
     h('div', { class: 'ambient', 'aria-hidden': 'true' }, amb),
     h('div', { class: 'swipe fade-in' },
-      h('header', { class: 'bar' }, inviteBtn, h('div', { class: 'spacer' }), people, matchesBtn),
+      h('header', { class: 'bar' }, homeBtn, inviteBtn, h('div', { class: 'spacer' }), people, matchesBtn),
       stack,
       h('div', { class: 'controls' }, nopeBtn, undoBtn, likeBtn)
     )
