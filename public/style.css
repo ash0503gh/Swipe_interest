@@ -241,17 +241,13 @@ svg { display: block; }
 .card img.poster { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .card .noposter { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; font-size: 26px; font-weight: 800; color: var(--muted); }
 .card .shade {
-  position: absolute; inset: auto 0 0 0; padding: 110px 22px 22px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.96) 40%, rgba(0, 0, 0, 0.65) 72%, rgba(0, 0, 0, 0));
+  position: absolute; inset: auto 0 0 0; padding: 90px 22px 22px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 25%, rgba(0, 0, 0, 0.6) 65%, rgba(0, 0, 0, 0));
 }
 .card .title { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
 .card .meta { margin-top: 10px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #dcdce4; }
 .card .genres { margin-top: 8px; font-size: 14px; color: #dcdce4; }
-.card .overview {
-  margin: 8px 0 0; font-size: 14px; line-height: 1.4; color: #e4e4ea;
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden;
-}
-.card .cast { margin-top: 6px; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card .cast { margin-top: 4px; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card .tag {
   position: absolute; top: 16px; right: 16px; height: 30px; padding: 0 12px; border-radius: 999px;
   background: rgba(0, 0, 0, 0.45); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
