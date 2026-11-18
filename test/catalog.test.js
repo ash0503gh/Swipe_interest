@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { filterMovies, sortTopRated, isKidsSafe, toMovie, cinemaOf } from '../src/catalog.js';
+import { filterMovies, sortTopRated, isKidsSafe, isKidsSafeTv, toMovie, toShow, cinemaOf } from '../src/catalog.js';
 
 const movies = [
   { id: 1, lang: 'hi', genres: ['Drama'], imdbRating: 8.4, imdbVotes: 50000, year: 2019, runtime: 150, kidsSafe: false },
@@ -63,4 +63,39 @@ test('toMovie maps TMDB details', () => {
   assert.equal(m.kidsSafe, true);
   assert.deepEqual(m.cast, ['A', 'B']);
   assert.equal(m.fetchedAt, 42);
+});
+
+const mixed = [
+  { id: 1, lang: 'hi', genres: ['Drama'], runtime: 150 },
+  { id: 2, kind: 'movie', lang: 'en', genres: ['Comedy'], runtime: 95 },
+  { id: -3, kind: 'tv', lang: 'ko', genres: ['Drama'], runtime: null, seasons: 2 },
+  { id: -4, kind: 'tv', lang: 'hi', genres: ['Crime'], runtime: null, seasons: 1 },
+];
+
+test('sessions are movies or shows, never mixed', () => {
+  assert.deepEqual(ids(filterMovies(mixed, {})), [1, 2]); // default and old sessions: movies
+  assert.deepEqual(ids(filterMovies(mixed, { kind: 'movie' })), [1, 2]);
+  assert.deepEqual(ids(filterMovies(mixed, { kind: 'tv' })), [-3, -4]);
+  assert.deepEqual(ids(filterMovies(mixed, { kind: 'tv', cinemas: ['bollywood'] })), [-4]);
+  assert.deepEqual(ids(filterMovies(mixed, { kind: 'tv', maxRuntime: 90 })), [-3, -4]); // length ignored for shows
+});
+
+test('toShow maps TMDB TV details with a negative id', () => {
+  const m = toShow({
+    id: 99, name: 'Show', first_air_date: '2019-03-01', number_of_seasons: 3, original_language: 'ko',
+    genres: [{ name: 'Drama' }], created_by: [{ name: 'C1' }, { name: 'C2' }, { name: 'C3' }],
+    external_ids: { imdb_id: 'tt9' }, credits: { cast: [{ name: 'A' }] },
+    videos: { results: [{ site: 'YouTube', type: 'Trailer', key: 'k' }] },
+    content_ratings: { results: [{ iso_3166_1: 'US', rating: 'TV-14' }] },
+  }, 5);
+  assert.equal(m.id, -99);
+  assert.equal(m.kind, 'tv');
+  assert.equal(m.year, 2019);
+  assert.equal(m.seasons, 3);
+  assert.equal(m.director, 'C1, C2');
+  assert.equal(m.imdbId, 'tt9');
+  assert.equal(m.cert, 'TV-14');
+  assert.equal(m.kidsSafe, false);
+  assert.equal(isKidsSafeTv({ US: 'TV-PG' }), true);
+  assert.equal(isKidsSafeTv({ IN: 'U/A 13+', US: 'TV-G' }), false);
 });

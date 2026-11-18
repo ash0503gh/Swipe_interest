@@ -1,5 +1,6 @@
-// Netflix India movie catalogue: availability, details, cast and trailers from TMDB;
+// Netflix India catalogue of movies and shows: availability, details, cast and trailers from TMDB;
 // ratings from IMDb's daily ratings file (datasets.imdbws.com, personal non-commercial use).
+// Shows are stored with negative ids (-tmdbId) so they never collide with movie ids.
 import { createGunzip } from 'node:zlib';
 import { Readable } from 'node:stream';
 import readline from 'node:readline';
@@ -43,12 +44,13 @@ export const cinemaOf = (lang) => CINEMAS.find((c) => c.langs?.includes(lang))?.
 export function filterMovies(movies, f = {}) {
   return movies.filter(
     (m) =>
+      (f.kind === 'tv' ? m.kind === 'tv' : m.kind !== 'tv') &&
       (!f.cinemas?.length || f.cinemas.includes(cinemaOf(m.lang))) &&
       (!f.genres?.length || m.genres.some((g) => f.genres.includes(g))) &&
       (!f.minRating || (m.imdbRating ?? 0) >= f.minRating) &&
       (!f.yearFrom || (m.year ?? 0) >= f.yearFrom) &&
       (!f.yearTo || (m.year ?? Infinity) <= f.yearTo) &&
-      (!f.maxRuntime || (m.runtime && m.runtime <= f.maxRuntime)) &&
+      (!f.maxRuntime || m.kind === 'tv' || (m.runtime && m.runtime <= f.maxRuntime)) &&
       (!f.kidsSafe || m.kidsSafe)
   );
 }
@@ -69,14 +71,21 @@ export function isKidsSafe(certs) {
   return ['G', 'PG'].includes(certs.US);
 }
 
+export function isKidsSafeTv(certs) {
+  if (certs.IN) return certs.IN === 'U';
+  return ['TV-Y', 'TV-Y7', 'TV-G', 'TV-PG'].includes(certs.US);
+}
+
 export function catalogMeta() {
   const cinemas = new Map(CINEMAS.map((c) => [c.id, 0]));
-  const genres = new Map();
+  const genres = { movie: new Map(), tv: new Map() };
   for (const m of catalog.movies) {
     const c = cinemaOf(m.lang);
     cinemas.set(c, cinemas.get(c) + 1);
-    m.genres.forEach((g) => genres.set(g, (genres.get(g) || 0) + 1));
+    const g = genres[m.kind === 'tv' ? 'tv' : 'movie'];
+    m.genres.forEach((name) => g.set(name, (g.get(name) || 0) + 1));
   }
+  const byCount = (map) => [...map].sort((a, b) => b[1] - a[1]).map(([name]) => name);
   // Most-voted posters, for the start screen backdrop.
   const posters = [...catalog.movies]
     .filter((m) => m.poster)
@@ -87,7 +96,7 @@ export function catalogMeta() {
     updatedAt: catalog.updatedAt,
     total: catalog.movies.length,
     cinemas: CINEMAS.map(({ id, name, sub }) => ({ id, name, sub, count: cinemas.get(id) })),
-    genres: [...genres].sort((a, b) => b[1] - a[1]).map(([name]) => name),
+    genres: { movie: byCount(genres.movie), tv: byCount(genres.tv) },
     posters,
   };
 }
@@ -137,27 +146,28 @@ const DISCOVER = {
 };
 
 // TMDB serves at most 500 pages (10,000 results) per query, so split by release year if needed.
-async function discoverIds(extra, ids) {
-  const first = await tmdb('/discover/movie', { ...DISCOVER, ...extra, page: 1 });
+async function discoverIds(kind, extra, ids) {
+  const first = await tmdb(`/discover/${kind}`, { ...DISCOVER, ...extra, page: 1 });
   first.results.forEach((r) => ids.add(r.id));
   const pages = Array.from({ length: Math.min(first.total_pages, 500) - 1 }, (_, i) => i + 2);
   await mapLimit(pages, 8, async (page) => {
-    const d = await tmdb('/discover/movie', { ...DISCOVER, ...extra, page });
+    const d = await tmdb(`/discover/${kind}`, { ...DISCOVER, ...extra, page });
     d.results.forEach((r) => ids.add(r.id));
   });
   return first.total_pages;
 }
 
-async function netflixIndiaIds() {
+async function netflixIndiaIds(kind) {
   const ids = new Set();
-  const totalPages = await discoverIds({}, ids);
+  const totalPages = await discoverIds(kind, {}, ids);
   if (totalPages > 500) {
+    const date = kind === 'tv' ? 'first_air_date' : 'primary_release_date';
     const thisYear = new Date().getFullYear();
     for (let y = 1900; y <= thisYear + 1; y += 5) {
-      await discoverIds({ 'primary_release_date.gte': `${y}-01-01`, 'primary_release_date.lte': `${y + 4}-12-31` }, ids);
+      await discoverIds(kind, { [`${date}.gte`]: `${y}-01-01`, [`${date}.lte`]: `${y + 4}-12-31` }, ids);
     }
   }
-  return ids;
+  return [...ids];
 }
 
 function pickTrailer(videos) {
@@ -195,6 +205,31 @@ export function toMovie(d, now = Date.now()) {
   };
 }
 
+export function toShow(d, now = Date.now()) {
+  const certs = {};
+  for (const r of d.content_ratings?.results || []) certs[r.iso_3166_1] = r.rating || '';
+  return {
+    id: -d.id,
+    kind: 'tv',
+    title: d.name,
+    year: d.first_air_date ? Number(d.first_air_date.slice(0, 4)) : null,
+    overview: d.overview || '',
+    poster: d.poster_path || null,
+    runtime: null,
+    seasons: d.number_of_seasons || null,
+    genres: (d.genres || []).map((g) => g.name),
+    lang: d.original_language,
+    imdbId: d.external_ids?.imdb_id || null,
+    cast: (d.credits?.cast || []).slice(0, 6).map((c) => c.name),
+    director: (d.created_by || []).slice(0, 2).map((c) => c.name).join(', ') || null, // "Created by"
+    trailer: pickTrailer(d.videos?.results || [])?.key || null,
+    cert: certs.IN || certs.US || null,
+    kidsSafe: isKidsSafeTv(certs),
+    tmdbRating: d.vote_average || null,
+    fetchedAt: now,
+  };
+}
+
 async function imdbRatings(wanted) {
   const res = await fetch('https://datasets.imdbws.com/title.ratings.tsv.gz');
   if (!res.ok) throw new Error(`IMDb ratings download failed: HTTP ${res.status}`);
@@ -214,8 +249,10 @@ export async function refreshCatalog(log = console.log) {
   const started = Date.now();
   const cached = new Map(((await getJSON(CATALOG_KEY))?.movies || []).map((m) => [m.id, m]));
 
-  const ids = [...(await netflixIndiaIds())];
-  log(`Netflix India: ${ids.length} movies`);
+  const movieIds = await netflixIndiaIds('movie');
+  const showIds = await netflixIndiaIds('tv');
+  log(`Netflix India: ${movieIds.length} movies, ${showIds.length} shows`);
+  const ids = [...movieIds, ...showIds.map((id) => -id)];
 
   let fetched = 0;
   let failed = 0;
@@ -224,12 +261,12 @@ export async function refreshCatalog(log = console.log) {
       const old = cached.get(id);
       if (old && started - old.fetchedAt < DETAILS_MAX_AGE_MS) return old;
       try {
-        const d = await tmdb(`/movie/${id}`, {
-          append_to_response: 'credits,videos,release_dates',
-          include_video_language: 'en,hi,null',
-        });
+        const d =
+          id > 0
+            ? await tmdb(`/movie/${id}`, { append_to_response: 'credits,videos,release_dates', include_video_language: 'en,hi,null' })
+            : await tmdb(`/tv/${-id}`, { append_to_response: 'credits,videos,content_ratings,external_ids', include_video_language: 'en,hi,null' });
         fetched++;
-        return toMovie(d, started);
+        return id > 0 ? toMovie(d, started) : toShow(d, started);
       } catch (err) {
         failed++;
         log(`skip ${id}: ${err.message}`);

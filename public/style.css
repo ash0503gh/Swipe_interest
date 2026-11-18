@@ -141,6 +141,12 @@ svg { display: block; }
 .headline span { color: var(--brand); }
 .home > .input { margin-top: 8px; }
 
+.segment {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07); border: 1px solid var(--line);
+}
+.segment button { height: 42px; border-radius: 12px; font-size: 15px; font-weight: 650; color: var(--muted); transition: background 0.25s var(--ease), color 0.25s; }
+.segment button.on { background: var(--text); color: #111; }
 .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .tile {
   position: relative; min-height: 84px; padding: 14px; border-radius: 18px; text-align: left;

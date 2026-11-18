@@ -21,6 +21,7 @@ const strings = (v) => (Array.isArray(v) ? v.filter((x) => typeof x === 'string'
 
 function cleanFilters(f = {}) {
   return {
+    kind: f.kind === 'tv' ? 'tv' : 'movie',
     cinemas: strings(f.cinemas),
     genres: strings(f.genres),
     minRating: num(f.minRating, 0, 10),

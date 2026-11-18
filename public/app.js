@@ -86,7 +86,8 @@ function onEnter(input, fn) {
 }
 
 const runtime = (m) => (m ? `${Math.floor(m / 60)}h ${m % 60}m`.replace(/^0h /, '') : null);
-const subline = (m) => [m.year, runtime(m.runtime), m.cert].filter(Boolean).join(' · ');
+const seasons = (n) => (n ? `${n} season${n === 1 ? '' : 's'}` : null);
+const subline = (m) => [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert].filter(Boolean).join(' · ');
 const netflixUrl = (m) => `https://www.netflix.com/search?q=${encodeURIComponent(m.title)}`;
 const youtubeUrl = (m) =>
   m.trailer ? `https://www.youtube.com/watch?v=${m.trailer}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.title} ${m.year || ''} trailer`)}`;
@@ -241,7 +242,7 @@ function details(m) {
     h('div', { class: 'meta' }, rating(m), h('span', null, subline(m))),
     m.genres.length ? h('div', { class: 'tags' }, m.genres.slice(0, 4).map((g) => h('span', null, g))) : null,
     m.overview ? h('p', { class: 'overview' }, m.overview) : null,
-    m.director ? h('p', { class: 'credit' }, h('span', null, 'Director'), h('b', null, m.director)) : null,
+    m.director ? h('p', { class: 'credit' }, h('span', null, m.kind === 'tv' ? 'Created by' : 'Director'), h('b', null, m.director)) : null,
     m.cast.length ? h('p', { class: 'credit' }, h('span', null, 'Cast'), h('b', null, m.cast.join(', '))) : null,
     h('div', { class: 'links' },
       h('a', { class: 'btn primary', href: netflixUrl(m), target: '_blank', rel: 'noopener' }, 'Watch on Netflix'),
@@ -297,11 +298,13 @@ function joinSheet() {
 async function homePage() {
   const meta = await api('/api/catalog').catch(() => null);
   const ready = meta?.total > 0;
-  const f = { cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
+  const f = { kind: 'movie', cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
+  const isMovies = () => f.kind === 'movie';
   const toFilters = () => ({
-    cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to, maxRuntime: f.runtime.v, kidsSafe: f.kidsSafe,
+    kind: f.kind, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
+    maxRuntime: isMovies() ? f.runtime.v : 0, kidsSafe: f.kidsSafe,
   });
-  const extraCount = () => [f.rating.v, f.year.label !== 'Any', f.runtime.v, f.kidsSafe].filter(Boolean).length;
+  const extraCount = () => [f.rating.v, f.year.label !== 'Any', isMovies() && f.runtime.v, f.kidsSafe].filter(Boolean).length;
 
   const name = h('input', { class: 'input', placeholder: 'Your name', maxlength: 24, value: ls.get('fs:name') || '', autocomplete: 'given-name', enterkeyhint: 'done' });
   const start = h('button', { class: 'btn primary block cta' }, ready ? 'Start' : 'Preparing movie list…');
@@ -318,7 +321,7 @@ async function homePage() {
       const r = await api('/api/catalog/count', { method: 'POST', body: { filters: toFilters() } }).catch(() => null);
       if (!r) return;
       start.disabled = r.count === 0;
-      start.replaceChildren(r.count ? 'Start' : 'No movies match');
+      start.replaceChildren(r.count ? 'Start' : `No ${isMovies() ? 'movies' : 'shows'} match`);
     }, 120);
   }
 
@@ -335,7 +338,30 @@ async function homePage() {
     );
   drawTiles();
 
-  const genres = chips((meta?.genres || []).map((g) => ({ label: g, v: g })), (o) => f.genres.includes(o.v), (o) => toggleIn(f.genres, o.v), changed, 'chips scroller');
+  // Movies and shows have different genre lists, so the row is rebuilt when the kind changes.
+  const genreBox = h('div');
+  const drawGenres = () =>
+    genreBox.replaceChildren(
+      chips((meta?.genres?.[f.kind] || []).map((g) => ({ label: g, v: g })), (o) => f.genres.includes(o.v), (o) => toggleIn(f.genres, o.v), changed, 'chips scroller')
+    );
+  drawGenres();
+
+  const kinds = h('div', { class: 'segment', role: 'tablist' });
+  const drawKinds = () =>
+    kinds.replaceChildren(
+      ...[['movie', 'Movies'], ['tv', 'Shows']].map(([k, label]) =>
+        h('button', { type: 'button', role: 'tab', 'aria-selected': String(f.kind === k), class: f.kind === k ? 'on' : '', onclick: () => {
+          if (f.kind === k) return;
+          haptic();
+          f.kind = k;
+          f.genres = [];
+          drawKinds();
+          drawGenres();
+          changed();
+        } }, label)
+      )
+    );
+  drawKinds();
 
   function moreSheet() {
     const group = (label, row) => h('div', { class: 'group' }, h('div', { class: 'label' }, label), row);
@@ -343,12 +369,12 @@ async function homePage() {
       h('h3', null, 'More filters'),
       group('IMDb rating', chips(RATINGS, (o) => f.rating === o, (o) => (f.rating = o), changed)),
       group('Released', chips(YEARS, (o) => f.year === o, (o) => (f.year = o), changed)),
-      group('Length', chips(RUNTIMES, (o) => f.runtime === o, (o) => (f.runtime = o), changed)),
+      isMovies() ? group('Length', chips(RUNTIMES, (o) => f.runtime === o, (o) => (f.runtime = o), changed)) : null,
       group('Audience', chips([{ label: 'Family-friendly only' }], () => f.kidsSafe, () => (f.kidsSafe = !f.kidsSafe), changed)),
       h('button', { class: 'btn primary block', onclick: () => close() }, 'Done'),
       h('p', { class: 'fine' },
         meta?.updatedAt ? `Netflix India list updated ${new Date(meta.updatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}. ` : '',
-        'Movie data from TMDB, ratings from IMDb. This product uses the TMDB API but is not endorsed or certified by TMDB. Not affiliated with Netflix.'
+        'Movie and show data from TMDB, ratings from IMDb. This product uses the TMDB API but is not endorsed or certified by TMDB. Not affiliated with Netflix.'
       )
     );
   }
@@ -377,10 +403,11 @@ async function homePage() {
       h('h1', { class: 'headline' }, 'Movie night,', h('br'), h('span', null, 'decided together.')),
       h('p', { class: 'lead' }, 'Everyone swipes on what’s streaming on Netflix India. When you all say yes, it’s a match.'),
       name,
+      ready ? kinds : null,
       ready ? h('div', { class: 'label' }, 'Cinema') : null,
       ready ? tiles : null,
       ready ? h('div', { class: 'label' }, 'Genre') : null,
-      ready ? genres : null,
+      ready ? genreBox : null,
       h('div', { class: 'row-links' },
         ready ? h('button', { class: 'link', onclick: moreSheet }, icon('sliders'), 'More filters', moreBadge) : h('span'),
         h('button', { class: 'link', onclick: joinSheet }, 'Join with a code')

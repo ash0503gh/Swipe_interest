@@ -1,6 +1,6 @@
 # FlickSwipe
 
-Swipe on Netflix India movies with family and friends. When everyone in a session swipes right on a movie, it's a match.
+Swipe on Netflix India movies or shows with family and friends. When everyone in a session swipes right on a movie, it's a match.
 
 - Host optionally picks a cinema (Bollywood, Hollywood, South, World) and genres, plus more filters (IMDb rating, release years, length, family-friendly), and shares a 6-letter code or link.
 - Works as an iPhone Home Screen app (full screen, own icon).
