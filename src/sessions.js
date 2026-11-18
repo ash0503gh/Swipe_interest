@@ -75,13 +75,18 @@ export function publicState(s, online = new Set()) {
   };
 }
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Cloud Run pauses the CPU between requests, so a change is saved before the request that made it
+// returns. Saves of one session are chained and coalesced: at most one running, one queued, and
+// at least minGapMs apart (Cloud Storage allows about one write per second to the same object).
 export class SessionHub extends EventEmitter {
-  constructor({ saveDelayMs = 5000 } = {}) {
+  constructor({ minGapMs = 1000 } = {}) {
     super();
     this.setMaxListeners(0);
-    this.saveDelayMs = saveDelayMs;
+    this.minGapMs = minGapMs;
     this.sessions = new Map();
-    this.saveTimers = new Map();
+    this.writes = new Map(); // code -> { tail, queued, lastAt }
     this.online = new Map(); // code -> Map(memberId -> open connections)
   }
 
@@ -102,7 +107,7 @@ export class SessionHub extends EventEmitter {
 
   add(s) {
     this.sessions.set(s.code, s);
-    this.changed(s);
+    return this.changed(s);
   }
 
   onlineIds(code) {
@@ -113,22 +118,30 @@ export class SessionHub extends EventEmitter {
     return publicState(s, this.onlineIds(s.code));
   }
 
+  // Notifies listeners; unless persist is false, resolves once the change is saved.
   changed(s, { persist = true } = {}) {
     this.emit(s.code, this.state(s));
-    if (!persist) return;
-    clearTimeout(this.saveTimers.get(s.code));
-    this.saveTimers.set(s.code, setTimeout(() => this.save(s.code), this.saveDelayMs));
+    return persist ? this.save(s.code) : Promise.resolve();
   }
 
-  async save(code) {
-    this.saveTimers.delete(code);
-    const s = this.sessions.get(code);
-    if (s) await putJSON(`sessions/${code}.json`, s).catch((err) => console.error(`save ${code}: ${err.message}`));
+  save(code) {
+    const w = this.writes.get(code) || { tail: Promise.resolve(), queued: null, lastAt: 0 };
+    this.writes.set(code, w);
+    if (w.queued) return w.queued; // a save that hasn't started yet will include this change
+    const run = async () => {
+      await sleep(Math.max(0, w.lastAt + this.minGapMs - Date.now()));
+      w.queued = null;
+      const s = this.sessions.get(code);
+      if (s) await putJSON(`sessions/${code}.json`, s).catch((err) => console.error(`save ${code}: ${err.message}`));
+      w.lastAt = Date.now();
+    };
+    w.queued = w.tail.then(run);
+    w.tail = w.queued;
+    return w.queued;
   }
 
   async flush() {
-    for (const [code, t] of this.saveTimers) clearTimeout(t);
-    await Promise.all([...this.saveTimers.keys()].map((code) => this.save(code)));
+    await Promise.all([...this.writes.values()].map((w) => w.tail));
   }
 
   connect(s, memberId) {
@@ -149,6 +162,11 @@ export class SessionHub extends EventEmitter {
   }
 
   dropExpired(now = Date.now()) {
-    for (const [code, s] of this.sessions) if (s.expiresAt < now && !this.saveTimers.has(code)) this.sessions.delete(code);
+    for (const [code, s] of this.sessions) {
+      if (s.expiresAt < now && !this.writes.get(code)?.queued) {
+        this.sessions.delete(code);
+        this.writes.delete(code);
+      }
+    }
   }
 }

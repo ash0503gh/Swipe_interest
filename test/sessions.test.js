@@ -95,14 +95,28 @@ test('public state hides tokens and votes', () => {
 });
 
 test('hub persists sessions and rejects expired ones', async () => {
-  const hub = new SessionHub({ saveDelayMs: 0 });
+  const hub = new SessionHub({ minGapMs: 0 });
   const s = createSession({ deck, filters: {} });
   addMember(s, 'A');
-  hub.add(s);
-  await hub.flush();
+  await hub.add(s); // saved before add resolves
   const fresh = new SessionHub();
   assert.equal((await fresh.get(s.code.toLowerCase())).members[0].name, 'A');
   s.expiresAt = Date.now() - 1;
   await assert.rejects(hub.get(s.code), /expired/);
   await assert.rejects(hub.get('bad'), /not found/);
+});
+
+test('hub coalesces rapid saves and keeps the latest state', async () => {
+  const hub = new SessionHub({ minGapMs: 30 });
+  const s = createSession({ deck, filters: {} });
+  const a = addMember(s, 'A');
+  await hub.add(s);
+  const saves = [];
+  for (const id of deck) {
+    swipe(s, a, id, true);
+    saves.push(hub.changed(s));
+  }
+  assert.equal(new Set(saves.slice(1)).size, 1); // later changes share one queued save
+  await Promise.all(saves);
+  assert.equal((await new SessionHub().get(s.code)).members[0].swipes.length, deck.length);
 });

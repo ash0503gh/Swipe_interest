@@ -57,13 +57,13 @@ app.post('/api/catalog/count', (req, res) => {
 
 // ---------- sessions ----------
 
-app.post('/api/sessions', (req, res) => {
+app.post('/api/sessions', async (req, res) => {
   requireCatalog();
   const filters = cleanFilters(req.body?.filters);
   const deck = sortTopRated(filterMovies(getCatalog().movies, filters)).map((m) => m.id);
   const s = createSession({ deck, filters });
   const m = addMember(s, req.body?.name);
-  hub.add(s);
+  await hub.add(s);
   res.status(201).json({ code: s.code, token: m.token });
 });
 
@@ -76,7 +76,7 @@ app.get('/api/sessions/:code', async (req, res) => {
 app.post('/api/sessions/:code/join', async (req, res) => {
   const s = await hub.get(req.params.code);
   const m = addMember(s, req.body?.name);
-  hub.changed(s);
+  await hub.changed(s);
   res.status(201).json({ token: m.token });
 });
 
@@ -95,14 +95,14 @@ app.post('/api/movies', (req, res) => {
 app.post('/api/sessions/:code/swipe', async (req, res) => {
   const { s, me: m } = await auth(req);
   const match = swipe(s, m, Number(req.body?.movieId), req.body?.like === true);
-  hub.changed(s);
+  await hub.changed(s);
   res.json({ me: me(m), match });
 });
 
 app.post('/api/sessions/:code/undo', async (req, res) => {
   const { s, me: m } = await auth(req);
   undo(s, m);
-  hub.changed(s);
+  await hub.changed(s);
   res.json({ me: me(m) });
 });
 
