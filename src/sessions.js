@@ -26,10 +26,13 @@ const cleanName = (name) => {
   return n;
 };
 
-export function createSession({ deck, filters, now = Date.now() }) {
-  if (!deck.length) throw new HttpError(400, 'No movies match these filters');
-  return { code: newCode(), createdAt: now, expiresAt: now + TTL_MS, filters, deck: deck.slice(0, MAX_DECK), members: [], matches: [] };
+// rule: 'all' (everyone swipes right: movies, shows) or 'majority' (more than half: food).
+export function createSession({ deck, filters, rule = 'all', now = Date.now() }) {
+  if (!deck.length) throw new HttpError(400, 'Nothing matches these filters');
+  return { code: newCode(), createdAt: now, expiresAt: now + TTL_MS, filters, rule, deck: deck.slice(0, MAX_DECK), members: [], matches: [] };
 }
+
+export const likesNeeded = (s) => (s.rule === 'majority' ? Math.floor(s.members.length / 2) + 1 : s.members.length);
 
 // Member: { id (public), token (secret), name, joinedAt, swipes: [[movieId, 1|0], ...] in deck order }
 export function addMember(s, name, now = Date.now()) {
@@ -53,7 +56,8 @@ export function swipe(s, member, movieId, like, now = Date.now()) {
   member.swipes.push([movieId, vote]);
   if (!vote || isMatched(s, movieId)) return null;
   if (s.members.length < 2) return null; // a match needs at least two people agreeing
-  if (!s.members.every((m) => m.swipes[pos]?.[1] === 1)) return null;
+  const likes = s.members.filter((m) => m.swipes[pos]?.[1] === 1).length;
+  if (likes < likesNeeded(s)) return null;
   const match = { id: movieId, at: now };
   s.matches.push(match);
   return match;
@@ -70,6 +74,8 @@ export function publicState(s, online = new Set()) {
   return {
     code: s.code,
     expiresAt: s.expiresAt,
+    kind: s.filters?.kind || 'movie',
+    rule: s.rule || 'all',
     deckSize: s.deck.length,
     members: s.members.map((m) => ({ id: m.id, name: m.name, position: m.swipes.length, online: online.has(m.id) })),
     matches: s.matches,

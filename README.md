@@ -1,9 +1,10 @@
-# FlickSwipe
+# SwipeTogether
 
 Swipe on Netflix India movies or shows with family and friends. When everyone in a session swipes right on a movie, it's a match.
 
 - Host optionally picks a cinema (Bollywood, Hollywood, South, World) and genres, plus more filters (IMDb rating, release years, length, family-friendly), and shares a 6-letter code or link.
 - Works as an iPhone Home Screen app (full screen, own icon).
+- Food mode: about 100 pure-veg home-style dishes for breakfast or lunch/dinner, a fresh shuffle each session, and a match when most of the group agrees. Dish list in `src/dishes.js`; run `npm run food` to rebuild `src/food.json` with Wikimedia Commons photos and credits.
 - Everyone gets the same deck, top IMDb rated first. Up to 10 people; sessions last 24 hours.
 - Cards show poster, cast, IMDb rating and a YouTube trailer, with a "Watch on Netflix" link.
 

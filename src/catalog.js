@@ -5,6 +5,7 @@ import { createGunzip } from 'node:zlib';
 import { Readable } from 'node:stream';
 import readline from 'node:readline';
 import { getJSON, putJSON } from './store.js';
+import { FOOD } from './food.js';
 
 const TMDB = 'https://api.themoviedb.org/3';
 const NETFLIX_PROVIDER_ID = 8;
@@ -13,11 +14,11 @@ const DETAILS_MAX_AGE_MS = 30 * 24 * 3600e3;
 export const MIN_VOTES_FOR_RANK = 1000; // below this, a rating is too noisy to rank by
 
 let catalog = { updatedAt: null, movies: [] };
-let byId = new Map();
+let byId = new Map(FOOD.map((m) => [m.id, m]));
 
 function setCatalog(c) {
   catalog = c;
-  byId = new Map(c.movies.map((m) => [m.id, m]));
+  byId = new Map([...c.movies, ...FOOD].map((m) => [m.id, m]));
 }
 
 export const getCatalog = () => catalog;

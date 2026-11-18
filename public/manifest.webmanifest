@@ -1,7 +1,7 @@
 {
-  "name": "FlickSwipe",
-  "short_name": "FlickSwipe",
-  "description": "Swipe on Netflix India movies together. When everyone says yes, it's a match.",
+  "name": "SwipeTogether",
+  "short_name": "SwipeTogether",
+  "description": "Swipe together on movies, shows or what to cook. When you agree, it's a match.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

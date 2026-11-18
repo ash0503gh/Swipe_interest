@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { timingSafeEqual } from 'node:crypto';
 import { loadCatalog, getCatalog, getMovie, filterMovies, sortTopRated, catalogMeta, refreshCatalog } from './catalog.js';
+import { dishesFor, shuffle } from './food.js';
 import { SessionHub, HttpError, createSession, addMember, findMember, swipe, undo } from './sessions.js';
 
 const PUBLIC_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
@@ -21,7 +22,8 @@ const strings = (v) => (Array.isArray(v) ? v.filter((x) => typeof x === 'string'
 
 function cleanFilters(f = {}) {
   return {
-    kind: f.kind === 'tv' ? 'tv' : 'movie',
+    kind: ['tv', 'food'].includes(f.kind) ? f.kind : 'movie',
+    meal: f.meal === 'breakfast' ? 'breakfast' : 'main',
     cinemas: strings(f.cinemas),
     genres: strings(f.genres),
     minRating: num(f.minRating, 0, 10),
@@ -53,16 +55,22 @@ app.get('/api/catalog', (req, res) => {
 });
 
 app.post('/api/catalog/count', (req, res) => {
-  res.json({ count: filterMovies(getCatalog().movies, cleanFilters(req.body?.filters)).length });
+  const f = cleanFilters(req.body?.filters);
+  res.json({ count: f.kind === 'food' ? dishesFor(f.meal).length : filterMovies(getCatalog().movies, f).length });
 });
 
 // ---------- sessions ----------
 
 app.post('/api/sessions', async (req, res) => {
-  requireCatalog();
   const filters = cleanFilters(req.body?.filters);
-  const deck = sortTopRated(filterMovies(getCatalog().movies, filters)).map((m) => m.id);
-  const s = createSession({ deck, filters });
+  let s;
+  if (filters.kind === 'food') {
+    // Dishes: a fresh shuffle per session (same order for everyone); most people agreeing is a match.
+    s = createSession({ deck: shuffle(dishesFor(filters.meal)).map((d) => d.id), filters, rule: 'majority' });
+  } else {
+    requireCatalog();
+    s = createSession({ deck: sortTopRated(filterMovies(getCatalog().movies, filters)).map((m) => m.id), filters });
+  }
   const m = addMember(s, req.body?.name);
   await hub.add(s);
   res.status(201).json({ code: s.code, token: m.token });

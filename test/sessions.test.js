@@ -80,7 +80,7 @@ test('member limit and name rules', () => {
   for (let i = 0; i < MAX_MEMBERS; i++) addMember(s, `P${i}`);
   assert.throws(() => addMember(s, 'Eleven'), /full/);
   assert.throws(() => addMember(createSession({ deck, filters: {} }), '   '), /Name is required/);
-  assert.throws(() => createSession({ deck: [], filters: {} }), /No movies match/);
+  assert.throws(() => createSession({ deck: [], filters: {} }), /Nothing matches/);
 });
 
 test('public state hides tokens and votes', () => {
@@ -127,4 +127,24 @@ test('no match when only one person is in the session', () => {
   assert.equal(s.matches.length, 0);
   const b = addMember(s, 'Joined later');
   assert.equal(swipe(s, b, 10, true).id, 10); // the solo like still counts once someone agrees
+});
+
+test('food sessions match when more than half agree', () => {
+  const s = createSession({ deck, filters: { kind: 'food' }, rule: 'majority' });
+  const [a, b, c] = ['A', 'B', 'C'].map((n) => addMember(s, n));
+  assert.equal(swipe(s, a, 10, true), null); // 1 of 3
+  assert.equal(swipe(s, b, 10, true).id, 10); // 2 of 3 is a majority, C hasn't swiped yet
+  swipe(s, c, 10, false);
+  assert.deepEqual(s.matches.map((m) => m.id), [10]);
+  swipe(s, a, 20, true);
+  swipe(s, b, 20, false);
+  assert.equal(swipe(s, c, 20, false), null); // 1 of 3
+  const pair = createSession({ deck, filters: {}, rule: 'majority' });
+  const [x, y] = ['X', 'Y'].map((n) => addMember(pair, n));
+  swipe(pair, x, 10, true);
+  assert.equal(swipe(pair, y, 10, false), null); // with two people, both must agree
+  const solo = createSession({ deck, filters: {}, rule: 'majority' });
+  assert.equal(swipe(solo, addMember(solo, 'Z'), 10, true), null); // never alone
+  assert.equal(publicState(s).rule, 'majority');
+  assert.equal(publicState(s).kind, 'food');
 });

@@ -1,0 +1,1565 @@
+[
+ {
+  "id": 3089459443,
+  "kind": "food",
+  "title": "Poha",
+  "hindi": "पोहा",
+  "meal": "breakfast",
+  "minutes": 20,
+  "overview": "Flattened rice with onion, peanuts and curry leaves",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3089050604,
+  "kind": "food",
+  "title": "Upma",
+  "hindi": "उपमा",
+  "meal": "breakfast",
+  "minutes": 20,
+  "overview": "Savoury semolina with veggies and mustard seeds",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/A_photo_of_Upma.jpg/960px-A_photo_of_Upma.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Thamizhpparithi Maari",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:A_photo_of_Upma.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3380425815,
+  "kind": "food",
+  "title": "Aloo Paratha",
+  "hindi": "आलू पराठा",
+  "meal": "breakfast",
+  "minutes": 35,
+  "overview": "Flatbread stuffed with spiced potato, with curd and butter",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Triangle_paratha_%28cropped%29.JPG/960px-Triangle_paratha_%28cropped%29.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Nithyasrm",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Triangle_paratha_(cropped).JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3175673081,
+  "kind": "food",
+  "title": "Gobi Paratha",
+  "hindi": "गोभी पराठा",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Flatbread stuffed with spiced grated cauliflower",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3947090359,
+  "kind": "food",
+  "title": "Paneer Paratha",
+  "hindi": "पनीर पराठा",
+  "meal": "breakfast",
+  "minutes": 35,
+  "overview": "Flatbread stuffed with spiced crumbled paneer",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3652269298,
+  "kind": "food",
+  "title": "Mooli Paratha",
+  "hindi": "मूली पराठा",
+  "meal": "breakfast",
+  "minutes": 35,
+  "overview": "Flatbread stuffed with grated radish and green chilli",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3222862012,
+  "kind": "food",
+  "title": "Methi Thepla",
+  "hindi": "मेथी थेपला",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Gujarati fenugreek flatbread, great with curd and pickle",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Thepla_main.jpg/960px-Thepla_main.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Rocky231293",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Thepla_main.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3730166799,
+  "kind": "food",
+  "title": "Masala Dosa",
+  "hindi": "मसाला डोसा",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Crisp rice-lentil crepe with potato filling and chutney",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/960px-Masala_Dosa_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Yakshitha",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Masala_Dosa_2023.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3107215427,
+  "kind": "food",
+  "title": "Idli Sambar",
+  "hindi": "इडली सांबर",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Steamed rice cakes with sambar and coconut chutney",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Soumya dey at English Wikipedia",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Idli_Sambar.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3761641294,
+  "kind": "food",
+  "title": "Medu Vada",
+  "hindi": "मेदु वड़ा",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Crispy urad dal doughnuts with sambar and chutney",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Medu_Vada.JPG/960px-Medu_Vada.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Lubnakarim06",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Medu_Vada.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3626731117,
+  "kind": "food",
+  "title": "Uttapam",
+  "hindi": "उत्तपम",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Thick rice pancake topped with onion, tomato and chilli",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Mini_Uttappam.jpg/960px-Mini_Uttappam.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Ramesh NG",
+   "license": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Mini_Uttappam.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3915113336,
+  "kind": "food",
+  "title": "Rava Dosa",
+  "hindi": "रवा डोसा",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Lacy, crisp instant semolina dosa",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg/960px-Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Vee Satayamas from Bangkok, Thailand",
+   "license": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Dosa_at_Sri_Ganesha_Restauran,_Bangkok_(44570742744).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3915282537,
+  "kind": "food",
+  "title": "Rava Idli",
+  "hindi": "रवा इडली",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Soft semolina idli with cashews and curry leaves",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Rava_Idli_%286005561226%29.jpg/960px-Rava_Idli_%286005561226%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Upendra Kanda",
+   "license": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Rava_Idli_(6005561226).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3189784576,
+  "kind": "food",
+  "title": "Neer Dosa",
+  "hindi": "नीर डोसा",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Thin, soft Mangalorean rice crepes",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Neer-dosa.jpg/960px-Neer-dosa.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Kannadavegrecipes",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Neer-dosa.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3858474756,
+  "kind": "food",
+  "title": "Pesarattu",
+  "hindi": "पेसरट्टू",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Green moong dal dosa with ginger chutney",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Pesarattu.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Ryallabandi at en.wikipedia",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Pesarattu.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3261920547,
+  "kind": "food",
+  "title": "Ven Pongal",
+  "hindi": "वेन पोंगल",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Peppery rice and moong dal with ghee and cashews",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ven_pongal_with_sambar_and_chutney.jpg/960px-Ven_pongal_with_sambar_and_chutney.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Shafana jasmine",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Ven_pongal_with_sambar_and_chutney.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3206074312,
+  "kind": "food",
+  "title": "Appam",
+  "hindi": "अप्पम",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Lacy fermented rice pancakes with veg stew",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg/960px-Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "VinPrasad",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3231640853,
+  "kind": "food",
+  "title": "Puttu",
+  "hindi": "पुट्टु",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Steamed rice and coconut cylinders with kadala curry",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Puttu_%28Rice_Flour_steamed_cake%29.jpg/960px-Puttu_%28Rice_Flour_steamed_cake%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Mathew Jibin",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Puttu_(Rice_Flour_steamed_cake).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3368950197,
+  "kind": "food",
+  "title": "Idiyappam",
+  "hindi": "इडियप्पम",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Steamed rice-noodle nests with coconut milk or stew",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Idiyappam_with_Egg_Masala_Curry.jpg/960px-Idiyappam_with_Egg_Masala_Curry.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Viewfinder18",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3705206265,
+  "kind": "food",
+  "title": "Akki Rotti",
+  "hindi": "अक्की रोटी",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Karnataka rice-flour flatbread with veggies",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg/960px-%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Lakshmi Vijayadas",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3564867901,
+  "kind": "food",
+  "title": "Besan Chilla",
+  "hindi": "बेसन चीला",
+  "meal": "breakfast",
+  "minutes": 20,
+  "overview": "Savoury gram-flour pancake with onion and tomato",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3296447115,
+  "kind": "food",
+  "title": "Moong Dal Chilla",
+  "hindi": "मूंग दाल चीला",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Protein-rich moong dal pancakes with chutney",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3038201414,
+  "kind": "food",
+  "title": "Sabudana Khichdi",
+  "hindi": "साबूदाना खिचड़ी",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Tapioca pearls with peanuts, potato and lemon",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Upwas_Special_Sabudana_Khichadi.jpg/960px-Upwas_Special_Sabudana_Khichadi.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Sharvarism",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Upwas_Special_Sabudana_Khichadi.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3759346520,
+  "kind": "food",
+  "title": "Sabudana Vada",
+  "hindi": "साबूदाना वड़ा",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Crisp tapioca and potato patties",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Sabudana_vada.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Archana Joshi",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Sabudana_vada.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3028606355,
+  "kind": "food",
+  "title": "Puri Bhaji",
+  "hindi": "पूरी भाजी",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Puffy fried puris with spiced potato bhaji",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Puri_Bhajji_in_Mumbai_Restaurant.JPG/960px-Puri_Bhajji_in_Mumbai_Restaurant.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Ask27",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Puri_Bhajji_in_Mumbai_Restaurant.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3332425811,
+  "kind": "food",
+  "title": "Kachori Sabzi",
+  "hindi": "कचौरी सब्ज़ी",
+  "meal": "breakfast",
+  "minutes": 50,
+  "overview": "Flaky stuffed kachoris with tangy aloo sabzi",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Rajasthani_Raj_Kachori.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Jaipuriamanasi",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Raj_Kachori.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3319486898,
+  "kind": "food",
+  "title": "Bombay Sandwich",
+  "hindi": "बॉम्बे सैंडविच",
+  "meal": "breakfast",
+  "minutes": 15,
+  "overview": "Green chutney sandwich with cucumber, tomato and potato",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Bombay_cheese_sandwich.jpg/960px-Bombay_cheese_sandwich.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Wind Hashira",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bombay_cheese_sandwich.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3109232083,
+  "kind": "food",
+  "title": "Bread Pakora",
+  "hindi": "ब्रेड पकोड़ा",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Gram-flour fried bread stuffed with aloo",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bread_Pakora_%28Stuffed_with_Mashed-Spicy_Potatoes%29.JPG/960px-Bread_Pakora_%28Stuffed_with_Mashed-Spicy_Potatoes%29.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Mdsmds0",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bread_Pakora_(Stuffed_with_Mashed-Spicy_Potatoes).JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3606896704,
+  "kind": "food",
+  "title": "Dhokla",
+  "hindi": "ढोकला",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Soft steamed gram-flour cake with mustard tadka",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Dhokla_on_Gujrart.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Samirluhar99",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Dhokla_on_Gujrart.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3020853125,
+  "kind": "food",
+  "title": "Khaman",
+  "hindi": "खमण",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Spongy Gujarati besan khaman with green chutney",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/SPECIAL_SURATI_KHAMAN.jpg/960px-SPECIAL_SURATI_KHAMAN.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Devmanoj",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:SPECIAL_SURATI_KHAMAN.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3058624511,
+  "kind": "food",
+  "title": "Handvo",
+  "hindi": "हांडवो",
+  "meal": "breakfast",
+  "minutes": 60,
+  "overview": "Baked savoury rice-lentil cake with bottle gourd",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Handavo3.jpg/960px-Handavo3.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Dkgohil",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Handavo3.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3251828456,
+  "kind": "food",
+  "title": "Fafda Jalebi",
+  "hindi": "फाफड़ा जलेबी",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Crunchy besan strips with hot jalebi, Gujarati Sunday style",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3244893688,
+  "kind": "food",
+  "title": "Misal Pav",
+  "hindi": "मिसळ पाव",
+  "meal": "breakfast",
+  "minutes": 40,
+  "overview": "Spicy sprouted moth curry with farsan and pav",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Kolhapuri_Misal_Pav.jpg/960px-Kolhapuri_Misal_Pav.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Ankushkr2020",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Kolhapuri_Misal_Pav.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3355996305,
+  "kind": "food",
+  "title": "Thalipeeth",
+  "hindi": "थालीपीठ",
+  "meal": "breakfast",
+  "minutes": 30,
+  "overview": "Multigrain Maharashtrian flatbread with white butter",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Maharashtrian_Thalipith_-_1.jpg/960px-Maharashtrian_Thalipith_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Satyajit Dhawale (Satyajit888)",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Maharashtrian_Thalipith_-_1.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3255108570,
+  "kind": "food",
+  "title": "Kothimbir Vadi",
+  "hindi": "कोथिंबीर वड़ी",
+  "meal": "breakfast",
+  "minutes": 45,
+  "overview": "Steamed then crisped coriander-besan squares",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3352766829,
+  "kind": "food",
+  "title": "Sheera",
+  "hindi": "शीरा",
+  "meal": "breakfast",
+  "minutes": 20,
+  "overview": "Sweet semolina halwa with ghee and dry fruits",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/%E0%A6%B8%E0%A7%81%E0%A6%9C%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A6%BE%E0%A6%B2%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE.jpg/960px-%E0%A6%B8%E0%A7%81%E0%A6%9C%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A6%BE%E0%A6%B2%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Munni Akter Mim",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:%E0%A6%B8%E0%A7%81%E0%A6%9C%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A6%BE%E0%A6%B2%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3208633060,
+  "kind": "food",
+  "title": "Dalia",
+  "hindi": "दलिया",
+  "meal": "breakfast",
+  "minutes": 25,
+  "overview": "Broken-wheat porridge, savoury with veggies or sweet",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3200764201,
+  "kind": "food",
+  "title": "Vegetable Semiya Upma",
+  "hindi": "सेवई उपमा",
+  "meal": "breakfast",
+  "minutes": 20,
+  "overview": "Roasted vermicelli upma with peas and carrots",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3661098395,
+  "kind": "food",
+  "title": "Paneer Bhurji Toast",
+  "hindi": "पनीर भुर्जी",
+  "meal": "breakfast",
+  "minutes": 20,
+  "overview": "Spiced scrambled paneer on buttered toast",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3969255218,
+  "kind": "food",
+  "title": "Khakhra & Chai",
+  "hindi": "खाखरा",
+  "meal": "breakfast",
+  "minutes": 5,
+  "overview": "Crisp Gujarati wheat crackers with masala chai",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Khakhra_br%C3%B6d.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Jayajasodani",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Khakhra_br%C3%B6d.png"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3410358848,
+  "kind": "food",
+  "title": "Rajma Chawal",
+  "hindi": "राजमा चावल",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Punjabi kidney bean curry with steamed rice",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rajma_Masala_%2832081557778%29.jpg/960px-Rajma_Masala_%2832081557778%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Gaurav Nemade",
+   "license": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Rajma_Masala_(32081557778).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3048044757,
+  "kind": "food",
+  "title": "Chole Bhature",
+  "hindi": "छोले भटूरे",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Spicy chickpea curry with fluffy fried bhature",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Chole_Bhature_from_Nagpur.JPG/960px-Chole_Bhature_from_Nagpur.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Dheerajk88",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3879135464,
+  "kind": "food",
+  "title": "Chana Masala & Rice",
+  "hindi": "छोले चावल",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Tangy chickpea curry with jeera rice",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Chana_masala.jpg/960px-Chana_masala.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Simon Law (sfllaw) from Montréal, QC, Canada",
+   "license": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chana_masala.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3823755962,
+  "kind": "food",
+  "title": "Amritsari Kulcha Chole",
+  "hindi": "कुलचे छोले",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Stuffed crisp kulcha with chole and onion salad",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg/960px-Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Gaurav Nemade",
+   "license": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_(31013272937).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3282142277,
+  "kind": "food",
+  "title": "Dal Makhani",
+  "hindi": "दाल मखनी",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Creamy black urad dal, slow-cooked with butter",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Punjabi_style_Dal_Makhani.jpg/960px-Punjabi_style_Dal_Makhani.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Radhikamprabhu82",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Punjabi_style_Dal_Makhani.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3392766933,
+  "kind": "food",
+  "title": "Dal Tadka & Jeera Rice",
+  "hindi": "दाल तड़का",
+  "meal": "main",
+  "minutes": 35,
+  "overview": "Yellow dal with ghee-garlic tadka and cumin rice",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3734565242,
+  "kind": "food",
+  "title": "Kadhi Chawal",
+  "hindi": "कढ़ी चावल",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Tangy curd-besan kadhi with pakoras and rice",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Kadhi_Pakora.jpg/960px-Kadhi_Pakora.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Ams4wiki",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Kadhi_Pakora.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3740621115,
+  "kind": "food",
+  "title": "Paneer Butter Masala",
+  "hindi": "पनीर बटर मसाला",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Paneer in rich tomato-butter gravy with naan or roti",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Paneer_Makhani_Veggie.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Charvi Kakwani",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Paneer_Makhani_Veggie.jpeg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3007638483,
+  "kind": "food",
+  "title": "Shahi Paneer",
+  "hindi": "शाही पनीर",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Paneer in creamy cashew-onion gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Shahi_panner.jpg/960px-Shahi_panner.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Om shankar singh",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Shahi_panner.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3558211935,
+  "kind": "food",
+  "title": "Palak Paneer",
+  "hindi": "पालक पनीर",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Paneer cubes in smooth spinach gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Palakpaneer_Rayagada_Odisha_0009.jpg/960px-Palakpaneer_Rayagada_Odisha_0009.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Lopanayak",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Palakpaneer_Rayagada_Odisha_0009.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3123012291,
+  "kind": "food",
+  "title": "Matar Paneer",
+  "hindi": "मटर पनीर",
+  "meal": "main",
+  "minutes": 35,
+  "overview": "Peas and paneer in homestyle tomato gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Matar_paneer_dish.jpg/960px-Matar_paneer_dish.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "CNEcija12345",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Matar_paneer_dish.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3451320302,
+  "kind": "food",
+  "title": "Kadai Paneer",
+  "hindi": "कड़ाही पनीर",
+  "meal": "main",
+  "minutes": 35,
+  "overview": "Paneer and capsicum with fresh kadai masala",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Kadai_Paneer-Delhi-12.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Koynadalmia",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Kadai_Paneer-Delhi-12.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3919742887,
+  "kind": "food",
+  "title": "Paneer Tikka Masala",
+  "hindi": "पनीर टिक्का मसाला",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Smoky grilled paneer in spiced masala gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Chicken_tikka_masala_%28cropped%29.jpg/960px-Chicken_tikka_masala_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Michael Hays",
+   "license": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala_(cropped).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3671363386,
+  "kind": "food",
+  "title": "Malai Kofta",
+  "hindi": "मलाई कोफ़्ता",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Paneer-potato dumplings in creamy gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Koofteh_tabrizi.jpg/960px-Koofteh_tabrizi.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Fabienkhan",
+   "license": "CC BY-SA 2.5",
+   "url": "https://commons.wikimedia.org/wiki/File:Koofteh_tabrizi.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3126050766,
+  "kind": "food",
+  "title": "Navratan Korma",
+  "hindi": "नवरतन कोरमा",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Mughlai mixed-veg korma with dry fruits",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Chicken_Korma.JPG/960px-Chicken_Korma.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Miansari66",
+   "license": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3219771915,
+  "kind": "food",
+  "title": "Aloo Gobi",
+  "hindi": "आलू गोभी",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Dry potato-cauliflower sabzi with roti and dal",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Aloo_Ghobi.jpg/960px-Aloo_Ghobi.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Sapanabehl",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Ghobi.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3797713731,
+  "kind": "food",
+  "title": "Aloo Matar",
+  "hindi": "आलू मटर",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Potato and peas curry with puri or rice",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Aloo_Mattar.jpg/960px-Aloo_Mattar.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Quadell",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Mattar.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3569201588,
+  "kind": "food",
+  "title": "Dum Aloo",
+  "hindi": "दम आलू",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Baby potatoes slow-cooked in spiced curd gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Kashmiri_Dum_aloo.jpeg/960px-Kashmiri_Dum_aloo.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Maskaravivek",
+   "license": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Dum_aloo.jpeg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3032070647,
+  "kind": "food",
+  "title": "Jeera Aloo & Roti",
+  "hindi": "जीरा आलू",
+  "meal": "main",
+  "minutes": 20,
+  "overview": "Cumin-tossed potatoes with roti and dal",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Jeera_aloo_served_with_sprouts_and_dal.jpg/960px-Jeera_aloo_served_with_sprouts_and_dal.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Kanikatwl",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Jeera_aloo_served_with_sprouts_and_dal.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3797578997,
+  "kind": "food",
+  "title": "Aloo Methi",
+  "hindi": "आलू मेथी",
+  "meal": "main",
+  "minutes": 25,
+  "overview": "Potatoes with fresh fenugreek leaves",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3797388901,
+  "kind": "food",
+  "title": "Baingan Bharta",
+  "hindi": "बैंगन भरता",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Smoky mashed brinjal with onion and tomato",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Baigan_Bharta_from_Nagpur.JPG/960px-Baigan_Bharta_from_Nagpur.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Dheerajk88",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Baigan_Bharta_from_Nagpur.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3375497398,
+  "kind": "food",
+  "title": "Bhindi Masala",
+  "hindi": "भिंडी मसाला",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Crisp spiced okra with roti and dal",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Bhindi_Masala.jpg/960px-Bhindi_Masala.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Monali.mishra",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bhindi_Masala.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3631014410,
+  "kind": "food",
+  "title": "Sarson ka Saag & Makki Roti",
+  "hindi": "सरसों का साग",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Punjabi mustard greens with maize roti and white butter",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Saagroti.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "w:en:User:Lokantha",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Saagroti.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3215430826,
+  "kind": "food",
+  "title": "Pav Bhaji",
+  "hindi": "पाव भाजी",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Buttery mashed-veg bhaji with toasted pav",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Rupali Banarase",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bambayya_Pav_bhaji.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3294942207,
+  "kind": "food",
+  "title": "Veg Pulao & Raita",
+  "hindi": "वेज पुलाव",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Fragrant rice with mixed veggies and cucumber raita",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3340083188,
+  "kind": "food",
+  "title": "Tehri (Veg Biryani)",
+  "hindi": "तहरी",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "UP-style spiced vegetable rice with raita",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3161778688,
+  "kind": "food",
+  "title": "Khichdi & Kadhi",
+  "hindi": "खिचड़ी",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Comforting moong dal khichdi with ghee and papad",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Dall_Khichdi.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Rpande",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Dall_Khichdi.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3546848901,
+  "kind": "food",
+  "title": "Bisi Bele Bath",
+  "hindi": "बिसी बेले भात",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Karnataka spicy lentil-rice with veggies and ghee",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Bisi_Bele_Bath_%28Bisibelebath%29.JPG/960px-Bisi_Bele_Bath_%28Bisibelebath%29.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Food and Remedy, LLC",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath).JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3657381661,
+  "kind": "food",
+  "title": "Lemon Rice",
+  "hindi": "लेमन राइस",
+  "meal": "main",
+  "minutes": 20,
+  "overview": "Tangy turmeric rice with peanuts and curry leaves",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Chitranna_and_Payasa.jpg/960px-Chitranna_and_Payasa.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Radhikapavan",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chitranna_and_Payasa.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3782960216,
+  "kind": "food",
+  "title": "Curd Rice",
+  "hindi": "दही चावल",
+  "meal": "main",
+  "minutes": 15,
+  "overview": "Cool tempered curd rice with pickle",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Curd_Rice.jpg/960px-Curd_Rice.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Sudharshan Shanmugasundaram",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3838639906,
+  "kind": "food",
+  "title": "Puliyogare",
+  "hindi": "इमली चावल",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Tamarind rice with peanuts and sesame",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Pulihara.JPG/960px-Pulihara.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "KALX999",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Pulihara.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3876364118,
+  "kind": "food",
+  "title": "Sambar Rice",
+  "hindi": "सांबर चावल",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Tamarind-lentil sambar with rice and poriyal",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Pumpkin_sambar.JPG/960px-Pumpkin_sambar.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Kalaiselvi Murugesan",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Pumpkin_sambar.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3236884340,
+  "kind": "food",
+  "title": "Rasam Rice",
+  "hindi": "रसम चावल",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Peppery tomato rasam with rice and papad",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3205896534,
+  "kind": "food",
+  "title": "Avial",
+  "hindi": "अवियल",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Kerala mixed veggies in coconut-curd paste",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ayiyal.jpg/960px-Ayiyal.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Samphotography",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Ayiyal.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3233038251,
+  "kind": "food",
+  "title": "Thoran",
+  "hindi": "थोरन",
+  "meal": "main",
+  "minutes": 25,
+  "overview": "Stir-fried beans or cabbage with grated coconut",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Travancore_Cheera_Thoran.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "Xufanc",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Travancore_Cheera_Thoran.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3221316111,
+  "kind": "food",
+  "title": "Kootu",
+  "hindi": "कूटु",
+  "meal": "main",
+  "minutes": 35,
+  "overview": "Lentils and veggies with coconut, Tamil style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Cabbage_kootu.jpg/960px-Cabbage_kootu.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Sanjay Acharya",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3088986921,
+  "kind": "food",
+  "title": "Olan",
+  "hindi": "ओलन",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Ash gourd and cowpeas in light coconut milk",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Olan.jpg/960px-Olan.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Kavya Manohar",
+   "license": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Olan.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3245693013,
+  "kind": "food",
+  "title": "Erissery",
+  "hindi": "एरिसेरी",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Pumpkin and red beans with roasted coconut",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg/960px-%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Varghesepunnamada",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3179182831,
+  "kind": "food",
+  "title": "Litti Chokha",
+  "hindi": "लिट्टी चोखा",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Sattu-stuffed baked balls with smoky aloo-baingan chokha",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3154568787,
+  "kind": "food",
+  "title": "Dal Baati Churma",
+  "hindi": "दाल बाटी चूरमा",
+  "meal": "main",
+  "minutes": 75,
+  "overview": "Rajasthani baked wheat balls, panchmel dal and sweet churma",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/DalBati.jpg/960px-DalBati.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Niranjan.gohane",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:DalBati.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3288279047,
+  "kind": "food",
+  "title": "Gatte ki Sabzi",
+  "hindi": "गट्टे की सब्ज़ी",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Gram-flour dumplings in spiced curd gravy",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3753605657,
+  "kind": "food",
+  "title": "Ker Sangri",
+  "hindi": "केर सांगरी",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Tangy Rajasthani desert beans and berries",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3434719599,
+  "kind": "food",
+  "title": "Undhiyu & Puri",
+  "hindi": "ऊंधियू",
+  "meal": "main",
+  "minutes": 75,
+  "overview": "Gujarati winter mixed-veg with methi muthiya",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Undhiyu.jpg/960px-Undhiyu.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Jatan1992",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Undhiyu.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3014372257,
+  "kind": "food",
+  "title": "Dal Dhokli",
+  "hindi": "दाल ढोकली",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Sweet-tangy Gujarati dal with wheat dumplings",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Dal_Dhokali.jpg/960px-Dal_Dhokali.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "KartikMistry",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Dal_Dhokali.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3309630318,
+  "kind": "food",
+  "title": "Bharli Vangi",
+  "hindi": "भरली वांगी",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Maharashtrian stuffed baby brinjals",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3896362102,
+  "kind": "food",
+  "title": "Pithla Bhakri",
+  "hindi": "पिठलं भाकरी",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Quick besan curry with jowar bhakri",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_%288%29.jpg/960px-Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_%288%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Dr. Raju Kasambe",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_(8).jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3145785597,
+  "kind": "food",
+  "title": "Zunka Bhakar",
+  "hindi": "झुणका भाकर",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Dry spiced besan with onions and bhakri",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3573831757,
+  "kind": "food",
+  "title": "Masale Bhat",
+  "hindi": "मसाले भात",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Maharashtrian goda-masala rice with tondli",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3822512895,
+  "kind": "food",
+  "title": "Aloo Posto",
+  "hindi": "आलू पोस्तो",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Bengali potatoes in poppy-seed paste",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3352181947,
+  "kind": "food",
+  "title": "Shukto",
+  "hindi": "शुक्तो",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Gently bitter Bengali mixed-veg in milk",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Sukkto.jpg/960px-Sukkto.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Soumya Das Gupta photo",
+   "license": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Sukkto.jpg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3370152778,
+  "kind": "food",
+  "title": "Cholar Dal & Luchi",
+  "hindi": "छोलार दाल",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Sweet Bengali chana dal with coconut and puffy luchi",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3863158847,
+  "kind": "food",
+  "title": "Bagara Baingan",
+  "hindi": "बघारे बैंगन",
+  "meal": "main",
+  "minutes": 45,
+  "overview": "Hyderabadi brinjals in peanut-sesame gravy",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Baghare_Baingan.JPG/960px-Baghare_Baingan.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "imageCredit": {
+   "author": "Miansari66",
+   "license": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Baghare_Baingan.JPG"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3415872842,
+  "kind": "food",
+  "title": "Mirchi ka Salan",
+  "hindi": "मिर्ची का सालन",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Green chillies in tangy peanut-sesame gravy",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3119166825,
+  "kind": "food",
+  "title": "Veg Thali",
+  "hindi": "वेज थाली",
+  "meal": "main",
+  "minutes": 60,
+  "overview": "Dal, two sabzis, rice, roti, raita and a sweet",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vegetarian_Curry.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "imageCredit": {
+   "author": "GracinhaMarco Abundo",
+   "license": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Vegetarian_Curry.jpeg"
+  },
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3877730835,
+  "kind": "food",
+  "title": "Lauki Chana Dal",
+  "hindi": "लौकी चना दाल",
+  "meal": "main",
+  "minutes": 35,
+  "overview": "Bottle gourd with chana dal, light and homely",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3104557867,
+  "kind": "food",
+  "title": "Mix Veg & Roti",
+  "hindi": "मिक्स वेज",
+  "meal": "main",
+  "minutes": 30,
+  "overview": "Seasonal mixed vegetables in onion-tomato masala",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3476906985,
+  "kind": "food",
+  "title": "Khatta Meetha Kaddu",
+  "hindi": "खट्टा मीठा कद्दू",
+  "meal": "main",
+  "minutes": 25,
+  "overview": "Sweet-sour pumpkin sabzi with puri",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3512268389,
+  "kind": "food",
+  "title": "Stuffed Capsicum",
+  "hindi": "भरवां शिमला मिर्च",
+  "meal": "main",
+  "minutes": 40,
+  "overview": "Capsicums filled with spiced potato",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ },
+ {
+  "id": 3090029152,
+  "kind": "food",
+  "title": "Paneer Bhurji & Roti",
+  "hindi": "पनीर भुर्जी",
+  "meal": "main",
+  "minutes": 20,
+  "overview": "Spiced scrambled paneer with onion and capsicum",
+  "image": null,
+  "imageCredit": null,
+  "genres": [],
+  "cast": []
+ }
+]

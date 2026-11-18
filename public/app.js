@@ -87,7 +87,12 @@ function onEnter(input, fn) {
 
 const runtime = (m) => (m ? `${Math.floor(m / 60)}h ${m % 60}m`.replace(/^0h /, '') : null);
 const seasons = (n) => (n ? `${n} season${n === 1 ? '' : 's'}` : null);
-const subline = (m) => [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert].filter(Boolean).join(' · ');
+const subline = (m) =>
+  (m.kind === 'food' ? [m.hindi, m.minutes && `${m.minutes} min`] : [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert])
+    .filter(Boolean).join(' · ');
+// Card artwork: TMDB poster for movies and shows, Wikimedia Commons photo for dishes.
+const art = (m, size) => (m.kind === 'food' ? m.image : m.poster ? `${IMG}${size}${m.poster}` : null);
+const recipeUrl = (m) => `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.title} recipe`)}`;
 const netflixUrl = (m) => `https://www.netflix.com/search?q=${encodeURIComponent(m.title)}`;
 const youtubeUrl = (m) =>
   m.trailer ? `https://www.youtube.com/watch?v=${m.trailer}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.title} ${m.year || ''} trailer`)}`;
@@ -236,6 +241,7 @@ function details(m) {
       );
     box.append(h('img', { src: `https://i.ytimg.com/vi/${m.trailer}/hqdefault.jpg`, alt: '' }), play);
   }
+  if (m.kind === 'food') return dishDetails(m);
   sheet(
     m.trailer ? box : null,
     h('h2', null, m.title),
@@ -249,6 +255,20 @@ function details(m) {
       h('a', { class: 'btn glass', href: youtubeUrl(m), target: '_blank', rel: 'noopener' }, 'YouTube'),
       m.imdbId ? h('a', { class: 'btn glass', href: `https://www.imdb.com/title/${m.imdbId}/`, target: '_blank', rel: 'noopener' }, 'IMDb') : null
     )
+  );
+}
+
+function dishDetails(m) {
+  const c = m.imageCredit;
+  sheet(
+    m.image ? h('div', { class: 'trailer' }, h('img', { src: m.image, alt: '' })) : null,
+    h('h2', null, m.title),
+    h('div', { class: 'meta' }, h('span', null, subline(m))),
+    m.overview ? h('p', { class: 'overview' }, m.overview) : null,
+    h('div', { class: 'links single' },
+      h('a', { class: 'btn primary', href: recipeUrl(m), target: '_blank', rel: 'noopener' }, icon('play'), 'Recipe on YouTube')
+    ),
+    c ? h('p', { class: 'fine' }, 'Photo: ', h('a', { href: c.url, target: '_blank', rel: 'noopener' }, c.author), ` · ${c.license} · Wikimedia Commons`) : null
   );
 }
 
@@ -298,10 +318,10 @@ function joinSheet() {
 async function homePage() {
   const meta = await api('/api/catalog').catch(() => null);
   const ready = meta?.total > 0;
-  const f = { kind: 'movie', cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
+  const f = { kind: 'movie', meal: 'main', cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
   const isMovies = () => f.kind === 'movie';
   const toFilters = () => ({
-    kind: f.kind, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
+    kind: f.kind, meal: f.meal, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
     maxRuntime: isMovies() ? f.runtime.v : 0, kidsSafe: f.kidsSafe,
   });
   const extraCount = () => [f.rating.v, f.year.label !== 'Any', isMovies() && f.runtime.v, f.kidsSafe].filter(Boolean).length;
@@ -346,10 +366,39 @@ async function homePage() {
     );
   drawGenres();
 
-  const kinds = h('div', { class: 'segment', role: 'tablist' });
+  const HEADLINES = {
+    movie: ['Movie night,', 'decided together.', 'Everyone swipes on what’s streaming on Netflix India. When you all say yes, it’s a match.'],
+    tv: ['Binge night,', 'decided together.', 'Everyone swipes on shows streaming on Netflix India. When you all say yes, it’s a match.'],
+    food: ['What’s cooking?', 'Decided together.', 'Everyone swipes on home-style veg dishes. When most of you say yes, it’s a match.'],
+  };
+  const headline = h('h1', { class: 'headline' });
+  const lead = h('p', { class: 'lead' });
+  const moreBtn = h('button', { class: 'link', onclick: () => moreSheet() }, icon('sliders'), 'More filters', moreBadge);
+
+  const meals = h('div', { class: 'segment' });
+  const drawMeals = () =>
+    meals.replaceChildren(
+      ...[['breakfast', 'Breakfast'], ['main', 'Lunch / Dinner']].map(([k, label]) =>
+        h('button', { type: 'button', class: f.meal === k ? 'on' : '', onclick: () => { if (f.meal !== k) { haptic(); f.meal = k; drawMeals(); changed(); } } }, label)
+      )
+    );
+  drawMeals();
+
+  // Movies and shows filter by cinema and genre; food only by meal.
+  const movieOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Cinema'), tiles, h('div', { class: 'label' }, 'Genre'), genreBox);
+  const foodOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Meal'), meals);
+  function drawMode() {
+    const [a, b, c] = HEADLINES[f.kind];
+    headline.replaceChildren(a, h('br'), h('span', null, b));
+    lead.textContent = c;
+    movieOpts.hidden = moreBtn.hidden = f.kind === 'food';
+    foodOpts.hidden = f.kind !== 'food';
+  }
+
+  const kinds = h('div', { class: 'segment three', role: 'tablist' });
   const drawKinds = () =>
     kinds.replaceChildren(
-      ...[['movie', 'Movies'], ['tv', 'Shows']].map(([k, label]) =>
+      ...[['movie', 'Movies'], ['tv', 'Shows'], ['food', 'Food']].map(([k, label]) =>
         h('button', { type: 'button', role: 'tab', 'aria-selected': String(f.kind === k), class: f.kind === k ? 'on' : '', onclick: () => {
           if (f.kind === k) return;
           haptic();
@@ -357,11 +406,13 @@ async function homePage() {
           f.genres = [];
           drawKinds();
           drawGenres();
+          drawMode();
           changed();
         } }, label)
       )
     );
   drawKinds();
+  drawMode();
 
   function moreSheet() {
     const group = (label, row) => h('div', { class: 'group' }, h('div', { class: 'label' }, label), row);
@@ -374,7 +425,7 @@ async function homePage() {
       h('button', { class: 'btn primary block', onclick: () => close() }, 'Done'),
       h('p', { class: 'fine' },
         meta?.updatedAt ? `Netflix India list updated ${new Date(meta.updatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}. ` : '',
-        'Movie and show data from TMDB, ratings from IMDb. This product uses the TMDB API but is not endorsed or certified by TMDB. Not affiliated with Netflix.'
+        'Movie and show data from TMDB, ratings from IMDb. Dish photos from Wikimedia Commons; each dish shows its credit. This product uses the TMDB API but is not endorsed or certified by TMDB. Not affiliated with Netflix.'
       )
     );
   }
@@ -399,17 +450,15 @@ async function homePage() {
   $app.replaceChildren(
     posterWall(meta?.posters),
     h('div', { class: 'home' },
-      h('div', { class: 'brand' }, h('span', { class: 'logo' }, icon('ticket')), 'FlickSwipe'),
-      h('h1', { class: 'headline' }, 'Movie night,', h('br'), h('span', null, 'decided together.')),
-      h('p', { class: 'lead' }, 'Everyone swipes on what’s streaming on Netflix India. When you all say yes, it’s a match.'),
+      h('div', { class: 'brand' }, h('span', { class: 'logo' }, icon('heart')), 'SwipeTogether'),
+      headline,
+      lead,
       name,
       ready ? kinds : null,
-      ready ? h('div', { class: 'label' }, 'Cinema') : null,
-      ready ? tiles : null,
-      ready ? h('div', { class: 'label' }, 'Genre') : null,
-      ready ? genreBox : null,
+      ready ? movieOpts : null,
+      ready ? foodOpts : null,
       h('div', { class: 'row-links' },
-        ready ? h('button', { class: 'link', onclick: moreSheet }, icon('sliders'), 'More filters', moreBadge) : h('span'),
+        ready ? moreBtn : h('span'),
         h('button', { class: 'link', onclick: joinSheet }, 'Join with a code')
       ),
       h('div', { class: 'cta-wrap' }, start)
@@ -463,7 +512,7 @@ async function joinPage(code, info) {
     h('div', { class: 'center fade-in' },
       h('div', { class: 'avatars big' }, info.members.map((m, i) => avatar({ ...m, online: true }, i))),
       h('h1', null, `Join ${info.host}'s movie night`),
-      h('p', null, 'Swipe right on what you’d watch on Netflix India. When everyone agrees, it’s a match.'),
+      h('p', null, info.kind === 'food' ? 'Swipe right on what you’d like to eat. When most of you agree, it’s a match.' : 'Swipe right on what you’d watch on Netflix India. When everyone agrees, it’s a match.'),
       name,
       btn
     )
@@ -504,11 +553,11 @@ function swipePage(code, token, info) {
 
   let ambIdx = 0;
   let ambPoster;
-  function setAmbient(poster) {
-    if (poster === ambPoster) return;
-    ambPoster = poster;
+  function setAmbient(url) {
+    if (url === ambPoster) return;
+    ambPoster = url;
     ambIdx ^= 1;
-    amb[ambIdx].style.backgroundImage = poster ? `url(${IMG}w342${poster})` : '';
+    amb[ambIdx].style.backgroundImage = url ? `url("${url}")` : '';
     amb[ambIdx].classList.add('on');
     amb[ambIdx ^ 1].classList.remove('on');
   }
@@ -540,7 +589,9 @@ function swipePage(code, token, info) {
 
   function cardEl(m) {
     const el = h('div', { class: 'card' },
-      m.poster ? h('img', { class: 'poster', src: `${IMG}w780${m.poster}`, alt: '', draggable: 'false' }) : h('div', { class: 'noposter' }, m.title),
+      art(m, 'w780') ? h('img', { class: 'poster', src: art(m, 'w780'), alt: '', draggable: 'false' })
+        : m.kind === 'food' ? h('div', { class: 'noposter dish' }, h('span', { class: 'emoji' }, m.meal === 'breakfast' ? '🫓' : '🍛'))
+        : h('div', { class: 'noposter' }, m.title),
       h('div', { class: 'tint like' }),
       h('div', { class: 'tint nope' }),
       h('div', { class: 'stamp like' }, icon('heart')),
@@ -572,7 +623,7 @@ function swipePage(code, token, info) {
       el.classList.toggle('next', i === 1);
       if (i === 0) stack.append(el);
     });
-    setAmbient(want[0]?.poster);
+    setAmbient(want[0] && art(want[0], 'w342'));
     if (enterFromLeft && want[0]) {
       const el = els.get(want[0].id);
       el.style.transition = 'none';
@@ -707,7 +758,7 @@ function swipePage(code, token, info) {
       const cards = await api(`${path}/cards?from=${from}&n=10`, { token });
       if (from === S.pos + S.queue.length) {
         S.queue.push(...cards);
-        cards.forEach((c) => c.poster && (new Image().src = `${IMG}w780${c.poster}`));
+        cards.forEach((c) => art(c, 'w780') && (new Image().src = art(c, 'w780')));
       }
     } catch (e) {
       toast(e.message);
@@ -757,14 +808,16 @@ function swipePage(code, token, info) {
       setTimeout(nextMatch, 250);
     };
     const ov = h('div', { class: 'overlay' },
-      m.poster ? h('div', { class: 'overlay-bg', style: `background-image:url(${IMG}w342${m.poster})` }) : null,
+      art(m, 'w342') ? h('div', { class: 'overlay-bg', style: `background-image:url("${art(m, 'w342')}")` }) : null,
       h('div', { class: 'match' },
         h('p', { class: 'kicker' }, 'It’s a match'),
-        m.poster ? h('img', { src: `${IMG}w500${m.poster}`, alt: '' }) : null,
+        art(m, 'w500') ? h('img', { src: art(m, 'w500'), alt: '' }) : null,
         h('h2', null, m.title),
-        h('p', null, 'Everyone swiped right.'),
-        h('a', { class: 'btn primary', href: netflixUrl(m), target: '_blank', rel: 'noopener' }, 'Watch on Netflix'),
-        h('button', { class: 'btn glass', onclick: () => { done(); details(m); } }, icon('play'), 'Trailer & details'),
+        h('p', null, m.kind === 'food' ? 'Most of you said yes.' : 'Everyone swiped right.'),
+        m.kind === 'food'
+          ? h('a', { class: 'btn primary', href: recipeUrl(m), target: '_blank', rel: 'noopener' }, 'See recipe')
+          : h('a', { class: 'btn primary', href: netflixUrl(m), target: '_blank', rel: 'noopener' }, 'Watch on Netflix'),
+        h('button', { class: 'btn glass', onclick: () => { done(); details(m); } }, m.kind === 'food' ? 'Details' : [icon('play'), 'Trailer & details']),
         h('button', { class: 'btn text', onclick: done }, 'Keep swiping')
       )
     );
@@ -781,7 +834,7 @@ function swipePage(code, token, info) {
     list.replaceChildren(
       ...items.map((m) =>
         h('button', { class: 'item', onclick: () => { close(); details(m); } },
-          m.poster ? h('img', { src: `${IMG}w185${m.poster}`, alt: '' }) : h('span', { class: 'ph' }),
+          art(m, 'w185') ? h('img', { src: art(m, 'w185'), alt: '' }) : h('span', { class: 'ph' }),
           h('div', { class: 'grow' }, h('div', { class: 't' }, m.title), h('div', { class: 's' }, subline(m))),
           rating(m)
         )
@@ -811,10 +864,10 @@ function swipePage(code, token, info) {
 
   async function invite() {
     const url = `${location.origin}/s/${code}`;
-    const text = `Help pick tonight’s movie! Join with code ${code}`;
+    const text = `Help us decide! Join with code ${code}`;
     if (navigator.share) {
       try {
-        return await navigator.share({ title: 'FlickSwipe', text, url });
+        return await navigator.share({ title: 'SwipeTogether', text, url });
       } catch (e) {
         if (e.name === 'AbortError') return;
       }
