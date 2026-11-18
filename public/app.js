@@ -3,6 +3,9 @@ const IMG = 'https://image.tmdb.org/t/p/';
 const isIOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.addEventListener('touchstart', () => {}, { passive: true }); // lets :active styles work on iOS
+// No page zoom: iOS Safari ignores user-scalable=no, so block pinch gestures directly.
+for (const type of ['gesturestart', 'gesturechange', 'gestureend']) document.addEventListener(type, (e) => e.preventDefault());
+document.addEventListener('touchmove', (e) => e.touches.length > 1 && e.preventDefault(), { passive: false });
 
 // ---------- tiny helpers ----------
 
@@ -570,7 +573,7 @@ function swipePage(code, token, info) {
       x0 = e.clientX;
       y0 = e.clientY;
       dx = dy = armed = 0;
-      el.setPointerCapture(e.pointerId);
+      try { el.setPointerCapture(e.pointerId); } catch {} // the pointer may already be gone
       el.style.transition = 'none';
     });
     el.addEventListener('pointermove', (e) => {
