@@ -1,3 +1,7 @@
 node_modules/
 .env
 data/
+dish-images/
+.DS_Store
+public/dish-images
+public/verify.html

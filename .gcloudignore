@@ -6,3 +6,7 @@
 data/
 node_modules/
 test/
+dish-images/
+.DS_Store
+public/dish-images
+public/verify.html

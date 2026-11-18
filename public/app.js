@@ -50,7 +50,7 @@ const recent = {
   add(code) { ls.set('fs:recent', JSON.stringify([code, ...recent.list().filter((c) => c !== code)].slice(0, 5))); },
   drop(code) { ls.set('fs:recent', JSON.stringify(recent.list().filter((c) => c !== code))); },
 };
-const KINDS = { movie: ['🎬', 'Movies'], tv: ['📺', 'Shows'], food: ['🍽️', 'Food'] };
+const KINDS = { movie: ['🎬', 'Movies'], tv: ['📺', 'Shows'], book: ['📚', 'Books'], food: ['🍽️', 'Food'] };
 
 async function api(path, { method = 'GET', body, token } = {}) {
   const headers = {};
@@ -98,15 +98,21 @@ function onEnter(input, fn) {
 const runtime = (m) => (m ? `${Math.floor(m / 60)}h ${m % 60}m`.replace(/^0h /, '') : null);
 const seasons = (n) => (n ? `${n} season${n === 1 ? '' : 's'}` : null);
 const subline = (m) =>
-  (m.kind === 'food' ? [m.hindi] : [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert])
+  (m.kind === 'food' ? [m.hindi]
+    : m.kind === 'book' ? [m.year, m.pages && `${m.pages} pages`]
+    : [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert])
     .filter(Boolean).join(' · ');
+const amazonUrl = (m) => `https://www.amazon.in/s?k=${encodeURIComponent(`${m.title} ${m.author}`)}&i=stripbooks`;
 // Card artwork: TMDB poster for movies and shows, Wikimedia Commons photo for dishes.
-const art = (m, size) => (m.kind === 'food' ? m.image : m.poster ? `${IMG}${size}${m.poster}` : null);
+const art = (m, size) => m.image || (m.poster ? `${IMG}${size}${m.poster}` : null);
 const recipeUrl = (m) => `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.title} recipe`)}`;
 const netflixUrl = (m) => `https://www.netflix.com/search?q=${encodeURIComponent(m.title)}`;
 const youtubeUrl = (m) =>
   m.trailer ? `https://www.youtube.com/watch?v=${m.trailer}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.title} ${m.year || ''} trailer`)}`;
-const rating = (m) => (m.imdbRating ? h('span', { class: 'imdb' }, 'IMDb', h('b', null, m.imdbRating.toFixed(1))) : null);
+const rating = (m) =>
+  m.kind === 'book'
+    ? m.rating ? h('span', { class: 'stars' }, '★', h('b', null, m.rating.toFixed(1))) : null
+    : m.imdbRating ? h('span', { class: 'imdb' }, 'IMDb', h('b', null, m.imdbRating.toFixed(1))) : null;
 const COLORS = ['#ffc857', '#3ddc97', '#7cc4ff', '#ff8fa3', '#c9a7ff', '#ffa45c', '#8be0d4', '#f5e663', '#b2e672', '#ff9de2'];
 const avatar = (m, i, cls = '') =>
   h('span', { class: `av ${cls} ${m.online ? '' : 'off'}`, style: `background:${COLORS[i % COLORS.length]}`, title: m.name }, m.name[0].toUpperCase());
@@ -252,6 +258,7 @@ function details(m) {
     box.append(h('img', { src: `https://i.ytimg.com/vi/${m.trailer}/hqdefault.jpg`, alt: '' }), play);
   }
   if (m.kind === 'food') return dishDetails(m);
+  if (m.kind === 'book') return bookDetails(m);
   sheet(
     m.trailer ? box : null,
     h('h2', null, m.title),
@@ -278,7 +285,20 @@ function dishDetails(m) {
     h('div', { class: 'links single' },
       h('a', { class: 'btn primary', href: recipeUrl(m), target: '_blank', rel: 'noopener' }, icon('play'), 'Recipe on YouTube')
     ),
-    c ? h('p', { class: 'fine' }, 'Photo: ', h('a', { href: c.url, target: '_blank', rel: 'noopener' }, c.author), ` · ${c.license} · Wikimedia Commons`) : null
+    c ? h('p', { class: 'fine' }, 'Photo: ', h('a', { href: c.url, target: '_blank', rel: 'noopener' }, c.author), ` · ${c.license} · ${c.source || 'Wikimedia Commons'}`) : null
+  );
+}
+
+function bookDetails(m) {
+  sheet(
+    h('div', { class: 'book-head' },
+      h('img', { src: m.image, alt: '' }),
+      h('div', null, h('h2', null, m.title), h('p', { class: 'by' }, m.author), h('div', { class: 'meta' }, rating(m), h('span', null, subline(m))))
+    ),
+    m.genres.length ? h('div', { class: 'tags' }, m.genres.map((g) => h('span', null, g)), m.nytRank ? h('span', { class: 'nyt' }, `NYT bestseller #${m.nytRank}`) : null) : null,
+    m.overview ? h('p', { class: 'overview' }, m.overview) : null,
+    h('div', { class: 'links single' }, h('a', { class: 'btn primary', href: amazonUrl(m), target: '_blank', rel: 'noopener' }, 'Buy on Amazon.in')),
+    h('p', { class: 'fine' }, m.nytRank ? 'Bestseller data from The New York Times. ' : '', 'Cover, ratings and description from Open Library.')
   );
 }
 
@@ -356,10 +376,10 @@ function resumeList() {
 async function homePage() {
   const meta = await api('/api/catalog').catch(() => null);
   const ready = meta?.total > 0;
-  const f = { kind: 'movie', meal: 'main', cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
+  const f = { kind: 'movie', meal: 'main', origins: [], cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
   const isMovies = () => f.kind === 'movie';
   const toFilters = () => ({
-    kind: f.kind, meal: f.meal, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
+    kind: f.kind, meal: f.meal, origins: f.origins, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
     maxRuntime: isMovies() ? f.runtime.v : 0, kidsSafe: f.kidsSafe,
   });
   const extraCount = () => [f.rating.v, f.year.label !== 'Any', isMovies() && f.runtime.v, f.kidsSafe].filter(Boolean).length;
@@ -376,7 +396,7 @@ async function homePage() {
     moreBadge.hidden = !n;
     clearTimeout(countTimer);
     countTimer = setTimeout(async () => {
-      if (!ready && f.kind !== 'food') {
+      if (!ready && ['movie', 'tv'].includes(f.kind)) {
         start.disabled = true;
         start.replaceChildren('Preparing movie list…');
         return;
@@ -405,13 +425,14 @@ async function homePage() {
   const genreBox = h('div');
   const drawGenres = () =>
     genreBox.replaceChildren(
-      chips((meta?.genres?.[f.kind] || []).map((g) => ({ label: g, v: g })), (o) => f.genres.includes(o.v), (o) => toggleIn(f.genres, o.v), changed, 'chips scroller')
+      chips(((f.kind === 'book' ? meta?.bookGenres : meta?.genres?.[f.kind]) || []).map((g) => ({ label: g, v: g })), (o) => f.genres.includes(o.v), (o) => toggleIn(f.genres, o.v), changed, 'chips scroller')
     );
   drawGenres();
 
   const HEADLINES = {
     movie: ['Movie night,', 'decided together.', 'Everyone swipes on what’s streaming on Netflix India. When you all say yes, it’s a match.'],
     tv: ['Binge night,', 'decided together.', 'Everyone swipes on shows streaming on Netflix India. When you all say yes, it’s a match.'],
+    book: ['Book club,', 'decided together.', 'Everyone swipes on bestselling fiction. When you all say yes, it’s a match.'],
     food: ['What’s cooking?', 'Decided together.', 'Everyone swipes on home-style veg dishes. When most of you say yes, it’s a match.'],
   };
   const headline = h('h1', { class: 'headline' });
@@ -427,18 +448,34 @@ async function homePage() {
     );
   drawMeals();
 
-  // Movies and shows filter by cinema and genre; food only by meal.
-  const movieOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Cinema'), tiles, h('div', { class: 'label' }, 'Genre'), genreBox);
+  const ORIGINS = [['indian', 'Indian', 'Bhagat, Amish, Roy, Narayan…'], ['international', 'International', 'Hoover, Coelho, Christie…']];
+  const bookTiles = h('div', { class: 'tiles' });
+  const drawBookTiles = () =>
+    bookTiles.replaceChildren(
+      ...ORIGINS.map(([id, name, sub]) =>
+        h('button', { type: 'button', class: `tile ${f.origins.includes(id) ? 'on' : ''}`, onclick: () => { haptic(); toggleIn(f.origins, id); drawBookTiles(); changed(); } },
+          h('span', { class: 'tick' }, icon('check')), h('span', { class: 'tile-name' }, name), h('span', { class: 'tile-sub' }, sub)
+        )
+      )
+    );
+  drawBookTiles();
+
+  // Movies and shows filter by cinema, books by author origin, both by genre; food only by meal.
+  const movieOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Cinema'), tiles);
+  const bookOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Authors'), bookTiles);
+  const genreOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Genre'), genreBox);
   const foodOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Meal'), meals);
   function drawMode() {
     const [a, b, c] = HEADLINES[f.kind];
     headline.replaceChildren(a, h('br'), h('span', null, b));
     lead.textContent = c;
-    movieOpts.hidden = moreBtn.hidden = f.kind === 'food';
+    movieOpts.hidden = moreBtn.hidden = !['movie', 'tv'].includes(f.kind);
+    bookOpts.hidden = f.kind !== 'book';
+    genreOpts.hidden = f.kind === 'food';
     foodOpts.hidden = f.kind !== 'food';
   }
 
-  const kinds = h('div', { class: 'segment three', role: 'tablist' });
+  const kinds = h('div', { class: 'segment modes', role: 'tablist' });
   const drawKinds = () =>
     kinds.replaceChildren(
       ...Object.entries(KINDS).map(([k, [, label]]) =>
@@ -468,7 +505,7 @@ async function homePage() {
       h('button', { class: 'btn primary block', onclick: () => close() }, 'Done'),
       h('p', { class: 'fine' },
         meta?.updatedAt ? `Netflix India list updated ${new Date(meta.updatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}. ` : '',
-        'Movie and show data from TMDB, ratings from IMDb. Dish photos from Wikimedia Commons; each dish shows its credit. This product uses the TMDB API but is not endorsed or certified by TMDB. Not affiliated with Netflix.'
+        'Movie and show data from TMDB, ratings from IMDb. Book covers from Open Library, descriptions from Google Books, bestseller lists from The New York Times. Dish photos from Wikimedia Commons and Flickr (via Openverse); each dish shows its credit. This product uses the TMDB API but is not endorsed or certified by TMDB. Not affiliated with Netflix.'
       )
     );
   }
@@ -500,6 +537,8 @@ async function homePage() {
       name,
       kinds,
       ready ? movieOpts : null,
+      bookOpts,
+      genreOpts,
       foodOpts,
       h('div', { class: 'row-links' },
         ready ? moreBtn : h('span'),
@@ -556,7 +595,7 @@ async function joinPage(code, info) {
     h('div', { class: 'center fade-in' },
       h('div', { class: 'avatars big' }, info.members.map((m, i) => avatar({ ...m, online: true }, i))),
       h('h1', null, `Join ${info.host}'s movie night`),
-      h('p', null, info.kind === 'food' ? 'Swipe right on what you’d like to eat. When most of you agree, it’s a match.' : 'Swipe right on what you’d watch on Netflix India. When everyone agrees, it’s a match.'),
+      h('p', null, info.kind === 'food' ? 'Swipe right on what you’d like to eat. When most of you agree, it’s a match.' : info.kind === 'book' ? 'Swipe right on books you’d read. When everyone agrees, it’s a match.' : 'Swipe right on what you’d watch on Netflix India. When everyone agrees, it’s a match.'),
       name,
       btn
     )
@@ -642,9 +681,10 @@ function swipePage(code, token, info) {
       h('div', { class: 'tint nope' }),
       h('div', { class: 'stamp like' }, icon('heart')),
       h('div', { class: 'stamp nope' }, icon('x')),
-      m.trailer ? h('div', { class: 'tag' }, icon('play'), 'Trailer') : null,
+      m.trailer ? h('div', { class: 'tag' }, icon('play'), 'Trailer') : m.nytRank ? h('div', { class: 'tag' }, `NYT #${m.nytRank}`) : null,
       h('div', { class: 'shade' },
         h('div', { class: 'title' }, m.title),
+        m.kind === 'book' ? h('div', { class: 'author' }, m.author) : null,
         h('div', { class: 'meta' }, rating(m), h('span', null, m.gone ? 'Left Netflix India since this session started' : subline(m))),
         m.genres.length ? h('div', { class: 'genres' }, m.genres.slice(0, 3).join(' · ')) : null,
         m.cast.length ? h('div', { class: 'cast' }, m.cast.slice(0, 3).join(', ')) : null
@@ -873,8 +913,10 @@ function swipePage(code, token, info) {
         h('p', null, m.kind === 'food' ? 'Most of you said yes.' : 'Everyone swiped right.'),
         m.kind === 'food'
           ? h('a', { class: 'btn primary', href: recipeUrl(m), target: '_blank', rel: 'noopener' }, 'See recipe')
-          : h('a', { class: 'btn primary', href: netflixUrl(m), target: '_blank', rel: 'noopener' }, 'Watch on Netflix'),
-        h('button', { class: 'btn glass', onclick: () => { done(); details(m); } }, m.kind === 'food' ? 'Details' : [icon('play'), 'Trailer & details']),
+          : m.kind === 'book'
+            ? h('a', { class: 'btn primary', href: amazonUrl(m), target: '_blank', rel: 'noopener' }, 'Buy on Amazon.in')
+            : h('a', { class: 'btn primary', href: netflixUrl(m), target: '_blank', rel: 'noopener' }, 'Watch on Netflix'),
+        h('button', { class: 'btn glass', onclick: () => { done(); details(m); } }, ['food', 'book'].includes(m.kind) ? 'Details' : [icon('play'), 'Trailer & details']),
         h('button', { class: 'btn text', onclick: done }, 'Keep swiping')
       )
     );
@@ -892,7 +934,7 @@ function swipePage(code, token, info) {
       ...items.map((m) =>
         h('button', { class: 'item', onclick: () => { close(); details(m); } },
           art(m, 'w185') ? h('img', { src: art(m, 'w185'), alt: '' }) : h('span', { class: 'ph' }),
-          h('div', { class: 'grow' }, h('div', { class: 't' }, m.title), h('div', { class: 's' }, subline(m))),
+          h('div', { class: 'grow' }, h('div', { class: 't' }, m.title), h('div', { class: 's' }, m.kind === 'book' ? [m.author, m.year].filter(Boolean).join(' · ') : subline(m))),
           rating(m)
         )
       )

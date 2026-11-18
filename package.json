@@ -8,7 +8,8 @@
     "start": "node src/server.js",
     "dev": "node --env-file=.env --watch src/server.js",
     "catalog": "node --env-file=.env src/build-catalog.js",
-    "food": "node src/build-food.js"
+    "food": "node src/build-food.js",
+    "books": "node --env-file=.env src/build-books.js"
   },
   "keywords": [],
   "author": "",

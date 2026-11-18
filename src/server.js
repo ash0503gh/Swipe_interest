@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { timingSafeEqual } from 'node:crypto';
 import { loadCatalog, getCatalog, getMovie, filterMovies, sortTopRated, catalogMeta, refreshCatalog } from './catalog.js';
 import { dishesFor, shuffle } from './food.js';
+import { BOOK_LIST, filterBooks, sortBooks, bookGenres } from './books.js';
 import { SessionHub, HttpError, createSession, addMember, findMember, swipe, undo } from './sessions.js';
 
 const PUBLIC_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
@@ -22,7 +23,8 @@ const strings = (v) => (Array.isArray(v) ? v.filter((x) => typeof x === 'string'
 
 function cleanFilters(f = {}) {
   return {
-    kind: ['tv', 'food'].includes(f.kind) ? f.kind : 'movie',
+    kind: ['tv', 'book', 'food'].includes(f.kind) ? f.kind : 'movie',
+    origins: strings(f.origins),
     meal: f.meal === 'breakfast' ? 'breakfast' : 'main',
     cinemas: strings(f.cinemas),
     genres: strings(f.genres),
@@ -59,12 +61,14 @@ const me = (m) => ({ id: m.id, name: m.name, position: m.swipes.length });
 // ---------- catalogue ----------
 
 app.get('/api/catalog', (req, res) => {
-  res.json(catalogMeta());
+  res.json({ ...catalogMeta(), bookGenres: bookGenres() });
 });
 
 app.post('/api/catalog/count', (req, res) => {
   const f = cleanFilters(req.body?.filters);
-  res.json({ count: f.kind === 'food' ? dishesFor(f.meal).length : filterMovies(getCatalog().movies, f).length });
+  const count =
+    f.kind === 'food' ? dishesFor(f.meal).length : f.kind === 'book' ? filterBooks(BOOK_LIST, f).length : filterMovies(getCatalog().movies, f).length;
+  res.json({ count });
 });
 
 // ---------- sessions ----------
@@ -75,6 +79,8 @@ app.post('/api/sessions', async (req, res) => {
   if (filters.kind === 'food') {
     // Dishes: a fresh shuffle per session (same order for everyone); most people agreeing is a match.
     s = createSession({ deck: shuffle(dishesFor(filters.meal)).map((d) => d.id), filters, rule: 'majority' });
+  } else if (filters.kind === 'book') {
+    s = createSession({ deck: sortBooks(filterBooks(BOOK_LIST, filters)).map((b) => b.id), filters });
   } else {
     requireCatalog();
     s = createSession({ deck: sortTopRated(filterMovies(getCatalog().movies, filters)).map((m) => m.id), filters });

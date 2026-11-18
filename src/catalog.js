@@ -6,6 +6,7 @@ import { Readable } from 'node:stream';
 import readline from 'node:readline';
 import { getJSON, putJSON } from './store.js';
 import { FOOD } from './food.js';
+import { BOOK_LIST } from './books.js';
 
 const TMDB = 'https://api.themoviedb.org/3';
 const NETFLIX_PROVIDER_ID = 8;
@@ -14,14 +15,14 @@ const DETAILS_MAX_AGE_MS = 30 * 24 * 3600e3;
 export const MIN_VOTES_FOR_RANK = 1000; // below this, a rating is too noisy to rank by
 
 let catalog = { updatedAt: null, movies: [] };
-let byId = new Map(FOOD.map((m) => [m.id, m]));
+let byId = new Map([...FOOD, ...BOOK_LIST].map((m) => [m.id, m]));
 
 let meta = null; // catalogMeta() result for the current catalogue
 
 function setCatalog(c) {
   catalog = c;
   meta = null;
-  byId = new Map([...c.movies, ...FOOD].map((m) => [m.id, m]));
+  byId = new Map([...c.movies, ...FOOD, ...BOOK_LIST].map((m) => [m.id, m]));
 }
 
 export const getCatalog = () => catalog;

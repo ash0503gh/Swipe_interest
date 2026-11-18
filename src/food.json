@@ -6,12 +6,8 @@
   "hindi": "पोहा",
   "meal": "breakfast",
   "overview": "Flattened rice with onion, peanuts and curry leaves",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Poha%2C_a_snack_made_of_flattened_rice.jpg/960px-Poha%2C_a_snack_made_of_flattened_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "rovingI",
-   "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Poha,_a_snack_made_of_flattened_rice.jpg"
-  },
+  "image": "/dishes/poha.jpg?v=7e50f7c8",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -22,12 +18,8 @@
   "hindi": "उपमा",
   "meal": "breakfast",
   "overview": "Savoury semolina with veggies and mustard seeds",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/A_photo_of_Upma.jpg/960px-A_photo_of_Upma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Thamizhpparithi Maari",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:A_photo_of_Upma.jpg"
-  },
+  "image": "/dishes/upma.jpg?v=73ef1baa",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -38,12 +30,8 @@
   "hindi": "आलू पराठा",
   "meal": "breakfast",
   "overview": "Flatbread stuffed with spiced potato, with curd and butter",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Aloo_Paratha_%2896238%29.jpg/960px-Aloo_Paratha_%2896238%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Gannu03",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Paratha_(96238).jpg"
-  },
+  "image": "/dishes/aloo-paratha.jpg?v=632cdd93",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -54,12 +42,8 @@
   "hindi": "गोभी पराठा",
   "meal": "breakfast",
   "overview": "Flatbread stuffed with spiced grated cauliflower",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Gobhi_Parantha_%28cropped%29.JPG/960px-Gobhi_Parantha_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Ravi Talwar",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Gobhi_Parantha_(cropped).JPG"
-  },
+  "image": "/dishes/gobi-paratha.jpg?v=eb0203eb",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -70,12 +54,8 @@
   "hindi": "पनीर पराठा",
   "meal": "breakfast",
   "overview": "Flatbread stuffed with spiced crumbled paneer",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Keema_Paratha_by_Preeti_Tamilarasan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "imageCredit": {
-   "author": "Preeti Tamilarasan",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Keema_Paratha_by_Preeti_Tamilarasan.jpg"
-  },
+  "image": "/dishes/paneer-paratha.jpg?v=1fea48cb",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -86,12 +66,8 @@
   "hindi": "मूली पराठा",
   "meal": "breakfast",
   "overview": "Flatbread stuffed with grated radish and green chilli",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Mooli_Paratha_Recipe_By_Sonia_Goyal.jpg/960px-Mooli_Paratha_Recipe_By_Sonia_Goyal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Sonia Goyal Jaipur",
-   "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Mooli_Paratha_Recipe_By_Sonia_Goyal.jpg"
-  },
+  "image": "/dishes/mooli-paratha.jpg?v=8a3a20eb",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -102,12 +78,8 @@
   "hindi": "मेथी थेपला",
   "meal": "breakfast",
   "overview": "Gujarati fenugreek flatbread, great with curd and pickle",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Thepla_main.jpg/960px-Thepla_main.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Rocky231293",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Thepla_main.jpg"
-  },
+  "image": "/dishes/methi-thepla.jpg?v=bc6df899",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -118,12 +90,8 @@
   "hindi": "मसाला डोसा",
   "meal": "breakfast",
   "overview": "Crisp rice-lentil crepe with potato filling and chutney",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/960px-Masala_Dosa_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Yakshitha",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Masala_Dosa_2023.jpg"
-  },
+  "image": "/dishes/masala-dosa.jpg?v=670f6cac",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -134,12 +102,8 @@
   "hindi": "इडली सांबर",
   "meal": "breakfast",
   "overview": "Steamed rice cakes with sambar and coconut chutney",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "imageCredit": {
-   "author": "Soumya dey at English Wikipedia",
-   "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Idli_Sambar.JPG"
-  },
+  "image": "/dishes/idli-sambar.jpg?v=786e6922",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -150,12 +114,8 @@
   "hindi": "मेदु वड़ा",
   "meal": "breakfast",
   "overview": "Crispy urad dal doughnuts with sambar and chutney",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Medu_Vada.JPG/960px-Medu_Vada.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Lubnakarim06",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Medu_Vada.JPG"
-  },
+  "image": "/dishes/medu-vada.jpg?v=70c619d7",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -166,12 +126,8 @@
   "hindi": "उत्तपम",
   "meal": "breakfast",
   "overview": "Thick rice pancake topped with onion, tomato and chilli",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Mini_Uttappam.jpg/960px-Mini_Uttappam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Ramesh NG",
-   "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Mini_Uttappam.jpg"
-  },
+  "image": "/dishes/uttapam.jpg?v=aa7f4616",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -182,12 +138,8 @@
   "hindi": "रवा डोसा",
   "meal": "breakfast",
   "overview": "Lacy, crisp instant semolina dosa",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg/960px-Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Vee Satayamas from Bangkok, Thailand",
-   "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Dosa_at_Sri_Ganesha_Restauran,_Bangkok_(44570742744).jpg"
-  },
+  "image": "/dishes/rava-dosa.jpg?v=c9c1ec50",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -198,11 +150,12 @@
   "hindi": "रवा इडली",
   "meal": "breakfast",
   "overview": "Soft semolina idli with cashews and curry leaves",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Rava_Idli_%286005561226%29.jpg/960px-Rava_Idli_%286005561226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/rava-idli.jpg?v=c0f7129c",
   "imageCredit": {
    "author": "Upendra Kanda",
    "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Rava_Idli_(6005561226).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Rava_Idli_(6005561226).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -214,11 +167,12 @@
   "hindi": "नीर डोसा",
   "meal": "breakfast",
   "overview": "Thin, soft Mangalorean rice crepes",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Neer-dosa.jpg/960px-Neer-dosa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/neer-dosa.jpg?v=26a9a096",
   "imageCredit": {
    "author": "Kannadavegrecipes",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Neer-dosa.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Neer-dosa.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -230,11 +184,12 @@
   "hindi": "पेसरट्टू",
   "meal": "breakfast",
   "overview": "Green moong dal dosa with ginger chutney",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Pesarattu_making.jpg/960px-Pesarattu_making.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/pesarattu.jpg?v=f994199f",
   "imageCredit": {
    "author": "Ashok Kumar P S",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Pesarattu_making.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Pesarattu_making.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -246,11 +201,12 @@
   "hindi": "वेन पोंगल",
   "meal": "breakfast",
   "overview": "Peppery rice and moong dal with ghee and cashews",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ven_pongal_with_sambar_and_chutney.jpg/960px-Ven_pongal_with_sambar_and_chutney.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/ven-pongal.jpg?v=8a88746f",
   "imageCredit": {
    "author": "Shafana jasmine",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Ven_pongal_with_sambar_and_chutney.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Ven_pongal_with_sambar_and_chutney.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -262,11 +218,12 @@
   "hindi": "अप्पम",
   "meal": "breakfast",
   "overview": "Lacy fermented rice pancakes with veg stew",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg/960px-Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/appam.jpg?v=e24d4282",
   "imageCredit": {
    "author": "VinPrasad",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -278,11 +235,12 @@
   "hindi": "पुट्टु",
   "meal": "breakfast",
   "overview": "Steamed rice and coconut cylinders with kadala curry",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Puttu_%28Rice_Flour_steamed_cake%29.jpg/960px-Puttu_%28Rice_Flour_steamed_cake%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/puttu.jpg?v=a8e19fd8",
   "imageCredit": {
    "author": "Mathew Jibin",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Puttu_(Rice_Flour_steamed_cake).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Puttu_(Rice_Flour_steamed_cake).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -294,12 +252,8 @@
   "hindi": "इडियप्पम",
   "meal": "breakfast",
   "overview": "Steamed rice-noodle nests with coconut milk or stew",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Idiyappam_with_Egg_Masala_Curry.jpg/960px-Idiyappam_with_Egg_Masala_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Viewfinder18",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg"
-  },
+  "image": "/dishes/idiyappam.jpg?v=43d9450c",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -310,11 +264,12 @@
   "hindi": "अक्की रोटी",
   "meal": "breakfast",
   "overview": "Karnataka rice-flour flatbread with veggies",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg/960px-%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/akki-rotti.jpg?v=37c92b2b",
   "imageCredit": {
    "author": "Lakshmi Vijayadas",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -326,11 +281,12 @@
   "hindi": "बेसन चीला",
   "meal": "breakfast",
   "overview": "Savoury gram-flour pancake with onion and tomato",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Chilla_besan.JPG/960px-Chilla_besan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/besan-chilla.jpg?v=2494a277",
   "imageCredit": {
    "author": "Kamalsahansi",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chilla_besan.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Chilla_besan.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -342,11 +298,12 @@
   "hindi": "साबूदाना खिचड़ी",
   "meal": "breakfast",
   "overview": "Tapioca pearls with peanuts, potato and lemon",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Upwas_Special_Sabudana_Khichadi.jpg/960px-Upwas_Special_Sabudana_Khichadi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sabudana-khichdi.jpg?v=f16d376f",
   "imageCredit": {
    "author": "Sharvarism",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Upwas_Special_Sabudana_Khichadi.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Upwas_Special_Sabudana_Khichadi.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -358,11 +315,12 @@
   "hindi": "साबूदाना वड़ा",
   "meal": "breakfast",
   "overview": "Crisp tapioca and potato patties",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Sabudana_Vada.jpg/960px-Sabudana_Vada.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sabudana-vada.jpg?v=b53f4d17",
   "imageCredit": {
    "author": "Yakshitha",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sabudana_Vada.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sabudana_Vada.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -374,11 +332,12 @@
   "hindi": "पूरी भाजी",
   "meal": "breakfast",
   "overview": "Puffy fried puris with spiced potato bhaji",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Puri_Bhajji_in_Mumbai_Restaurant.JPG/960px-Puri_Bhajji_in_Mumbai_Restaurant.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/puri-bhaji.jpg?v=47f8b7c8",
   "imageCredit": {
    "author": "Ask27",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Puri_Bhajji_in_Mumbai_Restaurant.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Puri_Bhajji_in_Mumbai_Restaurant.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -390,11 +349,12 @@
   "hindi": "कचौरी सब्ज़ी",
   "meal": "breakfast",
   "overview": "Flaky stuffed kachoris with tangy aloo sabzi",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Rajasthani_Raj_Kachori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/kachori-sabzi.jpg?v=0afeadb6",
   "imageCredit": {
    "author": "Jaipuriamanasi",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Raj_Kachori.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Raj_Kachori.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -406,11 +366,12 @@
   "hindi": "बॉम्बे सैंडविच",
   "meal": "breakfast",
   "overview": "Green chutney sandwich with cucumber, tomato and potato",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Bombay_cheese_sandwich.jpg/960px-Bombay_cheese_sandwich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bombay-sandwich.jpg?v=97118321",
   "imageCredit": {
    "author": "Wind Hashira",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bombay_cheese_sandwich.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Bombay_cheese_sandwich.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -422,11 +383,12 @@
   "hindi": "ब्रेड पकोड़ा",
   "meal": "breakfast",
   "overview": "Gram-flour fried bread stuffed with aloo",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bread_Pakora_%28Stuffed_with_Mashed-Spicy_Potatoes%29.JPG/960px-Bread_Pakora_%28Stuffed_with_Mashed-Spicy_Potatoes%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bread-pakora.jpg?v=3e7c382b",
   "imageCredit": {
    "author": "Mdsmds0",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bread_Pakora_(Stuffed_with_Mashed-Spicy_Potatoes).JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Bread_Pakora_(Stuffed_with_Mashed-Spicy_Potatoes).JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -438,11 +400,12 @@
   "hindi": "ढोकला",
   "meal": "breakfast",
   "overview": "Soft steamed gram-flour cake with mustard tadka",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Dhokla_6.jpg/960px-Dhokla_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dhokla.jpg?v=5d024778",
   "imageCredit": {
    "author": "Yakshitha",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Dhokla_6.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Dhokla_6.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -454,11 +417,12 @@
   "hindi": "खमण",
   "meal": "breakfast",
   "overview": "Spongy Gujarati besan khaman with green chutney",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/SPECIAL_SURATI_KHAMAN.jpg/960px-SPECIAL_SURATI_KHAMAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/khaman.jpg?v=47830d16",
   "imageCredit": {
    "author": "Devmanoj",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:SPECIAL_SURATI_KHAMAN.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:SPECIAL_SURATI_KHAMAN.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -470,11 +434,12 @@
   "hindi": "हांडवो",
   "meal": "breakfast",
   "overview": "Baked savoury rice-lentil cake with bottle gourd",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Handavo3.jpg/960px-Handavo3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/handvo.jpg?v=6e0363e1",
   "imageCredit": {
    "author": "Dkgohil",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Handavo3.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Handavo3.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -486,11 +451,12 @@
   "hindi": "फाफड़ा जलेबी",
   "meal": "breakfast",
   "overview": "Crunchy besan strips with hot jalebi, Gujarati Sunday style",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Fafda_Jalebi_at_Surat.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/fafda-jalebi.jpg?v=6f6c9e64",
   "imageCredit": {
    "author": "बृहस्पति",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Fafda_Jalebi_at_Surat.png"
+   "url": "https://commons.wikimedia.org/wiki/File:Fafda_Jalebi_at_Surat.png",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -502,11 +468,12 @@
   "hindi": "मिसळ पाव",
   "meal": "breakfast",
   "overview": "Spicy sprouted moth curry with farsan and pav",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Misal_Pav_from_Maharashtra.JPG/960px-Misal_Pav_from_Maharashtra.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/misal-pav.jpg?v=36522405",
   "imageCredit": {
    "author": "Dheerajk88",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Misal_Pav_from_Maharashtra.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Misal_Pav_from_Maharashtra.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -518,11 +485,12 @@
   "hindi": "थालीपीठ",
   "meal": "breakfast",
   "overview": "Multigrain Maharashtrian flatbread with white butter",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Maharashtrian_Thalipith_-_1.jpg/960px-Maharashtrian_Thalipith_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/thalipeeth.jpg?v=ae36dc49",
   "imageCredit": {
    "author": "Satyajit Dhawale (Satyajit888)",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Maharashtrian_Thalipith_-_1.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Maharashtrian_Thalipith_-_1.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -534,11 +502,12 @@
   "hindi": "कोथिंबीर वड़ी",
   "meal": "breakfast",
   "overview": "Steamed then crisped coriander-besan squares",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kothimbir_vadi.JPG/960px-Kothimbir_vadi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kothimbir-vadi.jpg?v=9edb97b6",
   "imageCredit": {
    "author": "सदस्य:वि.नरसीकर",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kothimbir_vadi.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Kothimbir_vadi.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -550,11 +519,12 @@
   "hindi": "शीरा",
   "meal": "breakfast",
   "overview": "Sweet semolina halwa with ghee and dry fruits",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Sooji_Halwa_%28Semolina_Pudding%29.JPG/960px-Sooji_Halwa_%28Semolina_Pudding%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sheera.jpg?v=f1517463",
   "imageCredit": {
    "author": "Mdsmds0",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sooji_Halwa_(Semolina_Pudding).JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Sooji_Halwa_(Semolina_Pudding).JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -566,11 +536,12 @@
   "hindi": "सेवई उपमा",
   "meal": "breakfast",
   "overview": "Roasted vermicelli upma with peas and carrots",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Traditional_Vermicelli_Upma_%28Semiya_Upma%29_with_Fresh_Vegetables.jpg/960px-Traditional_Vermicelli_Upma_%28Semiya_Upma%29_with_Fresh_Vegetables.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/vegetable-semiya-upma.jpg?v=74daf157",
   "imageCredit": {
    "author": "Srujanabotcha",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Traditional_Vermicelli_Upma_(Semiya_Upma)_with_Fresh_Vegetables.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Traditional_Vermicelli_Upma_(Semiya_Upma)_with_Fresh_Vegetables.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -582,11 +553,12 @@
   "hindi": "खाखरा",
   "meal": "breakfast",
   "overview": "Crisp Gujarati wheat crackers with masala chai",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Khakhra.JPG/960px-Khakhra.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/khakhra-and-chai.jpg?v=b7c2629a",
   "imageCredit": {
    "author": "Jay87.mehta",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Khakhra.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Khakhra.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -598,11 +570,12 @@
   "hindi": "राजमा चावल",
   "meal": "main",
   "overview": "Punjabi kidney bean curry with steamed rice",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Rajma_Chawal_by_Rama_Bhave.jpg/960px-Rajma_Chawal_by_Rama_Bhave.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/rajma-chawal.jpg?v=1fb33012",
   "imageCredit": {
    "author": "Shreya151994",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Rajma_Chawal_by_Rama_Bhave.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Rajma_Chawal_by_Rama_Bhave.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -614,11 +587,12 @@
   "hindi": "छोले भटूरे",
   "meal": "main",
   "overview": "Spicy chickpea curry with fluffy fried bhature",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Chole_Bhature_from_Nagpur.JPG/960px-Chole_Bhature_from_Nagpur.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/chole-bhature.jpg?v=d28ecef2",
   "imageCredit": {
    "author": "Dheerajk88",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -630,11 +604,12 @@
   "hindi": "छोले चावल",
   "meal": "main",
   "overview": "Tangy chickpea curry with jeera rice",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Chana_masala.jpg/960px-Chana_masala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/chana-masala-and-rice.jpg?v=aa84224a",
   "imageCredit": {
    "author": "Simon Law (sfllaw) from Montréal, QC, Canada",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chana_masala.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Chana_masala.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -646,11 +621,12 @@
   "hindi": "कुलचे छोले",
   "meal": "main",
   "overview": "Stuffed crisp kulcha with chole and onion salad",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg/960px-Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/amritsari-kulcha-chole.jpg?v=df5ef4b9",
   "imageCredit": {
    "author": "Gaurav Nemade",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_(31013272937).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_(31013272937).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -662,12 +638,8 @@
   "hindi": "दाल मखनी",
   "meal": "main",
   "overview": "Creamy black urad dal, slow-cooked with butter",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Punjabi_style_Dal_Makhani.jpg/960px-Punjabi_style_Dal_Makhani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Radhikamprabhu82",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Punjabi_style_Dal_Makhani.jpg"
-  },
+  "image": "/dishes/dal-makhani.jpg?v=0c77d7cc",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -678,11 +650,12 @@
   "hindi": "कढ़ी चावल",
   "meal": "main",
   "overview": "Tangy curd-besan kadhi with pakoras and rice",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Kadhi_Pakora.jpg/960px-Kadhi_Pakora.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kadhi-chawal.jpg?v=5dfdaa16",
   "imageCredit": {
    "author": "Ams4wiki",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kadhi_Pakora.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Kadhi_Pakora.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -694,11 +667,12 @@
   "hindi": "पनीर बटर मसाला",
   "meal": "main",
   "overview": "Paneer in rich tomato-butter gravy with naan or roti",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Paneer_Makhani_Veggie.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/paneer-butter-masala.jpg?v=860eb1c7",
   "imageCredit": {
    "author": "Charvi Kakwani",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Paneer_Makhani_Veggie.jpeg"
+   "url": "https://commons.wikimedia.org/wiki/File:Paneer_Makhani_Veggie.jpeg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -710,11 +684,12 @@
   "hindi": "शाही पनीर",
   "meal": "main",
   "overview": "Paneer in creamy cashew-onion gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Shahi_panner.jpg/960px-Shahi_panner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/shahi-paneer.jpg?v=b8e05dc4",
   "imageCredit": {
    "author": "Om shankar singh",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Shahi_panner.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Shahi_panner.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -726,11 +701,12 @@
   "hindi": "पालक पनीर",
   "meal": "main",
   "overview": "Paneer cubes in smooth spinach gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Palak_Paneer_at_WCI_2023.jpg/960px-Palak_Paneer_at_WCI_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/palak-paneer.jpg?v=a3995796",
   "imageCredit": {
    "author": "Koshur",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Palak_Paneer_at_WCI_2023.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Palak_Paneer_at_WCI_2023.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -742,11 +718,12 @@
   "hindi": "मटर पनीर",
   "meal": "main",
   "overview": "Peas and paneer in homestyle tomato gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Matar_Paneer-homemade.jpg/960px-Matar_Paneer-homemade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/matar-paneer.jpg?v=3157e80a",
   "imageCredit": {
    "author": "Bssasidhar",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Matar_Paneer-homemade.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Matar_Paneer-homemade.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -758,11 +735,12 @@
   "hindi": "कड़ाही पनीर",
   "meal": "main",
   "overview": "Paneer and capsicum with fresh kadai masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Kadai_Paneer_Recipe.JPG/960px-Kadai_Paneer_Recipe.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kadai-paneer.jpg?v=5e6c83a7",
   "imageCredit": {
    "author": "Saishalini7",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kadai_Paneer_Recipe.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Kadai_Paneer_Recipe.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -774,12 +752,8 @@
   "hindi": "पनीर टिक्का मसाला",
   "meal": "main",
   "overview": "Smoky grilled paneer in spiced masala gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Chicken_tikka_masala_%28cropped%29.jpg/960px-Chicken_tikka_masala_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Michael Hays",
-   "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala_(cropped).jpg"
-  },
+  "image": "/dishes/paneer-tikka-masala.jpg?v=e779be6d",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -790,12 +764,8 @@
   "hindi": "मलाई कोफ़्ता",
   "meal": "main",
   "overview": "Paneer-potato dumplings in creamy gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Koofteh_tabrizi.jpg/960px-Koofteh_tabrizi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Fabienkhan",
-   "license": "CC BY-SA 2.5",
-   "url": "https://commons.wikimedia.org/wiki/File:Koofteh_tabrizi.jpg"
-  },
+  "image": "/dishes/malai-kofta.jpg?v=3b073aa9",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -806,12 +776,8 @@
   "hindi": "नवरतन कोरमा",
   "meal": "main",
   "overview": "Mughlai mixed-veg korma with dry fruits",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Chicken_Korma.JPG/960px-Chicken_Korma.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Miansari66",
-   "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG"
-  },
+  "image": "/dishes/navratan-korma.jpg?v=01a5e871",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -822,11 +788,12 @@
   "hindi": "आलू गोभी",
   "meal": "main",
   "overview": "Dry potato-cauliflower sabzi with roti and dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Aloo_gobi.jpg/960px-Aloo_gobi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-gobi.jpg?v=9509775a",
   "imageCredit": {
    "author": "Unknown",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -838,11 +805,12 @@
   "hindi": "आलू मटर",
   "meal": "main",
   "overview": "Potato and peas curry with puri or rice",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Aloo_Matar.JPG/960px-Aloo_Matar.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-matar.jpg?v=327dcd50",
   "imageCredit": {
    "author": "Zeel Patel",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Matar.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Matar.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -854,11 +822,12 @@
   "hindi": "दम आलू",
   "meal": "main",
   "overview": "Baby potatoes slow-cooked in spiced curd gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Kashmiri_Dum_Aaloo.JPG/960px-Kashmiri_Dum_Aaloo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dum-aloo.jpg?v=a4b9334a",
   "imageCredit": {
    "author": "Miansari66",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Dum_Aaloo.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Dum_Aaloo.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -870,11 +839,12 @@
   "hindi": "जीरा आलू",
   "meal": "main",
   "overview": "Cumin-tossed potatoes with roti and dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Aalu_Jeera.jpg/960px-Aalu_Jeera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/jeera-aloo-and-roti.jpg?v=292e1149",
   "imageCredit": {
    "author": "Gaurav Dhwaj Khadka",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aalu_Jeera.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aalu_Jeera.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -886,11 +856,12 @@
   "hindi": "आलू मेथी",
   "meal": "main",
   "overview": "Potatoes with fresh fenugreek leaves",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Methi_Bhaji_%28Fenugreek_leaves_with_potato%29_%281303338041%29.jpg/960px-Methi_Bhaji_%28Fenugreek_leaves_with_potato%29_%281303338041%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-methi.jpg?v=1d5224eb",
   "imageCredit": {
    "author": "rovingI",
    "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Methi_Bhaji_(Fenugreek_leaves_with_potato)_(1303338041).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Methi_Bhaji_(Fenugreek_leaves_with_potato)_(1303338041).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -902,11 +873,12 @@
   "hindi": "बैंगन भरता",
   "meal": "main",
   "overview": "Smoky mashed brinjal with onion and tomato",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Baigan_Bharta_from_Nagpur.JPG/960px-Baigan_Bharta_from_Nagpur.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/baingan-bharta.jpg?v=5e505356",
   "imageCredit": {
    "author": "Dheerajk88",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Baigan_Bharta_from_Nagpur.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Baigan_Bharta_from_Nagpur.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -918,11 +890,12 @@
   "hindi": "भिंडी मसाला",
   "meal": "main",
   "overview": "Crisp spiced okra with roti and dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Bhindi_Masala.jpg/960px-Bhindi_Masala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bhindi-masala.jpg?v=548595eb",
   "imageCredit": {
    "author": "Monali.mishra",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bhindi_Masala.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Bhindi_Masala.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -934,11 +907,12 @@
   "hindi": "सरसों का साग",
   "meal": "main",
   "overview": "Punjabi mustard greens with maize roti and white butter",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Sarson-Ka-Saag.jpg/960px-Sarson-Ka-Saag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sarson-ka-saag-and-makki-roti.jpg?v=194788de",
   "imageCredit": {
    "author": "Officialksv",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sarson-Ka-Saag.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sarson-Ka-Saag.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -950,11 +924,12 @@
   "hindi": "पाव भाजी",
   "meal": "main",
   "overview": "Buttery mashed-veg bhaji with toasted pav",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/pav-bhaji.jpg?v=d5694719",
   "imageCredit": {
    "author": "Rupali Banarase",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bambayya_Pav_bhaji.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Bambayya_Pav_bhaji.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -966,11 +941,12 @@
   "hindi": "वेज पुलाव",
   "meal": "main",
   "overview": "Fragrant rice with mixed veggies and cucumber raita",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Veg_Pulao_with_onion_Raitha_02.jpg/960px-Veg_Pulao_with_onion_Raitha_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/veg-pulao-and-raita.jpg?v=53140117",
   "imageCredit": {
    "author": "Nandhinikandhasamy",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Veg_Pulao_with_onion_Raitha_02.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Veg_Pulao_with_onion_Raitha_02.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -982,11 +958,12 @@
   "hindi": "तहरी",
   "meal": "main",
   "overview": "UP-style spiced vegetable rice with raita",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Sindhi_biryani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/tehri-veg-biryani.jpg?v=dab511f0",
   "imageCredit": {
    "author": "Radhikamprabhu82",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sindhi_biryani.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sindhi_biryani.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -998,11 +975,12 @@
   "hindi": "खिचड़ी",
   "meal": "main",
   "overview": "Comforting moong dal khichdi with ghee and papad",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Dall_Khichdi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/khichdi-and-kadhi.jpg?v=07998093",
   "imageCredit": {
    "author": "Rpande",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Dall_Khichdi.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Dall_Khichdi.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1014,11 +992,12 @@
   "hindi": "बिसी बेले भात",
   "meal": "main",
   "overview": "Karnataka spicy lentil-rice with veggies and ghee",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Bisi_Bele_Bath_%28Bisibelebath%29.JPG/960px-Bisi_Bele_Bath_%28Bisibelebath%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bisi-bele-bath.jpg?v=d378af74",
   "imageCredit": {
    "author": "Food and Remedy, LLC",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath).JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath).JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1030,11 +1009,12 @@
   "hindi": "लेमन राइस",
   "meal": "main",
   "overview": "Tangy turmeric rice with peanuts and curry leaves",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Picture_of_Lemon_rice_dish.JPG/960px-Picture_of_Lemon_rice_dish.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/lemon-rice.jpg?v=c74d42df",
   "imageCredit": {
    "author": "Nithyasrm",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Picture_of_Lemon_rice_dish.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Picture_of_Lemon_rice_dish.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1046,11 +1026,12 @@
   "hindi": "दही चावल",
   "meal": "main",
   "overview": "Cool tempered curd rice with pickle",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Curd_Rice.jpg/960px-Curd_Rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/curd-rice.jpg?v=559e184f",
   "imageCredit": {
    "author": "Sudharshan Shanmugasundaram",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1062,11 +1043,12 @@
   "hindi": "इमली चावल",
   "meal": "main",
   "overview": "Tamarind rice with peanuts and sesame",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Pulihara.JPG/960px-Pulihara.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/puliyogare.jpg?v=08a1750a",
   "imageCredit": {
    "author": "KALX999",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Pulihara.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Pulihara.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1078,11 +1060,12 @@
   "hindi": "सांबर चावल",
   "meal": "main",
   "overview": "Tamarind-lentil sambar with rice and poriyal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Pumpkin_sambar.JPG/960px-Pumpkin_sambar.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sambar-rice.jpg?v=666bf1c6",
   "imageCredit": {
    "author": "Kalaiselvi Murugesan",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Pumpkin_sambar.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Pumpkin_sambar.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1094,11 +1077,12 @@
   "hindi": "रसम चावल",
   "meal": "main",
   "overview": "Peppery tomato rasam with rice and papad",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Midday_meals_with_rasam%2Cpappad%2Cplantain_shaft_fry_and_cooked_rice.JPG/960px-Midday_meals_with_rasam%2Cpappad%2Cplantain_shaft_fry_and_cooked_rice.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/rasam-rice.jpg?v=c07b4ecc",
   "imageCredit": {
    "author": "V.S.Pooja",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Midday_meals_with_rasam,pappad,plantain_shaft_fry_and_cooked_rice.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Midday_meals_with_rasam,pappad,plantain_shaft_fry_and_cooked_rice.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1110,11 +1094,12 @@
   "hindi": "अवियल",
   "meal": "main",
   "overview": "Kerala mixed veggies in coconut-curd paste",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ayiyal.jpg/960px-Ayiyal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/avial.jpg?v=a868952c",
   "imageCredit": {
    "author": "Samphotography",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Ayiyal.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Ayiyal.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1126,11 +1111,12 @@
   "hindi": "थोरन",
   "meal": "main",
   "overview": "Stir-fried beans or cabbage with grated coconut",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Travancore_Cheera_Thoran.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/thoran.jpg?v=9ff73cef",
   "imageCredit": {
    "author": "Xufanc",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Travancore_Cheera_Thoran.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Travancore_Cheera_Thoran.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1142,11 +1128,12 @@
   "hindi": "कूटु",
   "meal": "main",
   "overview": "Lentils and veggies with coconut, Tamil style",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Cabbage_kootu.jpg/960px-Cabbage_kootu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kootu.jpg?v=476d7ffa",
   "imageCredit": {
    "author": "Sanjay Acharya",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1158,11 +1145,12 @@
   "hindi": "ओलन",
   "meal": "main",
   "overview": "Ash gourd and cowpeas in light coconut milk",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Olan.jpg/960px-Olan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/olan.jpg?v=3bb9680b",
   "imageCredit": {
    "author": "Kavya Manohar",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Olan.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Olan.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1174,11 +1162,12 @@
   "hindi": "एरिसेरी",
   "meal": "main",
   "overview": "Pumpkin and red beans with roasted coconut",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg/960px-%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/erissery.jpg?v=1e43401f",
   "imageCredit": {
    "author": "Varghesepunnamada",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:%E0%B4%8E%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B6%E0%B5%87%E0%B4%B0%E0%B4%BF.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1190,11 +1179,12 @@
   "hindi": "लिट्टी चोखा",
   "meal": "main",
   "overview": "Sattu-stuffed baked balls with smoky aloo-baingan chokha",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Litti_Chokha_2.jpg/960px-Litti_Chokha_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/litti-chokha.jpg?v=c531dbf6",
   "imageCredit": {
    "author": "Eddie Stann",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Litti_Chokha_2.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Litti_Chokha_2.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1206,11 +1196,12 @@
   "hindi": "दाल बाटी चूरमा",
   "meal": "main",
   "overview": "Rajasthani baked wheat balls, panchmel dal and sweet churma",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/DalBati.jpg/960px-DalBati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dal-baati-churma.jpg?v=04222fd7",
   "imageCredit": {
    "author": "Niranjan.gohane",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:DalBati.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:DalBati.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1222,11 +1213,12 @@
   "hindi": "गट्टे की सब्ज़ी",
   "meal": "main",
   "overview": "Gram-flour dumplings in spiced curd gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Besan_Gatta_curry03.jpg/960px-Besan_Gatta_curry03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/gatte-ki-sabzi.jpg?v=3ea8a95f",
   "imageCredit": {
    "author": "EAT&amp;ART TARO",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Besan_Gatta_curry03.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Besan_Gatta_curry03.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1238,11 +1230,12 @@
   "hindi": "ऊंधियू",
   "meal": "main",
   "overview": "Gujarati winter mixed-veg with methi muthiya",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Undhiyu.jpg/960px-Undhiyu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/undhiyu-and-puri.jpg?v=785923a2",
   "imageCredit": {
    "author": "Jatan1992",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Undhiyu.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Undhiyu.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1254,11 +1247,12 @@
   "hindi": "दाल ढोकली",
   "meal": "main",
   "overview": "Sweet-tangy Gujarati dal with wheat dumplings",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Dal_Dhokali.jpg/960px-Dal_Dhokali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dal-dhokli.jpg?v=ac576b79",
   "imageCredit": {
    "author": "KartikMistry",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Dal_Dhokali.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Dal_Dhokali.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1270,11 +1264,12 @@
   "hindi": "पिठलं भाकरी",
   "meal": "main",
   "overview": "Quick besan curry with jowar bhakri",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_%288%29.jpg/960px-Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/pithla-bhakri.jpg?v=0d996197",
   "imageCredit": {
    "author": "Dr. Raju Kasambe",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_(8).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_(8).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1286,11 +1281,12 @@
   "hindi": "मसाले भात",
   "meal": "main",
   "overview": "Maharashtrian goda-masala rice with tondli",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Masale_Bhat_-Homemade_-_Maharashtra.jpg/960px-Masale_Bhat_-Homemade_-_Maharashtra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/masale-bhat.jpg?v=da4b9092",
   "imageCredit": {
    "author": "Phadke09",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Masale_Bhat_-Homemade_-_Maharashtra.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Masale_Bhat_-Homemade_-_Maharashtra.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1302,11 +1298,12 @@
   "hindi": "आलू पोस्तो",
   "meal": "main",
   "overview": "Bengali potatoes in poppy-seed paste",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Aloo_Posto.jpg/960px-Aloo_Posto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-posto.jpg?v=254edbee",
   "imageCredit": {
    "author": "SDBeast",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Posto.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Posto.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1318,11 +1315,12 @@
   "hindi": "शुक्तो",
   "meal": "main",
   "overview": "Gently bitter Bengali mixed-veg in milk",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Sukkto.jpg/960px-Sukkto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/shukto.jpg?v=23f55b9b",
   "imageCredit": {
    "author": "Soumya Das Gupta photo",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sukkto.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sukkto.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1334,11 +1332,12 @@
   "hindi": "छोलार दाल",
   "meal": "main",
   "overview": "Sweet Bengali chana dal with coconut and puffy luchi",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Luchi_and_Cholar_Dal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/cholar-dal-and-luchi.jpg?v=201a9d74",
   "imageCredit": {
    "author": "KoyeliC",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Luchi_and_Cholar_Dal.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Luchi_and_Cholar_Dal.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1350,11 +1349,12 @@
   "hindi": "बघारे बैंगन",
   "meal": "main",
   "overview": "Hyderabadi brinjals in peanut-sesame gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Baghare_Baingan.JPG/960px-Baghare_Baingan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bagara-baingan.jpg?v=ec46a103",
   "imageCredit": {
    "author": "Miansari66",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Baghare_Baingan.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Baghare_Baingan.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1366,11 +1366,12 @@
   "hindi": "मिर्ची का सालन",
   "meal": "main",
   "overview": "Green chillies in tangy peanut-sesame gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Mirchi_ka_salan_and_Dahi_chutney.jpg/960px-Mirchi_ka_salan_and_Dahi_chutney.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/mirchi-ka-salan.jpg?v=f00e3aa0",
   "imageCredit": {
    "author": "Randhirreddy at English Wikipedia",
    "license": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Mirchi_ka_salan_and_Dahi_chutney.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Mirchi_ka_salan_and_Dahi_chutney.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1382,11 +1383,12 @@
   "hindi": "वेज थाली",
   "meal": "main",
   "overview": "Dal, two sabzis, rice, roti, raita and a sweet",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vegetarian_Curry.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/veg-thali.jpg?v=6f4d3f4c",
   "imageCredit": {
    "author": "GracinhaMarco Abundo",
    "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Vegetarian_Curry.jpeg"
+   "url": "https://commons.wikimedia.org/wiki/File:Vegetarian_Curry.jpeg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1398,11 +1400,12 @@
   "hindi": "लौकी चना दाल",
   "meal": "main",
   "overview": "Bottle gourd with chana dal, light and homely",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Lauki_and_Chana_Dal_Curry.jpg/960px-Lauki_and_Chana_Dal_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/lauki-chana-dal.jpg?v=6ee4a772",
   "imageCredit": {
    "author": "Neha Sonal",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Lauki_and_Chana_Dal_Curry.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Lauki_and_Chana_Dal_Curry.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1414,11 +1417,12 @@
   "hindi": "मिक्स वेज",
   "meal": "main",
   "overview": "Seasonal mixed vegetables in onion-tomato masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Mix_veg_Bhaja.jpg/960px-Mix_veg_Bhaja.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/mix-veg-and-roti.jpg?v=a47ebc3e",
   "imageCredit": {
    "author": "Sattwik03",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Mix_veg_Bhaja.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Mix_veg_Bhaja.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1430,11 +1434,12 @@
   "hindi": "पनीर भुर्जी",
   "meal": "main",
   "overview": "Spiced scrambled paneer with onion and capsicum",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Indian_Cuisine_%28101%29_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/paneer-bhurji-and-roti.jpg?v=88c0956e",
   "imageCredit": {
    "author": "AmanAgrahari01",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Indian_Cuisine_(101)_08.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Indian_Cuisine_(101)_08.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1446,11 +1451,12 @@
   "hindi": "खस्ता कचौरी",
   "meal": "breakfast",
   "overview": "Flaky moong dal kachori with aloo sabzi and chutney",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Khasta_kachori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/khasta-kachori.jpg?v=2638b089",
   "imageCredit": {
    "author": "Hrishikes",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Khasta_kachori.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Khasta_kachori.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1462,11 +1468,12 @@
   "hindi": "प्याज़ कचौरी",
   "meal": "breakfast",
   "overview": "Jodhpur-style onion-filled kachori",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Jodhpuri_Kanda%28Pyaaz%29_Kachori_inside_stuffing.jpg/960px-Jodhpuri_Kanda%28Pyaaz%29_Kachori_inside_stuffing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/pyaz-kachori.jpg?v=692eb139",
   "imageCredit": {
    "author": "PabIoChocobar",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Jodhpuri_Kanda(Pyaaz)_Kachori_inside_stuffing.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Jodhpuri_Kanda(Pyaaz)_Kachori_inside_stuffing.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1478,11 +1485,12 @@
   "hindi": "मिर्ची वड़ा",
   "meal": "breakfast",
   "overview": "Jodhpuri chillies stuffed with potato, fried in besan",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mirchi_Vada_bajji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/mirchi-vada.jpg?v=e46fc2cb",
   "imageCredit": {
    "author": "Amit154",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Mirchi_Vada_bajji.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Mirchi_Vada_bajji.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1494,12 +1502,8 @@
   "hindi": "हलवा पूरी चना",
   "meal": "breakfast",
   "overview": "Suji halwa, puri and dry kala chana, Ashtami style",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Chole_Bhature_6.jpg/960px-Chole_Bhature_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Gannu03",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_6.jpg"
-  },
+  "image": "/dishes/halwa-puri-chana.jpg?v=5053c51c",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1510,11 +1514,12 @@
   "hindi": "अजवाइन पराठा",
   "meal": "breakfast",
   "overview": "Flaky carom-seed paratha with achaar and curd",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg/960px-Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/ajwain-paratha.jpg?v=a846c967",
   "imageCredit": {
    "author": "Fatimahope",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1526,11 +1531,12 @@
   "hindi": "लच्छा पराठा",
   "meal": "breakfast",
   "overview": "Layered crisp paratha with butter",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Lachha-paratha.jpg/960px-Lachha-paratha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/lachha-paratha.jpg?v=bf55f4e1",
   "imageCredit": {
    "author": "Sonia Goyal",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1542,11 +1548,12 @@
   "hindi": "मेथी पराठा",
   "meal": "breakfast",
   "overview": "Fenugreek-leaf paratha with curd",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Methi_Paratha_by_Fatima.jpg/960px-Methi_Paratha_by_Fatima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/methi-paratha.jpg?v=2f8bcc5f",
   "imageCredit": {
    "author": "Fatimahope",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Methi_Paratha_by_Fatima.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Methi_Paratha_by_Fatima.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1558,11 +1565,12 @@
   "hindi": "पालक पराठा",
   "meal": "breakfast",
   "overview": "Spinach paratha with white butter",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Palak_parantha.JPG/960px-Palak_parantha.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/palak-paratha.jpg?v=cdfa588d",
   "imageCredit": {
    "author": "Ravi Talwar",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Palak_parantha.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Palak_parantha.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1574,11 +1582,12 @@
   "hindi": "प्याज़ पराठा",
   "meal": "breakfast",
   "overview": "Onion-stuffed paratha with curd",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Staffed_Paratha_with_Chopped_Onion.jpg/960px-Staffed_Paratha_with_Chopped_Onion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/pyaz-paratha.jpg?v=d2460f2d",
   "imageCredit": {
    "author": "Subrata Ghose",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Staffed_Paratha_with_Chopped_Onion.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Staffed_Paratha_with_Chopped_Onion.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1590,11 +1599,12 @@
   "hindi": "दाल पराठा",
   "meal": "breakfast",
   "overview": "Paratha stuffed with spiced chana dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Moong_Dal_paratha.jpg/960px-Moong_Dal_paratha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dal-paratha.jpg?v=ea765729",
   "imageCredit": {
    "author": "Ravi Dwivedi",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Moong_Dal_paratha.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Moong_Dal_paratha.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1606,11 +1616,12 @@
   "hindi": "सत्तू पराठा",
   "meal": "breakfast",
   "overview": "Roasted gram-flour stuffed paratha",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Sattu_Paratha.jpg/960px-Sattu_Paratha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sattu-paratha.jpg?v=2d12550b",
   "imageCredit": {
    "author": "Samar Fatma",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sattu_Paratha.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sattu_Paratha.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1622,11 +1633,12 @@
   "hindi": "मिक्स वेज पराठा",
   "meal": "breakfast",
   "overview": "Paratha stuffed with mixed vegetables",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg/960px-Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/mix-veg-paratha.jpg?v=a846c967",
   "imageCredit": {
    "author": "Fatimahope",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Nawabi_Gobhi_With_ajwain_Paratha_by_Fatima.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1638,11 +1650,12 @@
   "hindi": "मिस्सी रोटी",
   "meal": "breakfast",
   "overview": "Besan-wheat roti with onion and ajwain, with curd",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Missi_roti.jpg/960px-Missi_roti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/missi-roti-and-dahi.jpg?v=47e66f11",
   "imageCredit": {
    "author": "Soumyasmita Mallick",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Missi_roti.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Missi_roti.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1654,12 +1667,8 @@
   "hindi": "आलू टोस्ट",
   "meal": "breakfast",
   "overview": "Spiced potato topping on crisp toast",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Breakfast_5.jpg/960px-Breakfast_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Gaurav Dhwaj Khadka",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Breakfast_5.jpg"
-  },
+  "image": "/dishes/aloo-toast.jpg?v=09b6ee8f",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1670,11 +1679,12 @@
   "hindi": "ब्रेड रोल",
   "meal": "breakfast",
   "overview": "Potato-stuffed fried bread rolls",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Bread_Roll.JPG/960px-Bread_Roll.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bread-roll.jpg?v=11680622",
   "imageCredit": {
    "author": "Ravi Talwar",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bread_Roll.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Bread_Roll.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1686,11 +1696,12 @@
   "hindi": "ब्रेड उपमा",
   "meal": "breakfast",
   "overview": "Bread cubes tossed with onion, tomato and spices",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Upma_India.jpg/960px-Upma_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bread-upma.jpg?v=a01c7bf5",
   "imageCredit": {
    "author": "Divya Kudua",
    "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Upma_India.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Upma_India.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1702,11 +1713,12 @@
   "hindi": "अंकुरित मूंग चाट",
   "meal": "breakfast",
   "overview": "Sprouted moong with onion, tomato and lemon",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/SPROUTED_MOONG_DAL_MOTH.jpg/960px-SPROUTED_MOONG_DAL_MOTH.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/moong-sprouts-chaat.jpg?v=f0d3a835",
   "imageCredit": {
    "author": "VIRENDRA SINGH",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:SPROUTED_MOONG_DAL_MOTH.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:SPROUTED_MOONG_DAL_MOTH.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1718,11 +1730,12 @@
   "hindi": "काला चना चाट",
   "meal": "breakfast",
   "overview": "Boiled black chana with onion, tomato and chaat masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Kala_chana_chat%28Black_pea_Chat%29.jpg/960px-Kala_chana_chat%28Black_pea_Chat%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kala-chana-chaat.jpg?v=2f9b5b7a",
   "imageCredit": {
    "author": "SamunderSinghBohriya",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kala_chana_chat(Black_pea_Chat).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Kala_chana_chat(Black_pea_Chat).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1734,11 +1747,12 @@
   "hindi": "कुट्टू पूरी",
   "meal": "breakfast",
   "overview": "Buckwheat-flour puris with fasting-style aloo",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Aaloo_ki_sabji_%26_Kuttu_ki_puri_-_Gujarat_-_SHAILI_016.jpg/960px-Aaloo_ki_sabji_%26_Kuttu_ki_puri_-_Gujarat_-_SHAILI_016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kuttu-puri-and-vrat-aloo.jpg?v=516f36e7",
   "imageCredit": {
    "author": "Shaili Sharma",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aaloo_ki_sabji_%26_Kuttu_ki_puri_-_Gujarat_-_SHAILI_016.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aaloo_ki_sabji_%26_Kuttu_ki_puri_-_Gujarat_-_SHAILI_016.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1750,11 +1764,12 @@
   "hindi": "मेथी ढेबरा",
   "meal": "breakfast",
   "overview": "Gujarati millet-methi flatbread",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Thepala.JPG/960px-Thepala.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/methi-dhebra.jpg?v=a6c01f5e",
   "imageCredit": {
    "author": "Sushant savla",
    "license": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Thepala.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Thepala.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1766,11 +1781,12 @@
   "hindi": "मुठिया",
   "meal": "breakfast",
   "overview": "Steamed methi-wheat dumplings with mustard tadka",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Methi_Muthiya_%28_fried_%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/muthiya.jpg?v=f001cf0f",
   "imageCredit": {
    "author": "Sushant savla",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1782,11 +1798,12 @@
   "hindi": "सेव खमणी",
   "meal": "breakfast",
   "overview": "Crumbled khaman with sev and pomegranate",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Sev_khamani.jpg/960px-Sev_khamani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sev-khamani.jpg?v=d4017f52",
   "imageCredit": {
    "author": "Nilesh0355",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sev_khamani.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sev_khamani.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1798,11 +1815,12 @@
   "hindi": "जलेबी रबड़ी",
   "meal": "breakfast",
   "overview": "Hot jalebis with thick rabri, Sunday special",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Jalebi_1.jpg/960px-Jalebi_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/jalebi-and-rabri.jpg?v=04948a0d",
   "imageCredit": {
    "author": "Gaurav Dhwaj Khadka",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Jalebi_1.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Jalebi_1.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1814,12 +1832,8 @@
   "hindi": "बेसन टोस्ट",
   "meal": "breakfast",
   "overview": "Bread dipped in spiced besan batter and pan-fried",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Pizza_made_of_rotis.jpg/960px-Pizza_made_of_rotis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Lakshmibsriram",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Pizza_made_of_rotis.jpg"
-  },
+  "image": "/dishes/besan-toast.jpg?v=ccb19f68",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1830,11 +1844,12 @@
   "hindi": "दाल पकवान",
   "meal": "breakfast",
   "overview": "Sindhi crisp pakwan with chana dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Dal_Pakwan_-_Sindhi_Food_-_7.jpg/960px-Dal_Pakwan_-_Sindhi_Food_-_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dal-pakwan.jpg?v=ea813424",
   "imageCredit": {
    "author": "Urvi Yagnik",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Dal_Pakwan_-_Sindhi_Food_-_7.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Dal_Pakwan_-_Sindhi_Food_-_7.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1846,11 +1861,12 @@
   "hindi": "आलू टिक्की छोले",
   "meal": "breakfast",
   "overview": "Crisp potato patties topped with chole and chutneys",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Aloo_Tikki_served_with_chutneys.jpg/960px-Aloo_Tikki_served_with_chutneys.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-tikki-chole.jpg?v=406e09a8",
   "imageCredit": {
    "author": "Raveesh Vyas from [Ahmedabad, Noida], India",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Tikki_served_with_chutneys.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Tikki_served_with_chutneys.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1862,11 +1878,12 @@
   "hindi": "लौकी की सब्ज़ी",
   "meal": "main",
   "overview": "Light bottle-gourd sabzi with jeera and tomato",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Lauki_Ki_Bhujia.JPG/960px-Lauki_Ki_Bhujia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/lauki-ki-sabzi.jpg?v=62fbc7a8",
   "imageCredit": {
    "author": "Miansari66",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Lauki_Ki_Bhujia.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Lauki_Ki_Bhujia.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1878,11 +1895,12 @@
   "hindi": "लौकी कोफ़्ता",
   "meal": "main",
   "overview": "Bottle-gourd dumplings in tomato gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Lauki_Kofta_Recipe_by_Sonia_Goyal.jpg/960px-Lauki_Kofta_Recipe_by_Sonia_Goyal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/lauki-kofta.jpg?v=f98f26ad",
   "imageCredit": {
    "author": "Sonia Goyal Jaipur",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Lauki_Kofta_Recipe_by_Sonia_Goyal.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Lauki_Kofta_Recipe_by_Sonia_Goyal.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1894,11 +1912,12 @@
   "hindi": "तोरई की सब्ज़ी",
   "meal": "main",
   "overview": "Ridge gourd cooked with tomato and spices",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Meshed_Torri.jpg/960px-Meshed_Torri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/tori-ki-sabzi.jpg?v=62830fa1",
   "imageCredit": {
    "author": "Sushant0411",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Meshed_Torri.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Meshed_Torri.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1910,11 +1929,12 @@
   "hindi": "टिंडा मसाला",
   "meal": "main",
   "overview": "Round gourd in onion-tomato masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Tinda_Masala.JPG/960px-Tinda_Masala.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/tinda-masala.jpg?v=e3ed83e7",
   "imageCredit": {
    "author": "Ravi Talwar",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Tinda_Masala.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Tinda_Masala.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1926,11 +1946,12 @@
   "hindi": "कटहल की सब्ज़ी",
   "meal": "main",
   "overview": "Spicy raw jackfruit masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/JackfruitCurry_Rayagada_Odisha_0001.jpg/960px-JackfruitCurry_Rayagada_Odisha_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kathal-ki-sabzi.jpg?v=dd3fce3a",
   "imageCredit": {
    "author": "Lopanayak",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:JackfruitCurry_Rayagada_Odisha_0001.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:JackfruitCurry_Rayagada_Odisha_0001.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1942,12 +1963,8 @@
   "hindi": "भिंडी दो प्याज़ा",
   "meal": "main",
   "overview": "Okra with plenty of onions",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Bhindi_Do_Pyaza.JPG/960px-Bhindi_Do_Pyaza.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Ravi Talwar",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bhindi_Do_Pyaza.JPG"
-  },
+  "image": "/dishes/bhindi-do-pyaza.jpg?v=1a4f6bd1",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1958,11 +1975,12 @@
   "hindi": "भरवां भिंडी",
   "meal": "main",
   "overview": "Okra stuffed with besan-amchur masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Stuffed_Okra_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg/960px-Stuffed_Okra_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bharwa-bhindi.jpg?v=c9e7be35",
   "imageCredit": {
    "author": "Sonia Goyal Jaipur",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Stuffed_Okra_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Stuffed_Okra_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1974,11 +1992,12 @@
   "hindi": "आलू बैंगन",
   "meal": "main",
   "overview": "Potato and brinjal dry sabzi",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Aloo_aur_Baingan_ki_sabzi.jpg/960px-Aloo_aur_Baingan_ki_sabzi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-baingan.jpg?v=cdf1506c",
   "imageCredit": {
    "author": "Celestial Pari",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_aur_Baingan_ki_sabzi.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_aur_Baingan_ki_sabzi.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -1990,11 +2009,12 @@
   "hindi": "भरवां बैंगन",
   "meal": "main",
   "overview": "Small brinjals stuffed with spiced masala",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bharwa-baingan-recipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/bharwa-baingan.jpg?v=ed187126",
   "imageCredit": {
    "author": "Foodieseats",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bharwa-baingan-recipe.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Bharwa-baingan-recipe.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2006,11 +2026,12 @@
   "hindi": "आलू शिमला मिर्च",
   "meal": "main",
   "overview": "Potatoes with capsicum, simple and quick",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Chilly_Capsicum_Potato.JPG/960px-Chilly_Capsicum_Potato.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-shimla-mirch.jpg?v=b0db0bde",
   "imageCredit": {
    "author": "Pduaroxxx",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chilly_Capsicum_Potato.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Chilly_Capsicum_Potato.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2022,11 +2043,12 @@
   "hindi": "आलू टमाटर रसेदार",
   "meal": "main",
   "overview": "Thin UP-style potato-tomato curry for puri",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Thali_meal-Before.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/aloo-tamatar-rasedaar.jpg?v=a4f87b75",
   "imageCredit": {
-   "author": "Ritwik Dey",
-   "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Thali_meal-Before.jpg"
+   "author": "Miansari66",
+   "license": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Dum_Aaloo.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2038,11 +2060,12 @@
   "hindi": "आलू पालक",
   "meal": "main",
   "overview": "Potatoes cooked with spinach",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Aloo_Palak_%28Spinach_with_Potatoes%29.JPG/960px-Aloo_Palak_%28Spinach_with_Potatoes%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-palak.jpg?v=5717f9c9",
   "imageCredit": {
    "author": "Miansari66",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Palak_(Spinach_with_Potatoes).JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Palak_(Spinach_with_Potatoes).JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2054,11 +2077,12 @@
   "hindi": "आलू बीन्स",
   "meal": "main",
   "overview": "French beans and potato dry sabzi",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Beans_%289608004870%29.jpg/960px-Beans_%289608004870%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-beans.jpg?v=15992ee7",
   "imageCredit": {
    "author": "Devika",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Beans_(9608004870).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Beans_(9608004870).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2070,11 +2094,12 @@
   "hindi": "गाजर मटर",
   "meal": "main",
   "overview": "Winter carrot and peas sabzi",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Carrot_and_Peas_Bhaji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image": "/dishes/gajar-matar.jpg?v=b9446b89",
   "imageCredit": {
    "author": "DreamyFlutura11",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Carrot_and_Peas_Bhaji.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Carrot_and_Peas_Bhaji.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2086,11 +2111,12 @@
   "hindi": "गोभी मटर",
   "meal": "main",
   "overview": "Cauliflower and peas sabzi",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Aloo_gobi_matar_ki_sabji.jpg/960px-Aloo_gobi_matar_ki_sabji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/gobhi-matar.jpg?v=f3b1e95b",
   "imageCredit": {
    "author": "Monali.mishra",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_gobi_matar_ki_sabji.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_gobi_matar_ki_sabji.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2102,11 +2128,12 @@
   "hindi": "मेथी मलाई मटर",
   "meal": "main",
   "overview": "Peas and fenugreek in creamy white gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Methi_Malai_Matar.jpg/960px-Methi_Malai_Matar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/methi-malai-matar.jpg?v=b54b59d3",
   "imageCredit": {
    "author": "Ujjawaoo7",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Methi_Malai_Matar.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Methi_Malai_Matar.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2118,11 +2145,12 @@
   "hindi": "सोया चंक्स करी",
   "meal": "main",
   "overview": "Soya chunks in spicy onion-tomato gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Soya_chunks_takkali_curry.jpg/960px-Soya_chunks_takkali_curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/soya-chunks-curry.jpg?v=a94a0447",
   "imageCredit": {
    "author": "Keerthinellikkalaya",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Soya_chunks_takkali_curry.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Soya_chunks_takkali_curry.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2134,11 +2162,12 @@
   "hindi": "सेव टमाटर",
   "meal": "main",
   "overview": "Tangy tomato curry topped with Bikaneri sev",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Sev_Tameta_Nu_Shaak.jpg/960px-Sev_Tameta_Nu_Shaak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sev-tamatar.jpg?v=43f21a34",
   "imageCredit": {
    "author": "UserWiki",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sev_Tameta_Nu_Shaak.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Sev_Tameta_Nu_Shaak.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2150,11 +2179,12 @@
   "hindi": "हल्दी की सब्ज़ी",
   "meal": "main",
   "overview": "Rajasthani winter fresh-turmeric sabzi with ghee",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Haldi_Ki_Sabzi.jpg/960px-Haldi_Ki_Sabzi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/haldi-ki-sabzi.jpg?v=14fd24bb",
   "imageCredit": {
    "author": "RohitValecha",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Haldi_Ki_Sabzi.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Haldi_Ki_Sabzi.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2166,11 +2196,12 @@
   "hindi": "बाजरे की रोटी",
   "meal": "main",
   "overview": "Millet roti with garlic chutney and ghee",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Bajri_na_Rotla.JPG/960px-Bajri_na_Rotla.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/bajra-roti-and-lahsun-chutney.jpg?v=fd671289",
   "imageCredit": {
    "author": "Zeel Patel",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bajri_na_Rotla.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Bajri_na_Rotla.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2182,11 +2213,12 @@
   "hindi": "पंचमेल दाल",
   "meal": "main",
   "overview": "Five-lentil Rajasthani dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/DalPanchmel.JPG/960px-DalPanchmel.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/panchmel-dal.jpg?v=ed1d9edb",
   "imageCredit": {
    "author": "Maccess Corporation",
    "license": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:DalPanchmel.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:DalPanchmel.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2198,11 +2230,12 @@
   "hindi": "मसूर दाल",
   "meal": "main",
   "overview": "Quick red lentil dal",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Kali_Masoor_Ki_Dal_Ka_Salan.JPG/960px-Kali_Masoor_Ki_Dal_Ka_Salan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/masoor-dal.jpg?v=b5632db7",
   "imageCredit": {
    "author": "Miansari66",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kali_Masoor_Ki_Dal_Ka_Salan.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Kali_Masoor_Ki_Dal_Ka_Salan.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2214,11 +2247,12 @@
   "hindi": "अरहर दाल चावल",
   "meal": "main",
   "overview": "UP-style toor dal with ghee and rice",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Rice_Dal.jpg/960px-Rice_Dal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/arhar-dal-chawal.jpg?v=e23f88a6",
   "imageCredit": {
    "author": "DineshGowd",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Rice_Dal.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Rice_Dal.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2230,11 +2264,12 @@
   "hindi": "दाल पालक",
   "meal": "main",
   "overview": "Lentils simmered with spinach",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Dal_Palak_Spinach_and_lentil_curry_%2815914333462%29.jpg/960px-Dal_Palak_Spinach_and_lentil_curry_%2815914333462%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/dal-palak.jpg?v=17f7bd4b",
   "imageCredit": {
    "author": "Yummy O Yummy",
    "license": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Dal_Palak_Spinach_and_lentil_curry_(15914333462).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Dal_Palak_Spinach_and_lentil_curry_(15914333462).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2246,11 +2281,12 @@
   "hindi": "लोबिया मसाला",
   "meal": "main",
   "overview": "Black-eyed beans in onion-tomato curry",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Black-eyed_Pea_Ragout_%287558542610%29.jpg/960px-Black-eyed_Pea_Ragout_%287558542610%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/lobia-masala.jpg?v=41b26f6b",
   "imageCredit": {
    "author": "Jen Arrr",
    "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Black-eyed_Pea_Ragout_(7558542610).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Black-eyed_Pea_Ragout_(7558542610).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2262,11 +2298,12 @@
   "hindi": "काला चना मसाला",
   "meal": "main",
   "overview": "Black chickpeas in spicy gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/DRY_KALA_CHANA_MASALA.jpg/960px-DRY_KALA_CHANA_MASALA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kala-chana-masala.jpg?v=f2569cf4",
   "imageCredit": {
    "author": "Nikitamusaddi",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:DRY_KALA_CHANA_MASALA.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:DRY_KALA_CHANA_MASALA.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2278,12 +2315,8 @@
   "hindi": "राजस्थानी कढ़ी",
   "meal": "main",
   "overview": "Thin spiced kadhi without pakoras",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Rajasthani_Kadhi.jpg/960px-Rajasthani_Kadhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Saurabhshekhar2329",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Kadhi.jpg"
-  },
+  "image": "/dishes/rajasthani-kadhi.jpg?v=f05b2532",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -2294,11 +2327,12 @@
   "hindi": "सिंधी कढ़ी",
   "meal": "main",
   "overview": "Tangy besan-tamarind curry with vegetables",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sindhi_Kadhi.JPG/960px-Sindhi_Kadhi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/sindhi-kadhi.jpg?v=c404f04a",
   "imageCredit": {
    "author": "Miansari66",
    "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sindhi_Kadhi.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Sindhi_Kadhi.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2310,11 +2344,12 @@
   "hindi": "पनीर दो प्याज़ा",
   "meal": "main",
   "overview": "Paneer with double onions in masala",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Paneer_Do-Pyaza.jpg/960px-Paneer_Do-Pyaza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/paneer-do-pyaza.jpg?v=40e0c915",
   "imageCredit": {
    "author": "Prads2189",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Paneer_Do-Pyaza.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Paneer_Do-Pyaza.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2326,11 +2361,12 @@
   "hindi": "पनीर लबाबदार",
   "meal": "main",
   "overview": "Paneer in rich tomato-onion-cream gravy",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Aloo_Gobi_And_Paneer_Lababdar_-_The_Indismart_Hotel_-_Salt_Lake_City_-_Kolkata_2023-09-10_5205.jpg/960px-Aloo_Gobi_And_Paneer_Lababdar_-_The_Indismart_Hotel_-_Salt_Lake_City_-_Kolkata_2023-09-10_5205.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/paneer-lababdar.jpg?v=7113dad9",
   "imageCredit": {
    "author": "Biswarup Ganguly",
    "license": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Gobi_And_Paneer_Lababdar_-_The_Indismart_Hotel_-_Salt_Lake_City_-_Kolkata_2023-09-10_5205.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Gobi_And_Paneer_Lababdar_-_The_Indismart_Hotel_-_Salt_Lake_City_-_Kolkata_2023-09-10_5205.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2342,11 +2378,12 @@
   "hindi": "कच्चे केले की सब्ज़ी",
   "meal": "main",
   "overview": "Raw banana dry sabzi",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Banana_fry.JPG/960px-Banana_fry.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kachche-kele-ki-sabzi.jpg?v=bb22d96b",
   "imageCredit": {
    "author": "Shobha Elizabeth John",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Banana_fry.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Banana_fry.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2358,11 +2395,12 @@
   "hindi": "मटर पुलाव",
   "meal": "main",
   "overview": "Peas pulao with whole spices",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Matar_Pulao_-_Mohali_2016-08-06_8222.JPG/960px-Matar_Pulao_-_Mohali_2016-08-06_8222.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/matar-pulao.jpg?v=51b8ea24",
   "imageCredit": {
    "author": "Biswarup Ganguly",
    "license": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Matar_Pulao_-_Mohali_2016-08-06_8222.JPG"
+   "url": "https://commons.wikimedia.org/wiki/File:Matar_Pulao_-_Mohali_2016-08-06_8222.JPG",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2374,11 +2412,12 @@
   "hindi": "मसाला खिचड़ी",
   "meal": "main",
   "overview": "Vegetable khichdi with spices and ghee",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Masala_Khichadi.jpg/960px-Masala_Khichadi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/masala-khichdi.jpg?v=58fa616b",
   "imageCredit": {
    "author": "Dkgohil",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Masala_Khichadi.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Masala_Khichadi.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2390,12 +2429,8 @@
   "hindi": "अचारी आलू",
   "meal": "main",
   "overview": "Potatoes with pickling spices",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Indian_cuisine_from_South_india.jpg/960px-Indian_cuisine_from_South_india.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "imageCredit": {
-   "author": "Rajatsingh8808",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Indian_cuisine_from_South_india.jpg"
-  },
+  "image": "/dishes/achari-aloo.jpg?v=84c116d7",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -2406,11 +2441,12 @@
   "hindi": "पिंडी छोले",
   "meal": "main",
   "overview": "Dark, dry Rawalpindi-style chole with bhature or kulcha",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg/960px-Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/pindi-chole.jpg?v=8d9dcaed",
   "imageCredit": {
    "author": "Best Ever Cooking Show SudShi",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2422,11 +2458,12 @@
   "hindi": "कढ़ी पकोड़ा",
   "meal": "main",
   "overview": "Punjabi kadhi with onion pakoras and rice",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Kadhi_Pakora.jpg/960px-Kadhi_Pakora.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/kadhi-pakoda-and-rice.jpg?v=5dfdaa16",
   "imageCredit": {
    "author": "Ams4wiki",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kadhi_Pakora.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Kadhi_Pakora.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2438,11 +2475,12 @@
   "hindi": "पनीर रोल",
   "meal": "main",
   "overview": "Paneer tikka wrapped in a paratha",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Paneer_kathi_roll_homemade.jpg/960px-Paneer_kathi_roll_homemade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/paneer-kathi-roll.jpg?v=1f636b9f",
   "imageCredit": {
    "author": "Shafana jasmine",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Paneer_kathi_roll_homemade.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Paneer_kathi_roll_homemade.jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
@@ -2454,11 +2492,12 @@
   "hindi": "आलू चोखा",
   "meal": "main",
   "overview": "Mustard-oil mashed potato with puri",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Home_made_Alu_vorta_%28Bengali_mashed_potato%29.jpg/960px-Home_made_Alu_vorta_%28Bengali_mashed_potato%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image": "/dishes/aloo-chokha-and-puri.jpg?v=a7741a97",
   "imageCredit": {
    "author": "Sm faysal",
    "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Home_made_Alu_vorta_(Bengali_mashed_potato).jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Home_made_Alu_vorta_(Bengali_mashed_potato).jpg",
+   "source": "Wikimedia Commons"
   },
   "genres": [],
   "cast": []
