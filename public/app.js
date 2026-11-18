@@ -1,7 +1,6 @@
 const $app = document.getElementById('app');
 const IMG = 'https://image.tmdb.org/t/p/';
 const isIOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-const standalone = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.addEventListener('touchstart', () => {}, { passive: true }); // lets :active styles work on iOS
 
@@ -183,20 +182,6 @@ function details(m) {
   );
 }
 
-function installHint() {
-  if (!isIOS || standalone || ls.get('fs:hint')) return;
-  const dismiss = () => {
-    ls.set('fs:hint', '1');
-    closeLayer(el);
-  };
-  const el = h('div', { class: 'install glass' },
-    h('img', { src: '/apple-touch-icon.png', alt: '' }),
-    h('div', { class: 'grow' }, h('b', null, 'Add FlickSwipe to your Home Screen'), h('span', null, 'Tap ', icon('share'), ' then “Add to Home Screen”')),
-    h('button', { class: 'close', 'aria-label': 'Dismiss', onclick: dismiss }, icon('x'))
-  );
-  setTimeout(() => document.body.append(el), 1200);
-}
-
 // ---------- home ----------
 
 const RATINGS = [{ label: 'Any', v: 0 }, { label: '6+', v: 6 }, { label: '7+', v: 7 }, { label: '8+', v: 8 }];
@@ -335,7 +320,6 @@ async function homePage() {
     )
   );
   if (ready) changed();
-  installHint();
 }
 
 // ---------- session ----------
@@ -406,20 +390,18 @@ function swipePage(code, token, info) {
 
   // --- layout ---
   const amb = [h('div', { class: 'amb' }), h('div', { class: 'amb' })];
-  const codeBtn = h('button', { class: 'pill glass code', onclick: invite }, code, icon('share'));
+  const inviteBtn = h('button', { class: 'pill glass', onclick: invite }, icon('share'), 'Invite');
   const avatars = h('button', { class: 'avatars', onclick: showMembers, 'aria-label': 'People' });
   const matchesBtn = h('button', { class: 'pill glass matches', onclick: showMatches });
   const stack = h('div', { class: 'stack' });
-  const hint = h('div', { class: 'hint' });
   const undoBtn = h('button', { class: 'round glass small', 'aria-label': 'Undo', onclick: doUndo }, icon('undo'));
   const nopeBtn = h('button', { class: 'round glass nope', 'aria-label': 'Pass', onclick: () => decide(false) }, icon('x'));
   const likeBtn = h('button', { class: 'round glass like', 'aria-label': 'Like', onclick: () => decide(true) }, icon('heart'));
   $app.replaceChildren(
     h('div', { class: 'ambient', 'aria-hidden': 'true' }, amb),
     h('div', { class: 'swipe fade-in' },
-      h('header', { class: 'bar' }, codeBtn, h('div', { class: 'spacer' }), avatars, matchesBtn),
+      h('header', { class: 'bar' }, inviteBtn, h('div', { class: 'spacer' }), avatars, matchesBtn),
       stack,
-      hint,
       h('div', { class: 'controls' }, nopeBtn, undoBtn, likeBtn)
     )
   );
@@ -452,15 +434,10 @@ function swipePage(code, token, info) {
     }
   }
 
-  function renderHint() {
-    const others = S.state.members.filter((m) => m.id !== S.myId);
-    const deck = S.state.deckSize;
+  // Nothing about other people's votes or progress is shown while swiping.
+  function renderControls() {
     undoBtn.disabled = S.pos === 0;
-    nopeBtn.disabled = likeBtn.disabled = S.pos >= deck;
-    if (S.pos >= deck) return (hint.textContent = '');
-    if (!others.length) return hint.replaceChildren(h('button', { class: 'link', onclick: invite }, icon('share'), 'Invite people to start matching'));
-    const swiped = others.filter((m) => m.position > S.pos).length;
-    hint.textContent = `${swiped} of ${others.length} ${others.length === 1 ? 'other has' : 'others have'} swiped this`;
+    nopeBtn.disabled = likeBtn.disabled = S.pos >= S.state.deckSize;
   }
 
   // --- cards ---
@@ -596,7 +573,7 @@ function swipePage(code, token, info) {
     S.queue.shift();
     S.pos++;
     renderStack();
-    renderHint();
+    renderControls();
     setTimeout(() => (S.busy = false), 180);
     fill();
     try {
@@ -618,7 +595,7 @@ function swipePage(code, token, info) {
       S.queue.unshift(m);
       haptic(5);
       renderStack(true);
-      renderHint();
+      renderControls();
     } catch (e) {
       toast(e.message);
     } finally {
@@ -652,7 +629,7 @@ function swipePage(code, token, info) {
       S.pos = fresh.me.position;
       S.queue = [];
       renderTop();
-      renderHint();
+      renderControls();
       fill();
     } catch (e) {
       toast(e.message);
@@ -720,6 +697,7 @@ function swipePage(code, token, info) {
   function showMembers() {
     sheet(
       h('h3', null, `${S.state.members.length} in this movie night`),
+      h('p', { class: 'lead' }, `Session code ${code}`),
       h('div', { class: 'list' },
         S.state.members.map((m, i) =>
           h('div', { class: 'item member' },
@@ -763,7 +741,7 @@ function swipePage(code, token, info) {
       const st = JSON.parse(e.data);
       Object.assign(S.state, st);
       renderTop();
-      renderHint();
+      renderControls();
       if (!S.queue.length) renderStack();
       st.matches.forEach((m) => showMatch(m.id));
     };
@@ -786,7 +764,7 @@ function swipePage(code, token, info) {
   });
 
   renderTop();
-  renderHint();
+  renderControls();
   fill();
 }
 
