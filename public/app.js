@@ -89,15 +89,71 @@ function closeLayer(el) {
 
 function sheet(...content) {
   const back = h('div', { class: 'backdrop', onclick: (e) => e.target === back && close() });
-  const close = () => {
+  const panel = h('div', { class: 'sheet', role: 'dialog' }, h('div', { class: 'grab' }), ...content);
+  let closed = false;
+  const close = ({ dragged = false } = {}) => {
+    if (closed) return;
+    closed = true;
     document.removeEventListener('keydown', onKey);
-    closeLayer(back);
+    if (!dragged) return closeLayer(back);
+    // Continue from where the finger let go instead of replaying the closing animation.
+    panel.style.transition = 'transform 0.26s cubic-bezier(.4,0,1,1)';
+    panel.style.transform = 'translateY(105%)';
+    back.style.transition = 'background-color 0.26s';
+    back.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    setTimeout(() => back.remove(), 280);
   };
   const onKey = (e) => e.key === 'Escape' && close();
   document.addEventListener('keydown', onKey);
-  back.append(h('div', { class: 'sheet', role: 'dialog' }, h('div', { class: 'grab' }), ...content));
+  pullToClose(panel, back, close);
+  back.append(panel);
   document.body.append(back);
   return close;
+}
+
+// iOS-style dismissal: drag a sheet down (when its content is scrolled to the top) and let go
+// past a quarter of its height, or flick it, to close; otherwise it springs back.
+function pullToClose(panel, back, close) {
+  let startY = null, lastY = 0, lastT = 0, speed = 0, dy = 0, dragging = false;
+  panel.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1 || e.target.closest('iframe')) return;
+    startY = lastY = e.touches[0].clientY;
+    lastT = performance.now();
+    speed = dy = 0;
+    dragging = false;
+  }, { passive: true });
+  panel.addEventListener('touchmove', (e) => {
+    if (startY == null) return;
+    const y = e.touches[0].clientY;
+    if (!dragging) {
+      if (y - startY > 4 && panel.scrollTop <= 0) {
+        dragging = true;
+        panel.style.transition = 'none';
+      } else if (Math.abs(y - startY) > 4) {
+        startY = null; // the content scrolls instead
+        return;
+      } else return;
+    }
+    e.preventDefault();
+    const now = performance.now();
+    speed = (y - lastY) / Math.max(1, now - lastT);
+    lastY = y;
+    lastT = now;
+    dy = Math.max(0, y - startY);
+    panel.style.transform = `translateY(${dy}px)`;
+    back.style.backgroundColor = `rgba(0, 0, 0, ${0.55 * (1 - Math.min(1, dy / panel.offsetHeight))})`;
+  }, { passive: false });
+  const end = () => {
+    if (startY == null) return;
+    startY = null;
+    if (!dragging) return;
+    if (dy > panel.offsetHeight * 0.25 || speed > 0.5) return close({ dragged: true });
+    panel.style.transition = 'transform 0.4s cubic-bezier(.3,1.3,.5,1)';
+    panel.style.transform = '';
+    back.style.backgroundColor = '';
+  };
+  panel.addEventListener('touchend', end);
+  panel.addEventListener('touchcancel', end);
 }
 
 // Slowly drifting wall of posters behind the start and join screens.
