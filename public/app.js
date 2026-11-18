@@ -73,7 +73,6 @@ function haptic(pattern = 10) {
   hapticLabel.click();
 }
 
-const fmt = (n) => n.toLocaleString('en-IN');
 const runtime = (m) => (m ? `${Math.floor(m / 60)}h ${m % 60}m`.replace(/^0h /, '') : null);
 const subline = (m) => [m.year, runtime(m.runtime), m.cert].filter(Boolean).join(' · ');
 const netflixUrl = (m) => `https://www.netflix.com/search?q=${encodeURIComponent(m.title)}`;
@@ -265,7 +264,7 @@ async function homePage() {
       const r = await api('/api/catalog/count', { method: 'POST', body: { filters: toFilters() } }).catch(() => null);
       if (!r) return;
       start.disabled = r.count === 0;
-      start.replaceChildren(r.count ? `Start · ${fmt(r.count)} ${r.count === 1 ? 'movie' : 'movies'}` : 'No movies match');
+      start.replaceChildren(r.count ? 'Start' : 'No movies match');
     }, 120);
   }
 
@@ -276,8 +275,7 @@ async function homePage() {
         h('button', { type: 'button', class: `tile ${f.cinemas.includes(c.id) ? 'on' : ''}`, onclick: () => { haptic(); toggleIn(f.cinemas, c.id); drawTiles(); changed(); } },
           h('span', { class: 'tick' }, icon('check')),
           h('span', { class: 'tile-name' }, c.name),
-          h('span', { class: 'tile-sub' }, c.sub),
-          h('span', { class: 'tile-count' }, `${fmt(c.count)} movies`)
+          h('span', { class: 'tile-sub' }, c.sub)
         )
       )
     );
@@ -385,7 +383,7 @@ async function joinPage(code, info) {
     h('div', { class: 'center fade-in' },
       h('div', { class: 'avatars big' }, info.members.map((m, i) => avatar({ ...m, online: true }, i))),
       h('h1', null, `Join ${info.host}'s movie night`),
-      h('p', null, `${fmt(info.deckSize)} movies on Netflix India. Swipe right on what you’d watch. When everyone agrees, it’s a match.`),
+      h('p', null, 'Swipe right on what you’d watch on Netflix India. When everyone agrees, it’s a match.'),
       name,
       btn
     )
@@ -462,7 +460,7 @@ function swipePage(code, token, info) {
     if (S.pos >= deck) return (hint.textContent = '');
     if (!others.length) return hint.replaceChildren(h('button', { class: 'link', onclick: invite }, icon('share'), 'Invite people to start matching'));
     const swiped = others.filter((m) => m.position > S.pos).length;
-    hint.textContent = `${swiped} of ${others.length} ${others.length === 1 ? 'other has' : 'others have'} swiped this · ${fmt(S.pos + 1)}/${fmt(deck)}`;
+    hint.textContent = `${swiped} of ${others.length} ${others.length === 1 ? 'other has' : 'others have'} swiped this`;
   }
 
   // --- cards ---
@@ -728,7 +726,7 @@ function swipePage(code, token, info) {
             avatar({ ...m, online: true }, i),
             h('div', { class: 'grow' },
               h('div', { class: 't' }, m.id === S.myId ? `${m.name} (you)` : m.name),
-              h('div', { class: 's' }, `${fmt(Math.min(m.id === S.myId ? S.pos : m.position, S.state.deckSize))} of ${fmt(S.state.deckSize)} swiped`)
+              h('div', { class: 's' }, (m.id === S.myId ? S.pos : m.position) >= S.state.deckSize ? 'Finished swiping' : m.online ? 'Swiping' : 'Away')
             ),
             h('span', { class: `dot ${m.online ? 'on' : ''}`, title: m.online ? 'Online' : 'Away' })
           )
