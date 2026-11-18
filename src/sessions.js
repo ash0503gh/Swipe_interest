@@ -76,7 +76,7 @@ export function publicState(s, online = new Set()) {
 }
 
 export class SessionHub extends EventEmitter {
-  constructor({ saveDelayMs = 1500 } = {}) {
+  constructor({ saveDelayMs = 5000 } = {}) {
     super();
     this.setMaxListeners(0);
     this.saveDelayMs = saveDelayMs;

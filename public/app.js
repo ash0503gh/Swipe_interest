@@ -755,15 +755,28 @@ function swipePage(code, token, info) {
   }
 
   // --- live updates ---
-  const events = new EventSource(`${path}/events?token=${encodeURIComponent(token)}`);
-  events.onmessage = (e) => {
-    const st = JSON.parse(e.data);
-    Object.assign(S.state, st);
-    renderTop();
-    renderHint();
-    if (!S.queue.length) renderStack();
-    st.matches.forEach((m) => showMatch(m.id));
-  };
+  // Only stay connected while the app is on screen: an open connection keeps the server billed.
+  let events = null;
+  function listen() {
+    events = new EventSource(`${path}/events?token=${encodeURIComponent(token)}`);
+    events.onmessage = (e) => {
+      const st = JSON.parse(e.data);
+      Object.assign(S.state, st);
+      renderTop();
+      renderHint();
+      if (!S.queue.length) renderStack();
+      st.matches.forEach((m) => showMatch(m.id));
+    };
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      events?.close();
+      events = null;
+    } else if (!events) {
+      listen();
+    }
+  });
+  if (!document.hidden) listen();
 
   document.addEventListener('keydown', (e) => {
     if (e.target.closest('input') || document.querySelector('.backdrop, .overlay')) return;
