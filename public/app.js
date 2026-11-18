@@ -75,6 +75,16 @@ function haptic(pattern = 10) {
   hapticLabel.click();
 }
 
+// Run fn when Enter is pressed. Never return false from a key handler: that cancels typing.
+function onEnter(input, fn) {
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      fn();
+    }
+  });
+}
+
 const runtime = (m) => (m ? `${Math.floor(m / 60)}h ${m % 60}m`.replace(/^0h /, '') : null);
 const subline = (m) => [m.year, runtime(m.runtime), m.cert].filter(Boolean).join(' · ');
 const netflixUrl = (m) => `https://www.netflix.com/search?q=${encodeURIComponent(m.title)}`;
@@ -274,7 +284,7 @@ function joinSheet() {
     if (/^[A-Z0-9]{6}$/.test(c)) location.assign(`/s/${c}`);
     else toast('Codes are 6 letters or numbers');
   };
-  input.onkeydown = (e) => e.key === 'Enter' && go();
+  onEnter(input, go);
   sheet(
     h('h3', null, 'Join a movie night'),
     h('p', { class: 'lead' }, 'Enter the code from your invite.'),
@@ -358,7 +368,7 @@ async function homePage() {
       start.disabled = false;
     }
   };
-  name.onkeydown = (e) => e.key === 'Enter' && name.blur();
+  onEnter(name, () => name.blur());
 
   $app.replaceChildren(
     posterWall(meta?.posters),
@@ -420,7 +430,7 @@ async function joinPage(code, info) {
       btn.disabled = false;
     }
   };
-  name.onkeydown = (e) => e.key === 'Enter' && btn.click();
+  onEnter(name, () => btn.click());
   $app.replaceChildren(
     posterWall(meta?.posters),
     h('div', { class: 'center fade-in' },
@@ -449,7 +459,7 @@ function swipePage(code, token, info) {
 
   // --- layout ---
   const amb = [h('div', { class: 'amb' }), h('div', { class: 'amb' })];
-  const inviteBtn = h('button', { class: 'pill glass', onclick: invite }, icon('share'), 'Invite');
+  const inviteBtn = h('button', { class: 'pill glass code', onclick: invite, 'aria-label': `Invite people. Session code ${code}` }, icon('share'), code);
   const people = h('button', { class: 'pill glass people', onclick: showMembers });
   const matchesBtn = h('button', { class: 'pill glass matches', onclick: showMatches });
   const stack = h('div', { class: 'stack' });
