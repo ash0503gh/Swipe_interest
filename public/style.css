@@ -121,11 +121,11 @@ svg { display: block; }
 /* ---------- swipe screen ---------- */
 
 .swipe { flex: 1; display: flex; flex-direction: column; height: 100dvh; overflow: hidden; }
-.top {
+.bar {
   display: flex; align-items: center; gap: 10px;
   padding: calc(10px + env(safe-area-inset-top)) 16px 6px;
 }
-.top .spacer { flex: 1; }
+.bar .spacer { flex: 1; }
 .pill {
   height: 36px; padding: 0 12px; border-radius: 999px; background: var(--surface);
   display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600;

@@ -95,12 +95,16 @@ export function catalogMeta() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Accepts either TMDB credential: the short v3 API key or the long v4 read access token.
 async function tmdb(pathname, params = {}) {
+  const key = process.env.TMDB_API_KEY.trim();
   const url = new URL(TMDB + pathname);
-  url.searchParams.set('api_key', process.env.TMDB_API_KEY);
+  const headers = {};
+  if (key.length > 40) headers.Authorization = `Bearer ${key}`;
+  else url.searchParams.set('api_key', key);
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
   for (let attempt = 0; ; attempt++) {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers });
     if (res.ok) return res.json();
     if ((res.status === 429 || res.status >= 500) && attempt < 4) {
       await sleep(1000 * 2 ** attempt);

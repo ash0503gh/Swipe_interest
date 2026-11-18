@@ -316,7 +316,7 @@ function swipePage(code, token, info) {
   const likeBtn = h('button', { class: 'round like', 'aria-label': 'Like', onclick: () => decide(true) }, icon('heart'));
   $app.replaceChildren(
     h('div', { class: 'swipe fade-in' },
-      h('header', { class: 'top' }, codeBtn, h('div', { class: 'spacer' }), avatars, matchesBtn),
+      h('header', { class: 'bar' }, codeBtn, h('div', { class: 'spacer' }), avatars, matchesBtn),
       stack,
       hint,
       h('div', { class: 'controls' }, nopeBtn, undoBtn, likeBtn)
