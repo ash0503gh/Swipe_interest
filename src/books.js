@@ -1,4 +1,4 @@
-// Books mode: English fiction bestsellers (built by `npm run books` into books.json).
+// Books mode: English fiction and non-fiction bestsellers (built by `npm run books` into books.json).
 import { readFileSync, existsSync } from 'node:fs';
 
 const file = new URL('./books.json', import.meta.url);
@@ -14,7 +14,10 @@ export function bookId(title, author) {
 // Within a filter any choice matches; filters combine with AND.
 export function filterBooks(books, f = {}) {
   return books.filter(
-    (b) => (!f.origins?.length || f.origins.includes(b.origin)) && (!f.genres?.length || b.genres.some((g) => f.genres.includes(g)))
+    (b) =>
+      (!f.category || (b.category || 'fiction') === f.category) &&
+      (!f.origins?.length || f.origins.includes(b.origin)) &&
+      (!f.genres?.length || b.genres.some((g) => f.genres.includes(g)))
   );
 }
 
@@ -24,8 +27,13 @@ export function sortBooks(books) {
   return [...books].sort((a, b) => (a.nytRank ?? 99) - (b.nytRank ?? 99) || score(b) - score(a) || b.ratingCount - a.ratingCount);
 }
 
-export function bookGenres() {
-  const count = new Map();
-  for (const b of BOOK_LIST) b.genres.forEach((g) => count.set(g, (count.get(g) || 0) + 1));
-  return [...count].sort((a, b) => b[1] - a[1]).map(([g]) => g);
+// Genres by category, most common first: { fiction: [...], nonfiction: [...] }.
+export function bookGenres(books = BOOK_LIST) {
+  const out = {};
+  for (const category of ['fiction', 'nonfiction']) {
+    const count = new Map();
+    for (const b of books) if ((b.category || 'fiction') === category) b.genres.forEach((g) => count.set(g, (count.get(g) || 0) + 1));
+    out[category] = [...count].sort((a, b) => b[1] - a[1]).map(([g]) => g);
+  }
+  return out;
 }

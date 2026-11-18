@@ -1,11 +1,13 @@
-// npm run books — builds src/books.json from the curated list (src/books-list.js) plus, when
-// NYT_API_KEY is set, the current New York Times fiction bestseller lists. Covers, first publication
+// npm run books — builds src/books.json from the curated lists (src/books-list.js fiction,
+// src/books-nonfiction.js non-fiction) plus, when NYT_API_KEY is set, the current New York Times
+// fiction and non-fiction bestseller lists. Covers, first publication
 // year, pages, reader ratings and descriptions come from Open Library (Google Books fills gaps while its
 // free quota lasts). All free.
 import { writeFile } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { BOOKS, GENRES } from './books-list.js';
+import { NONFICTION, NF_GENRES } from './books-nonfiction.js';
 import { bookId } from './books.js';
 
 const UA = 'SwipeTogether-books/1.0 (personal family app)';
@@ -76,6 +78,7 @@ async function googleBooks(title, author) {
   u.searchParams.set('maxResults', '6');
   u.searchParams.set('printType', 'books');
   u.searchParams.set('langRestrict', 'en');
+  if (process.env.GOOGLE_BOOKS_KEY) u.searchParams.set('key', process.env.GOOGLE_BOOKS_KEY); // free; key only raises the quota
   let items = [];
   try {
     items = (await getJSON(u, { retries: 0 }))?.items || [];
@@ -98,35 +101,48 @@ const GENRE_WORDS = [
   ['Fantasy', /fantasy|magic/], ['Sci-Fi', /science fiction|dystopi/], ['Historical', /historical|history/],
   ['Horror', /horror/], ['Mythology', /mytholog/], ['Literary', /literary/],
 ];
-const genresFrom = (cats) => {
+const NF_WORDS = [
+  ['Self-help', /self-help|personal growth|motivation|success/], ['Money', /finance|money|invest/],
+  ['Business', /business|economics|management|entrepreneur/], ['Biography', /biography|memoir/],
+  ['History', /history/], ['Science', /science|nature|medical|health/], ['Spirituality', /religion|spiritual|philosophy/],
+  ['Psychology', /psychology/],
+];
+// Fiction falls back to Contemporary; non-fiction outside our categories (politics, true crime...) gets none and is left out.
+const genresFrom = (cats, category) => {
   const text = cats.join(' ').toLowerCase();
-  const g = GENRE_WORDS.filter(([, re]) => re.test(text)).map(([name]) => name);
-  return g.length ? g.slice(0, 2) : ['Contemporary'];
+  const g = (category === 'nonfiction' ? NF_WORDS : GENRE_WORDS).filter(([, re]) => re.test(text)).map(([name]) => name);
+  return g.length ? g.slice(0, 2) : category === 'nonfiction' ? [] : ['Contemporary'];
 };
 
 async function nytBooks() {
   const key = process.env.NYT_API_KEY;
   if (!key) return [];
   const out = new Map();
-  for (const list of ['combined-print-and-e-book-fiction', 'hardcover-fiction', 'trade-fiction-paperback']) {
+  const lists = [
+    ['combined-print-and-e-book-fiction', 'fiction'], ['hardcover-fiction', 'fiction'], ['trade-fiction-paperback', 'fiction'],
+    ['combined-print-and-e-book-nonfiction', 'nonfiction'], ['hardcover-nonfiction', 'nonfiction'], ['paperback-nonfiction', 'nonfiction'],
+    ['advice-how-to-and-miscellaneous', 'nonfiction'], ['business-books', 'nonfiction'],
+  ];
+  for (const [list, category] of lists) {
     const d = await getJSON(`https://api.nytimes.com/svc/books/v3/lists/current/${list}.json?api-key=${encodeURIComponent(key)}`);
     for (const b of d?.results?.books || []) {
       const k = norm(b.title);
       const prev = out.get(k);
-      if (!prev || b.rank < prev.rank) out.set(k, { title: titleCase(b.title), author: b.author, rank: b.rank, image: b.book_image, description: b.description });
+      if (!prev || b.rank < prev.rank) out.set(k, { title: titleCase(b.title), author: b.author, rank: b.rank, image: b.book_image, description: b.description, category });
     }
     await sleep(12500); // NYT allows 5 requests per minute
   }
   return [...out.values()];
 }
 
-const indianAuthors = new Set(BOOKS.filter((b) => b[2] === 'indian').map((b) => norm(b[1])));
-const curatedTitles = new Set(BOOKS.map((b) => norm(b[0])));
+const CURATED = [...BOOKS.map((b) => [b[0], b[1], b[2], b[3], b[4], 'fiction']), ...NONFICTION.map((b) => [b[0], b[1], b[2], b[3], b[4], 'nonfiction'])];
+const indianAuthors = new Set(CURATED.filter((b) => b[2] === 'indian').map((b) => norm(b[1])));
+const curatedTitles = new Set(CURATED.map((b) => norm(b[0])));
 const nyt = (await nytBooks()).filter((b) => !curatedTitles.has(norm(b.title)));
 const nytRank = new Map();
 const entries = [
-  ...BOOKS.map(([title, author, origin, genres, cover]) => ({ title, author, origin, genres: genres.split('|'), cover })),
-  ...nyt.map((b) => ({ title: b.title, author: b.author, origin: indianAuthors.has(norm(b.author)) ? 'indian' : 'international', genres: null, nyt: b })),
+  ...CURATED.map(([title, author, origin, genres, cover, category]) => ({ title, author, origin, genres: genres.split('|'), cover, category })),
+  ...nyt.map((b) => ({ title: b.title, author: b.author, origin: indianAuthors.has(norm(b.author)) ? 'indian' : 'international', genres: null, category: b.category, nyt: b })),
 ];
 for (const b of nyt) nytRank.set(norm(b.title), b.rank);
 
@@ -136,20 +152,25 @@ let done = 0;
 for (const e of entries) {
   const ol = await openLibrary(e.title, e.author);
   const olText = await workDescription(ol?.key);
-  const gb = olText.length > 120 ? { description: '', categories: [] } : await googleBooks(e.title, e.author);
+  const gb = olText.length > 120 && e.genres ? { description: '', categories: [] } : await googleBooks(e.title, e.author); // NYT picks need categories for genres
   await sleep(300);
   if (++done % 20 === 0) console.log(`${done}/${entries.length}`);
   const coverId = e.cover || ol?.cover_i; // a pinned cover (English edition, checked by eye) wins
   const image = e.nyt?.image || (coverId ? `https://covers.openlibrary.org/b/id/${coverId}-L.jpg` : gb.thumb);
   if (!image) { problems.push(`no cover: ${e.title}`); continue; }
-  for (const g of e.genres || []) if (!GENRES.includes(g)) throw new Error(`Unknown genre ${g} for ${e.title}`);
+  for (const g of e.genres || []) if (!(e.category === 'nonfiction' ? NF_GENRES : GENRES).includes(g)) throw new Error(`Unknown genre ${g} for ${e.title}`);
+  let genres = e.genres || genresFrom(gb.categories, e.category);
+  // NYT non-fiction is mostly US memoir, history and politics; keep only its how-to side.
+  if (!e.genres && e.category === 'nonfiction' && !genres.some((g) => ['Self-help', 'Business', 'Money', 'Psychology', 'Spirituality'].includes(g))) genres = [];
+  if (!genres.length) { problems.push(`skipped (outside our categories): ${e.title}`); continue; }
   books.push({
     id: bookId(e.title, e.author),
     kind: 'book',
     title: e.title,
     author: e.author,
     origin: e.origin,
-    genres: e.genres || genresFrom(gb.categories),
+    category: e.category,
+    genres,
     year: ol?.first_publish_year || null,
     pages: ol?.number_of_pages_median || null,
     rating: ol?.ratings_count >= 5 ? Math.round(ol.ratings_average * 10) / 10 : null,

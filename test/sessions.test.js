@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 
 process.env.DATA_DIR = await mkdtemp(path.join(tmpdir(), 'flick-'));
-const { createSession, addMember, swipe, undo, publicState, findMember, SessionHub, MAX_MEMBERS, HttpError } = await import('../src/sessions.js');
+const { createSession, addMember, swipe, undo, publicState, findMember, endSession, SessionHub, MAX_MEMBERS, HttpError } = await import('../src/sessions.js');
 
 const deck = [10, 20, 30, 40];
 const setup = (n = 3) => {
@@ -156,4 +156,24 @@ test('concurrent loads of a stored session share one object', async () => {
   const cold = new SessionHub();
   const [x, y, z] = await Promise.all([cold.get(s.code), cold.get(s.code), cold.get(s.code)]);
   assert.ok(x === y && y === z);
+});
+
+test('joining again with the same name continues as that person', () => {
+  const { s, ms: [a, b] } = setup(2);
+  swipe(s, a, 10, true);
+  const again = addMember(s, '  p1 ');
+  assert.equal(again, b);
+  assert.equal(s.members.length, 2);
+  assert.deepEqual(swipe(s, again, 10, true, 7000), { id: 10, at: 7000 }); // no ghost member blocking the match
+});
+
+test('anyone can end a session for everyone', async () => {
+  const hub = new SessionHub({ minGapMs: 0 });
+  const { s, ms: [, b] } = setup(2);
+  await hub.add(s);
+  endSession(s, b);
+  assert.equal(publicState(s).endedBy, 'P1');
+  await hub.changed(s);
+  await assert.rejects(hub.get(s.code), /P1 ended this session/);
+  await assert.rejects(new SessionHub().get(s.code), /P1 ended this session/); // still ended after a restart
 });

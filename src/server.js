@@ -5,7 +5,7 @@ import { timingSafeEqual } from 'node:crypto';
 import { loadCatalog, getCatalog, getMovie, filterMovies, sortTopRated, catalogMeta, refreshCatalog } from './catalog.js';
 import { dishesFor, shuffle } from './food.js';
 import { BOOK_LIST, filterBooks, sortBooks, bookGenres } from './books.js';
-import { SessionHub, HttpError, createSession, addMember, findMember, swipe, undo } from './sessions.js';
+import { SessionHub, HttpError, createSession, addMember, findMember, swipe, undo, endSession } from './sessions.js';
 
 const PUBLIC_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const hub = new SessionHub();
@@ -25,6 +25,7 @@ function cleanFilters(f = {}) {
   return {
     kind: ['tv', 'book', 'food'].includes(f.kind) ? f.kind : 'movie',
     origins: strings(f.origins),
+    category: ['fiction', 'nonfiction'].includes(f.category) ? f.category : '',
     meal: f.meal === 'breakfast' ? 'breakfast' : 'main',
     cinemas: strings(f.cinemas),
     genres: strings(f.genres),
@@ -127,6 +128,13 @@ app.post('/api/sessions/:code/undo', async (req, res) => {
   undo(s, m);
   await saved(s);
   res.json({ me: me(m) });
+});
+
+app.post('/api/sessions/:code/end', async (req, res) => {
+  const { s, me: m } = await auth(req);
+  endSession(s, m);
+  await hub.changed(s); // tells everyone connected, and waits for the save
+  res.json({ ok: true });
 });
 
 // Live updates (EventSource can't send headers, so the token rides in the query string).

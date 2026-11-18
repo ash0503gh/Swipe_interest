@@ -47,7 +47,7 @@ const ls = {
 // Sessions this phone has joined, newest first, for the "Continue session" shortcut.
 const recent = {
   list() { try { return JSON.parse(ls.get('fs:recent') || '[]'); } catch { return []; } },
-  add(code) { ls.set('fs:recent', JSON.stringify([code, ...recent.list().filter((c) => c !== code)].slice(0, 5))); },
+  add(code) { ls.set('fs:recent', JSON.stringify([code, ...recent.list().filter((c) => c !== code)].slice(0, 8))); },
   drop(code) { ls.set('fs:recent', JSON.stringify(recent.list().filter((c) => c !== code))); },
 };
 const KINDS = { movie: ['🎬', 'Movies'], tv: ['📺', 'Shows'], book: ['📚', 'Books'], food: ['🍽️', 'Food'] };
@@ -345,10 +345,11 @@ function joinSheet() {
   setTimeout(() => input.focus(), 350);
 }
 
-// Up to two still-running sessions this phone is part of; checked against the server, expired ones forgotten.
+// The latest still-running session per section (movies, shows, books, food) this phone is part of;
+// checked against the server, expired ones forgotten.
 function resumeList() {
   const box = h('div', { class: 'resume-list' });
-  const codes = recent.list().filter((c) => ls.get(`fs:${c}`)).slice(0, 3);
+  const codes = recent.list().filter((c) => ls.get(`fs:${c}`));
   Promise.all(
     codes.map((c) =>
       api(`/api/sessions/${c}`, { token: ls.get(`fs:${c}`) }).catch((e) => {
@@ -357,16 +358,20 @@ function resumeList() {
       })
     )
   ).then((infos) => {
-    const live = infos.filter((i) => i?.me).slice(0, 2);
+    const kinds = new Set();
+    const live = infos.filter((i) => i?.me && !kinds.has(i.kind) && kinds.add(i.kind));
     box.replaceChildren(
       ...live.map((i) => {
         const [emoji, label] = KINDS[i.kind] || KINDS.movie;
         const n = i.members.length;
-        return h('a', { class: 'resume glass fade-in', href: `/s/${i.code}` },
-          h('span', { class: 'resume-icon' }, emoji),
-          h('span', { class: 'grow' }, h('b', null, 'Continue session'), h('span', null, `${label} · ${i.code} · ${n} ${n === 1 ? 'person' : 'people'}`)),
-          icon('right')
+        const card = h('div', { class: 'resume glass fade-in' },
+          h('a', { class: 'resume-open', href: `/s/${i.code}` },
+            h('span', { class: 'resume-icon' }, emoji),
+            h('span', { class: 'grow' }, h('b', null, 'Continue session'), h('span', null, `${label} · ${i.code} · ${n} ${n === 1 ? 'person' : 'people'}`))
+          ),
+          h('button', { class: 'resume-end', 'aria-label': `End session ${i.code}`, onclick: () => endSession(i.code, () => card.remove()) }, icon('x'))
         );
+        return card;
       })
     );
   });
@@ -376,10 +381,10 @@ function resumeList() {
 async function homePage() {
   const meta = await api('/api/catalog').catch(() => null);
   const ready = meta?.total > 0;
-  const f = { kind: 'movie', meal: 'main', origins: [], cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
+  const f = { kind: 'movie', meal: 'main', category: '', origins: [], cinemas: [], genres: [], rating: RATINGS[0], year: YEARS[0], runtime: RUNTIMES[0], kidsSafe: false };
   const isMovies = () => f.kind === 'movie';
   const toFilters = () => ({
-    kind: f.kind, meal: f.meal, origins: f.origins, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
+    kind: f.kind, meal: f.meal, category: f.category, origins: f.origins, cinemas: f.cinemas, genres: f.genres, minRating: f.rating.v, yearFrom: f.year.from, yearTo: f.year.to,
     maxRuntime: isMovies() ? f.runtime.v : 0, kidsSafe: f.kidsSafe,
   });
   const extraCount = () => [f.rating.v, f.year.label !== 'Any', isMovies() && f.runtime.v, f.kidsSafe].filter(Boolean).length;
@@ -404,7 +409,7 @@ async function homePage() {
       const r = await api('/api/catalog/count', { method: 'POST', body: { filters: toFilters() } }).catch(() => null);
       if (!r) return;
       start.disabled = r.count === 0;
-      start.replaceChildren(r.count ? 'Start' : `No ${isMovies() ? 'movies' : 'shows'} match`);
+      start.replaceChildren(r.count ? 'Start' : `No ${{ movie: 'movies', tv: 'shows', book: 'books' }[f.kind] || 'dishes'} match`);
     }, 120);
   }
 
@@ -421,18 +426,20 @@ async function homePage() {
     );
   drawTiles();
 
-  // Movies and shows have different genre lists, so the row is rebuilt when the kind changes.
+  // Movies, shows, fiction and non-fiction have different genre lists, so the row is rebuilt when the kind changes.
+  const genreList = () =>
+    (f.kind === 'book' ? (f.category ? meta?.bookGenres?.[f.category] : [...(meta?.bookGenres?.fiction || []), ...(meta?.bookGenres?.nonfiction || [])]) : meta?.genres?.[f.kind]) || [];
   const genreBox = h('div');
   const drawGenres = () =>
     genreBox.replaceChildren(
-      chips(((f.kind === 'book' ? meta?.bookGenres : meta?.genres?.[f.kind]) || []).map((g) => ({ label: g, v: g })), (o) => f.genres.includes(o.v), (o) => toggleIn(f.genres, o.v), changed, 'chips scroller')
+      chips(genreList().map((g) => ({ label: g, v: g })), (o) => f.genres.includes(o.v), (o) => toggleIn(f.genres, o.v), changed, 'chips scroller')
     );
   drawGenres();
 
   const HEADLINES = {
     movie: ['Movie night,', 'decided together.', 'Everyone swipes on what’s streaming on Netflix India. When you all say yes, it’s a match.'],
     tv: ['Binge night,', 'decided together.', 'Everyone swipes on shows streaming on Netflix India. When you all say yes, it’s a match.'],
-    book: ['Book club,', 'decided together.', 'Everyone swipes on bestselling fiction. When you all say yes, it’s a match.'],
+    book: ['Book club,', 'decided together.', 'Everyone swipes on bestselling books. When you all say yes, it’s a match.'],
     food: ['What’s cooking?', 'Decided together.', 'Everyone swipes on home-style veg dishes. When most of you say yes, it’s a match.'],
   };
   const headline = h('h1', { class: 'headline' });
@@ -448,7 +455,24 @@ async function homePage() {
     );
   drawMeals();
 
-  const ORIGINS = [['indian', 'Indian', 'Bhagat, Amish, Roy, Narayan…'], ['international', 'International', 'Hoover, Coelho, Christie…']];
+  const categories = h('div', { class: 'segment three' });
+  const drawCategories = () =>
+    categories.replaceChildren(
+      ...[['fiction', 'Fiction'], ['nonfiction', 'Non-fiction'], ['', 'Both']].map(([k, label]) =>
+        h('button', { type: 'button', class: f.category === k ? 'on' : '', onclick: () => {
+          if (f.category === k) return;
+          haptic();
+          f.category = k;
+          f.genres = f.genres.filter((g) => genreList().includes(g));
+          drawCategories();
+          drawGenres();
+          changed();
+        } }, label)
+      )
+    );
+  drawCategories();
+
+  const ORIGINS = [['indian', 'Indian', 'Bhagat, Amish, Kalam, Sadhguru…'], ['international', 'International', 'Hoover, Coelho, Clear, Harari…']];
   const bookTiles = h('div', { class: 'tiles' });
   const drawBookTiles = () =>
     bookTiles.replaceChildren(
@@ -462,7 +486,7 @@ async function homePage() {
 
   // Movies and shows filter by cinema, books by author origin, both by genre; food only by meal.
   const movieOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Cinema'), tiles);
-  const bookOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Authors'), bookTiles);
+  const bookOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Type'), categories, h('div', { class: 'label' }, 'Authors'), bookTiles);
   const genreOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Genre'), genreBox);
   const foodOpts = h('div', { class: 'opts' }, h('div', { class: 'label' }, 'Meal'), meals);
   function drawMode() {
@@ -552,6 +576,27 @@ async function homePage() {
 
 // ---------- session ----------
 
+// Asks first, then ends the session for everyone in it.
+function endSession(code, onEnded) {
+  const close = sheet(
+    h('h3', null, 'End this session?'),
+    h('p', { class: 'lead' }, 'It closes for everyone in it, and the matches go with it.'),
+    h('button', { class: 'btn danger block', onclick: async (e) => {
+      const btn = e.currentTarget;
+      btn.disabled = true;
+      try {
+        await api(`/api/sessions/${code}/end`, { method: 'POST', token: ls.get(`fs:${code}`) });
+      } catch (err) {
+        if (err.status !== 404) return toast(err.message), (btn.disabled = false);
+      }
+      recent.drop(code);
+      close();
+      onEnded();
+    } }, 'End for everyone'),
+    h('button', { class: 'btn text block', onclick: () => close() }, 'Cancel')
+  );
+}
+
 function message(title, text) {
   $app.replaceChildren(
     h('div', { class: 'center fade-in' }, h('h1', null, title), h('p', null, text), h('a', { class: 'btn primary', href: '/' }, 'Start a new one'))
@@ -564,7 +609,8 @@ async function sessionPage(code) {
   try {
     info = await api(`/api/sessions/${code}`, { token });
   } catch (e) {
-    return e.status === 404 ? message('Session ended', 'This movie night has expired or never existed.') : message('Hmm', e.message);
+    if (e.status === 404) recent.drop(code);
+    return e.status === 404 ? message('Session ended', /ended this session/.test(e.message) ? e.message : 'This session has expired or never existed.') : message('Hmm', e.message);
   }
   if (!info.me) return joinPage(code, info);
   swipePage(code, token, info);
@@ -673,8 +719,11 @@ function swipePage(code, token, info) {
   const els = new Map(); // movie id -> card element (not counting cards flying away)
 
   function cardEl(m) {
-    const el = h('div', { class: 'card' },
-      art(m, 'w780') ? h('img', { class: 'poster', src: art(m, 'w780'), alt: '', draggable: 'false' })
+    const book = m.kind === 'book' && m.image;
+    const el = h('div', { class: book ? 'card book' : 'card' },
+      // Books: the whole cover on a blurred copy of itself, text below it (covers aren't card-shaped).
+      book ? [h('div', { class: 'book-bg', style: `background-image:url("${m.image}")` }), h('div', { class: 'book-cover' }, h('img', { src: m.image, alt: '', draggable: 'false' }))]
+        : art(m, 'w780') ? h('img', { class: 'poster', src: art(m, 'w780'), alt: '', draggable: 'false' })
         : m.kind === 'food' ? h('div', { class: 'noposter dish' }, h('span', { class: 'emoji' }, m.meal === 'breakfast' ? '🫓' : '🍛'))
         : h('div', { class: 'noposter' }, m.title),
       h('div', { class: 'tint like' }),
@@ -942,7 +991,7 @@ function swipePage(code, token, info) {
   }
 
   function showMembers() {
-    sheet(
+    const close = sheet(
       h('h3', null, `${S.state.members.length} in this movie night`),
       h('p', { class: 'lead' }, `Session code ${code}`),
       h('div', { class: 'list' },
@@ -957,7 +1006,11 @@ function swipePage(code, token, info) {
           )
         )
       ),
-      h('button', { class: 'btn primary block', style: 'margin-top:16px', onclick: invite }, icon('share'), 'Invite people')
+      h('button', { class: 'btn primary block', style: 'margin-top:16px', onclick: invite }, icon('share'), 'Invite people'),
+      h('button', { class: 'btn text block danger-text', onclick: () => {
+        close();
+        endSession(code, () => (events?.close(), message('Session ended', 'You ended this session for everyone.')));
+      } }, 'End session')
     );
   }
 
@@ -986,6 +1039,12 @@ function swipePage(code, token, info) {
     events = new EventSource(`${path}/events?token=${encodeURIComponent(token)}`);
     events.onmessage = (e) => {
       const st = JSON.parse(e.data);
+      if (st.endedBy) {
+        events.close();
+        recent.drop(code);
+        document.querySelectorAll('.backdrop, .overlay').forEach((el) => el.remove());
+        return message('Session ended', `${st.endedBy} ended this session.`);
+      }
       Object.assign(S.state, st);
       renderTop();
       renderControls();

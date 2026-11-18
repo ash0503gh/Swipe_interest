@@ -35,7 +35,12 @@ export function createSession({ deck, filters, rule = 'all', now = Date.now() })
 export const likesNeeded = (s) => (s.rule === 'majority' ? Math.floor(s.members.length / 2) + 1 : s.members.length);
 
 // Member: { id (public), token (secret), name, joinedAt, swipes: [[movieId, 1|0], ...] in deck order }
+// Joining again with a name already in the session (another browser, or the Home Screen app,
+// which keeps its own storage on iPhone) continues as that person instead of adding a second
+// one who never swipes and so blocks every "everyone agrees" match.
 export function addMember(s, name, now = Date.now()) {
+  const same = s.members.find((m) => m.name.toLowerCase() === cleanName(name).toLowerCase());
+  if (same) return same;
   if (s.members.length >= MAX_MEMBERS) throw new HttpError(409, `This session is full (${MAX_MEMBERS} people)`);
   const m = { id: randomUUID().slice(0, 8), token: randomUUID(), name: cleanName(name), joinedAt: now, swipes: [] };
   s.members.push(m);
@@ -70,10 +75,17 @@ export function undo(s, member) {
   member.swipes.pop();
 }
 
+// Anyone in the session can end it for everybody.
+export function endSession(s, member, now = Date.now()) {
+  s.expiresAt = now - 1;
+  s.endedBy = member.name;
+}
+
 export function publicState(s, online = new Set()) {
   return {
     code: s.code,
     expiresAt: s.expiresAt,
+    endedBy: s.endedBy || null,
     kind: s.filters?.kind || 'movie',
     rule: s.rule || 'all',
     deckSize: s.deck.length,
@@ -114,8 +126,8 @@ export class SessionHub extends EventEmitter {
       if (s) this.sessions.set(code, s);
     }
     if (!s || s.expiresAt < Date.now()) {
-      this.sessions.delete(code);
-      throw new HttpError(404, 'Session not found or expired');
+      if (!this.writes.get(code)?.queued) this.sessions.delete(code); // keep it until its last save lands
+      throw new HttpError(404, s?.endedBy ? `${s.endedBy} ended this session.` : 'Session not found or expired');
     }
     return s;
   }

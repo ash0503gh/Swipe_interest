@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { bookId, filterBooks, sortBooks } from '../src/books.js';
+import { bookId, filterBooks, sortBooks, bookGenres } from '../src/books.js';
 import { BOOKS, GENRES } from '../src/books-list.js';
+import { NONFICTION, NF_GENRES } from '../src/books-nonfiction.js';
 
 const list = [
   { id: 1, origin: 'indian', genres: ['Romance'], rating: 3.9, ratingCount: 400, nytRank: null },
@@ -25,11 +26,19 @@ test('NYT bestsellers first, then well-rated books', () => {
 
 test('curated list is valid and ids are safe', () => {
   const seen = new Set();
-  for (const [title, author, origin, genres] of BOOKS) {
+  for (const [[title, author, origin, genres], valid] of [...BOOKS.map((b) => [b, GENRES]), ...NONFICTION.map((b) => [b, NF_GENRES])]) {
     assert.ok(['indian', 'international'].includes(origin), title);
-    genres.split('|').forEach((g) => assert.ok(GENRES.includes(g), `${title}: ${g}`));
+    genres.split('|').forEach((g) => assert.ok(valid.includes(g), `${title}: ${g}`));
     const id = bookId(title, author);
     assert.ok(id >= 5e9 && id < 6e9 && !seen.has(id), title);
     seen.add(id);
   }
+});
+
+test('fiction / non-fiction filter and genres per category', () => {
+  const both = [...list, { id: 6, origin: 'indian', category: 'nonfiction', genres: ['Self-help'], rating: 4.5, ratingCount: 80 }];
+  assert.deepEqual(ids(filterBooks(both, { category: 'nonfiction' })), [6]);
+  assert.deepEqual(ids(filterBooks(both, { category: 'fiction', origins: ['indian'] })), [1, 4]); // no category = fiction
+  assert.equal(filterBooks(both, { category: '' }).length, 6);
+  assert.deepEqual(bookGenres(both), { fiction: ['Romance', 'Thriller', 'Mystery', 'Mythology', 'Fantasy'], nonfiction: ['Self-help'] });
 });
