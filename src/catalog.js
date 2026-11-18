@@ -30,10 +30,20 @@ export async function loadCatalog() {
 
 // ---------- filtering and ordering (pure) ----------
 
+// "Cinema" is the movie's original language, grouped. World = every other language.
+export const CINEMAS = [
+  { id: 'bollywood', name: 'Bollywood', sub: 'Hindi', langs: ['hi'] },
+  { id: 'hollywood', name: 'Hollywood', sub: 'English', langs: ['en'] },
+  { id: 'south', name: 'South', sub: 'Tamil, Telugu, Malayalam, Kannada', langs: ['ta', 'te', 'ml', 'kn'] },
+  { id: 'world', name: 'World', sub: 'Korean, Japanese, Spanish & more', langs: null },
+];
+export const cinemaOf = (lang) => CINEMAS.find((c) => c.langs?.includes(lang))?.id || 'world';
+
+// Within a filter any choice matches (Bollywood or Hollywood; Comedy or Thriller); filters combine with AND.
 export function filterMovies(movies, f = {}) {
   return movies.filter(
     (m) =>
-      (!f.languages?.length || f.languages.includes(m.lang)) &&
+      (!f.cinemas?.length || f.cinemas.includes(cinemaOf(m.lang))) &&
       (!f.genres?.length || m.genres.some((g) => f.genres.includes(g))) &&
       (!f.minRating || (m.imdbRating ?? 0) >= f.minRating) &&
       (!f.yearFrom || (m.year ?? 0) >= f.yearFrom) &&
@@ -59,35 +69,26 @@ export function isKidsSafe(certs) {
   return ['G', 'PG'].includes(certs.US);
 }
 
-const languageNames = new Intl.DisplayNames(['en'], { type: 'language' });
-const langName = (code) => {
-  try {
-    return languageNames.of(code) || code;
-  } catch {
-    return code;
-  }
-};
-
 export function catalogMeta() {
-  const langs = new Map();
-  const genres = new Set();
-  let yearMin = Infinity;
-  let yearMax = -Infinity;
+  const cinemas = new Map(CINEMAS.map((c) => [c.id, 0]));
+  const genres = new Map();
   for (const m of catalog.movies) {
-    langs.set(m.lang, (langs.get(m.lang) || 0) + 1);
-    m.genres.forEach((g) => genres.add(g));
-    if (m.year) {
-      yearMin = Math.min(yearMin, m.year);
-      yearMax = Math.max(yearMax, m.year);
-    }
+    const c = cinemaOf(m.lang);
+    cinemas.set(c, cinemas.get(c) + 1);
+    m.genres.forEach((g) => genres.set(g, (genres.get(g) || 0) + 1));
   }
+  // Most-voted posters, for the start screen backdrop.
+  const posters = [...catalog.movies]
+    .filter((m) => m.poster)
+    .sort((a, b) => (b.imdbVotes ?? 0) - (a.imdbVotes ?? 0))
+    .slice(0, 24)
+    .map((m) => m.poster);
   return {
     updatedAt: catalog.updatedAt,
     total: catalog.movies.length,
-    languages: [...langs].sort((a, b) => b[1] - a[1]).map(([code, count]) => ({ code, name: langName(code), count })),
-    genres: [...genres].sort(),
-    yearMin: Number.isFinite(yearMin) ? yearMin : null,
-    yearMax: Number.isFinite(yearMax) ? yearMax : null,
+    cinemas: CINEMAS.map(({ id, name, sub }) => ({ id, name, sub, count: cinemas.get(id) })),
+    genres: [...genres].sort((a, b) => b[1] - a[1]).map(([name]) => name),
+    posters,
   };
 }
 

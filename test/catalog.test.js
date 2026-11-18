@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { filterMovies, sortTopRated, isKidsSafe, toMovie } from '../src/catalog.js';
+import { filterMovies, sortTopRated, isKidsSafe, toMovie, cinemaOf } from '../src/catalog.js';
 
 const movies = [
   { id: 1, lang: 'hi', genres: ['Drama'], imdbRating: 8.4, imdbVotes: 50000, year: 2019, runtime: 150, kidsSafe: false },
@@ -8,23 +8,34 @@ const movies = [
   { id: 3, lang: 'ta', genres: ['Action'], imdbRating: 9.6, imdbVotes: 40, year: 2024, runtime: 120, kidsSafe: false },
   { id: 4, lang: 'hi', genres: ['Comedy'], imdbRating: null, imdbVotes: null, year: 1998, runtime: null, kidsSafe: false },
   { id: 5, lang: 'en', genres: ['Thriller'], imdbRating: 8.4, imdbVotes: 900000, year: 2010, runtime: 148, kidsSafe: false },
+  { id: 6, lang: 'ko', genres: ['Thriller', 'Drama'], imdbRating: 8.5, imdbVotes: 1000000, year: 2019, runtime: 132, kidsSafe: false },
 ];
 const ids = (list) => list.map((m) => m.id);
 
 test('filters combine', () => {
-  assert.deepEqual(ids(filterMovies(movies, { languages: ['hi'] })), [1, 4]);
+  assert.deepEqual(ids(filterMovies(movies, { cinemas: ['bollywood'] })), [1, 4]);
+  assert.deepEqual(ids(filterMovies(movies, { cinemas: ['bollywood', 'hollywood'] })), [1, 2, 4, 5]);
+  assert.deepEqual(ids(filterMovies(movies, { cinemas: ['south', 'world'] })), [3, 6]);
   assert.deepEqual(ids(filterMovies(movies, { genres: ['Comedy', 'Action'] })), [2, 3, 4]);
-  assert.deepEqual(ids(filterMovies(movies, { minRating: 8 })), [1, 3, 5]);
-  assert.deepEqual(ids(filterMovies(movies, { yearFrom: 2015, yearTo: 2022 })), [1, 2]);
+  assert.deepEqual(ids(filterMovies(movies, { cinemas: ['hollywood'], genres: ['Thriller'] })), [5]);
+  assert.deepEqual(ids(filterMovies(movies, { minRating: 8 })), [1, 3, 5, 6]);
+  assert.deepEqual(ids(filterMovies(movies, { yearFrom: 2015, yearTo: 2022 })), [1, 2, 6]);
   assert.deepEqual(ids(filterMovies(movies, { yearTo: 1999 })), [4]);
   assert.deepEqual(ids(filterMovies(movies, { maxRuntime: 120 })), [2, 3]);
   assert.deepEqual(ids(filterMovies(movies, { kidsSafe: true })), [2]);
-  assert.deepEqual(ids(filterMovies(movies, { languages: ['en'], minRating: 7 })), [5]);
-  assert.equal(filterMovies(movies, {}).length, 5);
+  assert.deepEqual(ids(filterMovies(movies, { cinemas: ['hollywood'], minRating: 7 })), [5]);
+  assert.equal(filterMovies(movies, {}).length, 6);
+});
+
+test('cinema groups', () => {
+  assert.equal(cinemaOf('hi'), 'bollywood');
+  assert.equal(cinemaOf('en'), 'hollywood');
+  assert.equal(cinemaOf('kn'), 'south');
+  assert.equal(cinemaOf('ko'), 'world');
 });
 
 test('top rated first, thin vote counts after, unrated last', () => {
-  assert.deepEqual(ids(sortTopRated(movies)), [5, 1, 2, 3, 4]);
+  assert.deepEqual(ids(sortTopRated(movies)), [6, 5, 1, 2, 3, 4]);
 });
 
 test('kids-safe uses Indian certificate, else US', () => {

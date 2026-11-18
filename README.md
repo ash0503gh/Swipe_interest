@@ -2,7 +2,8 @@
 
 Swipe on Netflix India movies with family and friends. When everyone in a session swipes right on a movie, it's a match.
 
-- Host picks filters (language, genre, IMDb rating, release years, length, family-friendly) and shares a 6-letter code or link.
+- Host optionally picks a cinema (Bollywood, Hollywood, South, World) and genres, plus more filters (IMDb rating, release years, length, family-friendly), and shares a 6-letter code or link.
+- Works as an iPhone Home Screen app (full screen, own icon).
 - Everyone gets the same deck, top IMDb rated first. Up to 10 people; sessions last 24 hours.
 - Cards show poster, cast, IMDb rating and a YouTube trailer, with a "Watch on Netflix" link.
 
