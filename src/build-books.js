@@ -3,6 +3,8 @@
 // year, pages, reader ratings and descriptions come from Open Library (Google Books fills gaps while its
 // free quota lasts). All free.
 import { writeFile } from 'node:fs/promises';
+import { existsSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { BOOKS, GENRES } from './books-list.js';
 import { bookId } from './books.js';
 
@@ -13,6 +15,14 @@ const strip = (s = '') => s.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
 const SMALL = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'of', 'on', 'or', 'the', 'to', 'with']);
 export const titleCase = (s) =>
   s.toLowerCase().split(' ').map((w, i) => (i > 0 && SMALL.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1))).join(' ');
+// AI-upscaled covers (Real-ESRGAN, 900px) saved in public/books/<slug>.jpg are served by the app
+// and win over the small remote covers.
+const coverSlug = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+function localCover(title) {
+  const file = new URL(`../public/books/${coverSlug(title)}.jpg`, import.meta.url);
+  if (!existsSync(file)) return null;
+  return `/books/${coverSlug(title)}.jpg?v=${createHash('md5').update(readFileSync(file)).digest('hex').slice(0, 8)}`;
+}
 const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 
 async function getJSON(url, { retries = 3 } = {}) {
@@ -145,7 +155,7 @@ for (const e of entries) {
     rating: ol?.ratings_count >= 5 ? Math.round(ol.ratings_average * 10) / 10 : null,
     ratingCount: ol?.ratings_count || 0,
     overview: [olText, gb.description, e.nyt?.description].sort((a, b) => (b || '').length - (a || '').length)[0] || '',
-    image,
+    image: localCover(e.title) || image,
     nytRank: nytRank.get(norm(e.title)) || null,
     cast: [],
   });
