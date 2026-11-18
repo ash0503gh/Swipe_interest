@@ -1,0 +1,23 @@
+{
+  "name": "flick-swipe",
+  "version": "1.0.0",
+  "description": "Swipe on Netflix India movies together",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "catalog": "node --env-file=.env src/build-catalog.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^9.0.0",
+    "express": "^5.3.0"
+  }
+}
