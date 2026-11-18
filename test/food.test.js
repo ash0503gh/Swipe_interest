@@ -10,7 +10,7 @@ test('dish list is built, complete and uses safe ids', () => {
     assert.ok(d.id >= 3e9 && d.id < 4e9, d.title);
     assert.equal(d.id, foodId(d.title));
     assert.ok(['breakfast', 'main'].includes(d.meal), d.title);
-    if (d.image) assert.ok(d.imageCredit?.url && d.imageCredit.license, `${d.title} photo needs a credit`);
+    assert.ok(d.image && d.imageCredit?.url && d.imageCredit.license, `${d.title} needs a photo with a credit`);
   }
   assert.ok(dishesFor('breakfast').length > 20 && dishesFor('main').length > 20);
 });

@@ -88,7 +88,7 @@ function onEnter(input, fn) {
 const runtime = (m) => (m ? `${Math.floor(m / 60)}h ${m % 60}m`.replace(/^0h /, '') : null);
 const seasons = (n) => (n ? `${n} season${n === 1 ? '' : 's'}` : null);
 const subline = (m) =>
-  (m.kind === 'food' ? [m.hindi, m.minutes && `${m.minutes} min`] : [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert])
+  (m.kind === 'food' ? [m.hindi] : [m.year, m.kind === 'tv' ? seasons(m.seasons) : runtime(m.runtime), m.cert])
     .filter(Boolean).join(' · ');
 // Card artwork: TMDB poster for movies and shows, Wikimedia Commons photo for dishes.
 const art = (m, size) => (m.kind === 'food' ? m.image : m.poster ? `${IMG}${size}${m.poster}` : null);
