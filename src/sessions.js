@@ -93,6 +93,7 @@ export class SessionHub extends EventEmitter {
     this.setMaxListeners(0);
     this.minGapMs = minGapMs;
     this.sessions = new Map();
+    this.loading = new Map(); // code -> pending load from storage
     this.writes = new Map(); // code -> { tail, queued, lastAt }
     this.online = new Map(); // code -> Map(memberId -> open connections)
   }
@@ -102,7 +103,14 @@ export class SessionHub extends EventEmitter {
     if (!/^[A-Z0-9]{6}$/.test(code)) throw new HttpError(404, 'Session not found');
     let s = this.sessions.get(code);
     if (!s) {
-      s = await getJSON(`sessions/${code}.json`);
+      // Share one load between concurrent requests so they all get the same session object.
+      let load = this.loading.get(code);
+      if (!load) {
+        load = getJSON(`sessions/${code}.json`).finally(() => this.loading.delete(code));
+        this.loading.set(code, load);
+      }
+      const loaded = await load;
+      s = this.sessions.get(code) || loaded;
       if (s) this.sessions.set(code, s);
     }
     if (!s || s.expiresAt < Date.now()) {

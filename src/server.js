@@ -46,6 +46,14 @@ async function memberOf(req, token) {
 }
 const auth = (req) => memberOf(req, req.get('x-member-token'));
 
+// Cloud Run keeps CPU running only while a request is open. When anyone in the session has a live
+// connection, the save can finish in the background and the reply goes out straight away;
+// otherwise the request waits for its save so nothing is lost when the instance pauses.
+function saved(s) {
+  const save = hub.changed(s);
+  return hub.onlineIds(s.code).size ? undefined : save;
+}
+
 const me = (m) => ({ id: m.id, name: m.name, position: m.swipes.length });
 
 // ---------- catalogue ----------
@@ -85,7 +93,7 @@ app.get('/api/sessions/:code', async (req, res) => {
 app.post('/api/sessions/:code/join', async (req, res) => {
   const s = await hub.get(req.params.code);
   const m = addMember(s, req.body?.name);
-  await hub.changed(s);
+  await saved(s);
   res.status(201).json({ token: m.token });
 });
 
@@ -104,14 +112,14 @@ app.post('/api/movies', (req, res) => {
 app.post('/api/sessions/:code/swipe', async (req, res) => {
   const { s, me: m } = await auth(req);
   const match = swipe(s, m, Number(req.body?.movieId), req.body?.like === true);
-  await hub.changed(s);
+  await saved(s);
   res.json({ me: me(m), match });
 });
 
 app.post('/api/sessions/:code/undo', async (req, res) => {
   const { s, me: m } = await auth(req);
   undo(s, m);
-  await hub.changed(s);
+  await saved(s);
   res.json({ me: me(m) });
 });
 
@@ -123,7 +131,13 @@ app.get('/api/sessions/:code/events', async (req, res) => {
   const send = (state) => res.write(`data: ${JSON.stringify(state)}\n\n`);
   hub.on(s.code, send);
   hub.connect(s, m.id);
-  const ping = setInterval(() => res.write(': ping\n\n'), 25000);
+  const ping = setInterval(() => {
+    if (s.expiresAt < Date.now()) {
+      res.write('event: ended\ndata: {}\n\n');
+      return res.end();
+    }
+    res.write(': ping\n\n');
+  }, 25000);
   req.on('close', () => {
     clearInterval(ping);
     hub.off(s.code, send);

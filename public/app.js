@@ -29,6 +29,7 @@ const ICONS = {
   play: '<path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/>',
   check: '<path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>',
   sliders: '<path d="M4 7h10M18 7h2M4 17h2M10 17h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.3" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="8" cy="17" r="2.3" fill="none" stroke="currentColor" stroke-width="2.2"/>',
+  right: '<path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
   home: '<path d="M4 11.5L12 4.5l8 7M6.5 9.5V19a1 1 0 0 0 1 1H10v-5.5h4V20h2.5a1 1 0 0 0 1-1V9.5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>',
   ticket: '<path d="M4 8a2 2 0 0 0 2-2h12a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H6a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 9v6" stroke="currentColor" stroke-width="2" stroke-dasharray="1.5 2"/>',
 };
@@ -42,6 +43,14 @@ const ls = {
   get(k) { try { return localStorage.getItem(k); } catch { return null; } },
   set(k, v) { try { localStorage.setItem(k, v); } catch {} },
 };
+
+// Sessions this phone has joined, newest first, for the "Continue session" shortcut.
+const recent = {
+  list() { try { return JSON.parse(ls.get('fs:recent') || '[]'); } catch { return []; } },
+  add(code) { ls.set('fs:recent', JSON.stringify([code, ...recent.list().filter((c) => c !== code)].slice(0, 5))); },
+  drop(code) { ls.set('fs:recent', JSON.stringify(recent.list().filter((c) => c !== code))); },
+};
+const KINDS = { movie: ['🎬', 'Movies'], tv: ['📺', 'Shows'], food: ['🍽️', 'Food'] };
 
 async function api(path, { method = 'GET', body, token } = {}) {
   const headers = {};
@@ -316,6 +325,34 @@ function joinSheet() {
   setTimeout(() => input.focus(), 350);
 }
 
+// Up to two still-running sessions this phone is part of; checked against the server, expired ones forgotten.
+function resumeList() {
+  const box = h('div', { class: 'resume-list' });
+  const codes = recent.list().filter((c) => ls.get(`fs:${c}`)).slice(0, 3);
+  Promise.all(
+    codes.map((c) =>
+      api(`/api/sessions/${c}`, { token: ls.get(`fs:${c}`) }).catch((e) => {
+        if (e.status === 404) recent.drop(c);
+        return null;
+      })
+    )
+  ).then((infos) => {
+    const live = infos.filter((i) => i?.me).slice(0, 2);
+    box.replaceChildren(
+      ...live.map((i) => {
+        const [emoji, label] = KINDS[i.kind] || KINDS.movie;
+        const n = i.members.length;
+        return h('a', { class: 'resume glass fade-in', href: `/s/${i.code}` },
+          h('span', { class: 'resume-icon' }, emoji),
+          h('span', { class: 'grow' }, h('b', null, 'Continue session'), h('span', null, `${label} · ${i.code} · ${n} ${n === 1 ? 'person' : 'people'}`)),
+          icon('right')
+        );
+      })
+    );
+  });
+  return box;
+}
+
 async function homePage() {
   const meta = await api('/api/catalog').catch(() => null);
   const ready = meta?.total > 0;
@@ -339,6 +376,11 @@ async function homePage() {
     moreBadge.hidden = !n;
     clearTimeout(countTimer);
     countTimer = setTimeout(async () => {
+      if (!ready && f.kind !== 'food') {
+        start.disabled = true;
+        start.replaceChildren('Preparing movie list…');
+        return;
+      }
       const r = await api('/api/catalog/count', { method: 'POST', body: { filters: toFilters() } }).catch(() => null);
       if (!r) return;
       start.disabled = r.count === 0;
@@ -399,7 +441,7 @@ async function homePage() {
   const kinds = h('div', { class: 'segment three', role: 'tablist' });
   const drawKinds = () =>
     kinds.replaceChildren(
-      ...[['movie', 'Movies'], ['tv', 'Shows'], ['food', 'Food']].map(([k, label]) =>
+      ...Object.entries(KINDS).map(([k, [, label]]) =>
         h('button', { type: 'button', role: 'tab', 'aria-selected': String(f.kind === k), class: f.kind === k ? 'on' : '', onclick: () => {
           if (f.kind === k) return;
           haptic();
@@ -454,10 +496,11 @@ async function homePage() {
       h('div', { class: 'brand' }, h('span', { class: 'logo' }, icon('heart')), 'SwipeTogether'),
       headline,
       lead,
+      resumeList(),
       name,
-      ready ? kinds : null,
+      kinds,
       ready ? movieOpts : null,
-      ready ? foodOpts : null,
+      foodOpts,
       h('div', { class: 'row-links' },
         ready ? moreBtn : h('span'),
         h('button', { class: 'link', onclick: joinSheet }, 'Join with a code')
@@ -465,7 +508,7 @@ async function homePage() {
       h('div', { class: 'cta-wrap' }, start)
     )
   );
-  if (ready) changed();
+  changed();
 }
 
 // ---------- session ----------
@@ -521,6 +564,7 @@ async function joinPage(code, info) {
 }
 
 function swipePage(code, token, info) {
+  recent.add(code);
   const S = {
     state: info,
     myId: info.me.id,
@@ -724,18 +768,29 @@ function swipePage(code, token, info) {
     renderControls();
     setTimeout(() => (S.busy = false), 180);
     fill();
-    try {
-      const r = await api(`${path}/swipe`, { method: 'POST', token, body: { movieId: m.id, like } });
-      if (r.match) showMatch(r.match.id);
-    } catch (e) {
-      toast(e.message);
-      resync();
-    }
+    await inOrder(async () => {
+      try {
+        const r = await api(`${path}/swipe`, { method: 'POST', token, body: { movieId: m.id, like } });
+        if (r.match) showMatch(r.match.id);
+      } catch (e) {
+        toast(e.message);
+        await resync();
+      }
+    });
+  }
+
+  // Swipes and undos go to the server one at a time, in the order they happened,
+  // so a quick swipe or undo can't overtake an earlier one still in flight.
+  let pending = Promise.resolve();
+  function inOrder(fn) {
+    pending = pending.then(fn, fn);
+    return pending;
   }
 
   async function doUndo() {
     if (S.busy || S.pos === 0) return;
     S.busy = true;
+    await inOrder(async () => {}); // let earlier swipes land first
     try {
       const r = await api(`${path}/undo`, { method: 'POST', token });
       const [m] = await api(`${path}/cards?from=${r.me.position}&n=1`, { token });
@@ -895,6 +950,10 @@ function swipePage(code, token, info) {
       if (!S.queue.length) renderStack();
       st.matches.forEach((m) => showMatch(m.id));
     };
+    events.addEventListener('ended', () => {
+      events.close();
+      message('Session ended', 'This session is more than 24 hours old. Start a new one.');
+    });
   }
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {

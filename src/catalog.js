@@ -16,8 +16,11 @@ export const MIN_VOTES_FOR_RANK = 1000; // below this, a rating is too noisy to 
 let catalog = { updatedAt: null, movies: [] };
 let byId = new Map(FOOD.map((m) => [m.id, m]));
 
+let meta = null; // catalogMeta() result for the current catalogue
+
 function setCatalog(c) {
   catalog = c;
+  meta = null;
   byId = new Map([...c.movies, ...FOOD].map((m) => [m.id, m]));
 }
 
@@ -78,6 +81,7 @@ export function isKidsSafeTv(certs) {
 }
 
 export function catalogMeta() {
+  if (meta) return meta;
   const cinemas = new Map(CINEMAS.map((c) => [c.id, 0]));
   const genres = { movie: new Map(), tv: new Map() };
   for (const m of catalog.movies) {
@@ -93,13 +97,14 @@ export function catalogMeta() {
     .sort((a, b) => (b.imdbVotes ?? 0) - (a.imdbVotes ?? 0))
     .slice(0, 24)
     .map((m) => m.poster);
-  return {
+  meta = {
     updatedAt: catalog.updatedAt,
     total: catalog.movies.length,
     cinemas: CINEMAS.map(({ id, name, sub }) => ({ id, name, sub, count: cinemas.get(id) })),
     genres: { movie: byCount(genres.movie), tv: byCount(genres.tv) },
     posters,
   };
+  return meta;
 }
 
 // ---------- refresh from TMDB + IMDb ----------

@@ -148,3 +148,12 @@ test('food sessions match when more than half agree', () => {
   assert.equal(publicState(s).rule, 'majority');
   assert.equal(publicState(s).kind, 'food');
 });
+
+test('concurrent loads of a stored session share one object', async () => {
+  const s = createSession({ deck, filters: {} });
+  addMember(s, 'A');
+  await new SessionHub({ minGapMs: 0 }).add(s);
+  const cold = new SessionHub();
+  const [x, y, z] = await Promise.all([cold.get(s.code), cold.get(s.code), cold.get(s.code)]);
+  assert.ok(x === y && y === z);
+});
