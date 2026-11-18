@@ -120,3 +120,11 @@ test('hub coalesces rapid saves and keeps the latest state', async () => {
   await Promise.all(saves);
   assert.equal((await new SessionHub().get(s.code)).members[0].swipes.length, deck.length);
 });
+
+test('no match when only one person is in the session', () => {
+  const { s, ms: [a] } = setup(1);
+  assert.equal(swipe(s, a, 10, true), null);
+  assert.equal(s.matches.length, 0);
+  const b = addMember(s, 'Joined later');
+  assert.equal(swipe(s, b, 10, true).id, 10); // the solo like still counts once someone agrees
+});

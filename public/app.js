@@ -447,7 +447,7 @@ function swipePage(code, token, info) {
   // --- layout ---
   const amb = [h('div', { class: 'amb' }), h('div', { class: 'amb' })];
   const inviteBtn = h('button', { class: 'pill glass', onclick: invite }, icon('share'), 'Invite');
-  const avatars = h('button', { class: 'avatars', onclick: showMembers, 'aria-label': 'People' });
+  const people = h('button', { class: 'pill glass people', onclick: showMembers });
   const matchesBtn = h('button', { class: 'pill glass matches', onclick: showMatches });
   const stack = h('div', { class: 'stack' });
   const undoBtn = h('button', { class: 'round glass small', 'aria-label': 'Undo', onclick: doUndo }, icon('undo'));
@@ -456,7 +456,7 @@ function swipePage(code, token, info) {
   $app.replaceChildren(
     h('div', { class: 'ambient', 'aria-hidden': 'true' }, amb),
     h('div', { class: 'swipe fade-in' },
-      h('header', { class: 'bar' }, inviteBtn, h('div', { class: 'spacer' }), avatars, matchesBtn),
+      h('header', { class: 'bar' }, inviteBtn, h('div', { class: 'spacer' }), people, matchesBtn),
       stack,
       h('div', { class: 'controls' }, nopeBtn, undoBtn, likeBtn)
     )
@@ -475,9 +475,8 @@ function swipePage(code, token, info) {
 
   function renderTop() {
     const ms = S.state.members;
-    const shown = ms.slice(0, 4).map((m, i) => avatar(m, i));
-    if (ms.length > 4) shown.push(h('span', { class: 'av more' }, `+${ms.length - 4}`));
-    avatars.replaceChildren(...shown);
+    people.replaceChildren(h('span', { class: 'avatars' }, ms.slice(0, 3).map((m, i) => avatar(m, i))), String(ms.length));
+    people.setAttribute('aria-label', `${ms.length} ${ms.length === 1 ? 'person' : 'people'} in this session`);
     const n = S.state.matches.length;
     if (matchesBtn.dataset.n !== String(n)) {
       matchesBtn.replaceChildren(icon('heart'), String(n));

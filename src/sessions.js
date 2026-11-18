@@ -52,6 +52,7 @@ export function swipe(s, member, movieId, like, now = Date.now()) {
   if (s.deck[pos] !== movieId) throw new HttpError(409, 'Out of sync');
   member.swipes.push([movieId, vote]);
   if (!vote || isMatched(s, movieId)) return null;
+  if (s.members.length < 2) return null; // a match needs at least two people agreeing
   if (!s.members.every((m) => m.swipes[pos]?.[1] === 1)) return null;
   const match = { id: movieId, at: now };
   s.matches.push(match);
