@@ -1,0 +1,8 @@
+.git
+.gitignore
+.gcloudignore
+.env
+.env.*
+data/
+node_modules/
+test/

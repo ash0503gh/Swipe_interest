@@ -478,6 +478,7 @@ function swipePage(code, token, info) {
         h('div', { class: 'title' }, m.title),
         h('div', { class: 'meta' }, rating(m), h('span', null, m.gone ? 'Left Netflix India since this session started' : subline(m))),
         m.genres.length ? h('div', { class: 'genres' }, m.genres.slice(0, 3).join(' · ')) : null,
+        m.overview ? h('p', { class: 'overview' }, m.overview) : null,
         m.cast.length ? h('div', { class: 'cast' }, m.cast.slice(0, 3).join(', ')) : null
       )
     );
