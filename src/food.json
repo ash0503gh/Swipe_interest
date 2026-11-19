@@ -504,13 +504,8 @@
   "hindi": "शीरा",
   "meal": "breakfast",
   "overview": "Sweet semolina halwa with ghee and dry fruits",
-  "image": "/dishes/sheera.jpg?v=f1517463",
-  "imageCredit": {
-   "author": "Mdsmds0",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sooji_Halwa_(Semolina_Pudding).JPG",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/sheera.jpg?v=a2e8e985",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -654,13 +649,8 @@
   "hindi": "शाही पनीर",
   "meal": "main",
   "overview": "Paneer in creamy cashew-onion gravy",
-  "image": "/dishes/shahi-paneer.jpg?v=b8e05dc4",
-  "imageCredit": {
-   "author": "Om shankar singh",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Shahi_panner.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/shahi-paneer.jpg?v=cff01858",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1511,13 +1501,8 @@
   "hindi": "सत्तू पराठा",
   "meal": "breakfast",
   "overview": "Roasted gram-flour stuffed paratha",
-  "image": "/dishes/sattu-paratha.jpg?v=2d12550b",
-  "imageCredit": {
-   "author": "Samar Fatma",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sattu_Paratha.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/sattu-paratha.jpg?v=7a59db75",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1995,13 +1980,8 @@
   "hindi": "सोया चंक्स करी",
   "meal": "main",
   "overview": "Soya chunks in spicy onion-tomato gravy",
-  "image": "/dishes/soya-chunks-curry.jpg?v=a94a0447",
-  "imageCredit": {
-   "author": "Keerthinellikkalaya",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Soya_chunks_takkali_curry.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/soya-chunks-curry.jpg?v=a8529790",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -2149,35 +2129,6 @@
   "cast": []
  },
  {
-  "id": 3699364891,
-  "kind": "food",
-  "title": "Rajasthani Kadhi",
-  "hindi": "राजस्थानी कढ़ी",
-  "meal": "main",
-  "overview": "Thin spiced kadhi without pakoras",
-  "image": "/dishes/rajasthani-kadhi.jpg?v=f05b2532",
-  "imageCredit": null,
-  "genres": [],
-  "cast": []
- },
- {
-  "id": 3158070811,
-  "kind": "food",
-  "title": "Sindhi Kadhi",
-  "hindi": "सिंधी कढ़ी",
-  "meal": "main",
-  "overview": "Tangy besan-tamarind curry with vegetables",
-  "image": "/dishes/sindhi-kadhi.jpg?v=c404f04a",
-  "imageCredit": {
-   "author": "Miansari66",
-   "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sindhi_Kadhi.JPG",
-   "source": "Wikimedia Commons"
-  },
-  "genres": [],
-  "cast": []
- },
- {
   "id": 3169357584,
   "kind": "food",
   "title": "Paneer Do Pyaza",
@@ -2286,23 +2237,6 @@
    "author": "Best Ever Cooking Show SudShi",
    "license": "CC BY-SA 4.0",
    "url": "https://commons.wikimedia.org/wiki/File:Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg",
-   "source": "Wikimedia Commons"
-  },
-  "genres": [],
-  "cast": []
- },
- {
-  "id": 3198669313,
-  "kind": "food",
-  "title": "Kadhi Pakoda & Rice",
-  "hindi": "कढ़ी पकोड़ा",
-  "meal": "main",
-  "overview": "Punjabi kadhi with onion pakoras and rice",
-  "image": "/dishes/kadhi-pakoda-and-rice.jpg?v=5dfdaa16",
-  "imageCredit": {
-   "author": "Ams4wiki",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Kadhi_Pakora.jpg",
    "source": "Wikimedia Commons"
   },
   "genres": [],

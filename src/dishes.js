@@ -149,8 +149,6 @@ export const DISHES = [
   { name: 'Dal Palak', hindi: 'दाल पालक', meal: 'main', minutes: 30, desc: 'Lentils simmered with spinach', photo: 'Dal Palak Spinach and lentil curry (15914333462).jpg' },
   { name: 'Lobia Masala', hindi: 'लोबिया मसाला', meal: 'main', minutes: 40, desc: 'Black-eyed beans in onion-tomato curry', photo: 'Black-eyed Pea Ragout (7558542610).jpg' },
   { name: 'Kala Chana Masala', hindi: 'काला चना मसाला', meal: 'main', minutes: 45, desc: 'Black chickpeas in spicy gravy', photo: 'DRY KALA CHANA MASALA.jpg' },
-  { name: 'Rajasthani Kadhi', hindi: 'राजस्थानी कढ़ी', meal: 'main', minutes: 30, desc: 'Thin spiced kadhi without pakoras', photo: 'Rajasthani Kadhi.jpg' },
-  { name: 'Sindhi Kadhi', hindi: 'सिंधी कढ़ी', meal: 'main', minutes: 45, desc: 'Tangy besan-tamarind curry with vegetables', photo: 'Sindhi Kadhi.JPG' },
   { name: 'Paneer Do Pyaza', hindi: 'पनीर दो प्याज़ा', meal: 'main', minutes: 30, desc: 'Paneer with double onions in masala', photo: 'Paneer Do-Pyaza.jpg' },
   { name: 'Paneer Lababdar', hindi: 'पनीर लबाबदार', meal: 'main', minutes: 40, desc: 'Paneer in rich tomato-onion-cream gravy', photo: 'Aloo Gobi And Paneer Lababdar - The Indismart Hotel - Salt Lake City - Kolkata 2023-09-10 5205.jpg' },
   { name: 'Kachche Kele ki Sabzi', hindi: 'कच्चे केले की सब्ज़ी', meal: 'main', minutes: 25, desc: 'Raw banana dry sabzi', photo: 'Banana fry.JPG' },
@@ -158,7 +156,6 @@ export const DISHES = [
   { name: 'Masala Khichdi', hindi: 'मसाला खिचड़ी', meal: 'main', minutes: 30, desc: 'Vegetable khichdi with spices and ghee', photo: 'Masala Khichadi.jpg' },
   { name: 'Achari Aloo', hindi: 'अचारी आलू', meal: 'main', minutes: 25, desc: 'Potatoes with pickling spices', photo: 'Indian cuisine from South india.jpg' },
   { name: 'Pindi Chole', hindi: 'पिंडी छोले', meal: 'main', minutes: 50, desc: 'Dark, dry Rawalpindi-style chole with bhature or kulcha', photo: 'Pindi Chole with Poori or Chole Poori 02.jpg' },
-  { name: 'Kadhi Pakoda & Rice', hindi: 'कढ़ी पकोड़ा', meal: 'main', minutes: 45, desc: 'Punjabi kadhi with onion pakoras and rice', photo: 'Kadhi Pakora.jpg' },
   { name: 'Paneer Kathi Roll', hindi: 'पनीर रोल', meal: 'main', minutes: 30, desc: 'Paneer tikka wrapped in a paratha', photo: 'Paneer kathi roll homemade.jpg' },
   { name: 'Aloo Chokha & Puri', hindi: 'आलू चोखा', meal: 'main', minutes: 25, desc: 'Mustard-oil mashed potato with puri', photo: 'Home made Alu vorta (Bengali mashed potato).jpg' },
 ];
