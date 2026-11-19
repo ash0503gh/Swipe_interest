@@ -218,13 +218,8 @@
   "hindi": "अप्पम",
   "meal": "breakfast",
   "overview": "Lacy fermented rice pancakes with veg stew",
-  "image": "/dishes/appam.jpg?v=e24d4282",
-  "imageCredit": {
-   "author": "VinPrasad",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Appam_-_%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%AE%E0%AF%8D.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/appam.jpg?v=475ba537",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -276,13 +271,8 @@
   "hindi": "बेसन चीला",
   "meal": "breakfast",
   "overview": "Savoury gram-flour pancake with onion and tomato",
-  "image": "/dishes/besan-chilla.jpg?v=2494a277",
-  "imageCredit": {
-   "author": "Kamalsahansi",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chilla_besan.JPG",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/besan-chilla.jpg?v=9d86ed4a",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -616,13 +606,8 @@
   "hindi": "कुलचे छोले",
   "meal": "main",
   "overview": "Stuffed crisp kulcha with chole and onion salad",
-  "image": "/dishes/amritsari-kulcha-chole.jpg?v=df5ef4b9",
-  "imageCredit": {
-   "author": "Gaurav Nemade",
-   "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_(31013272937).jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/amritsari-kulcha-chole.jpg?v=59b5c6d1",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -855,13 +840,8 @@
   "hindi": "भिंडी मसाला",
   "meal": "main",
   "overview": "Crisp spiced okra with roti and dal",
-  "image": "/dishes/bhindi-masala.jpg?v=548595eb",
-  "imageCredit": {
-   "author": "Monali.mishra",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bhindi_Masala.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/bhindi-masala.jpg?v=dcf9e1d4",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1044,13 +1024,8 @@
   "hindi": "अवियल",
   "meal": "main",
   "overview": "Kerala mixed veggies in coconut-curd paste",
-  "image": "/dishes/avial.jpg?v=a868952c",
-  "imageCredit": {
-   "author": "Samphotography",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Ayiyal.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/avial.jpg?v=1c64981b",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1289,13 +1264,8 @@
   "hindi": "बघारे बैंगन",
   "meal": "main",
   "overview": "Hyderabadi brinjals in peanut-sesame gravy",
-  "image": "/dishes/bagara-baingan.jpg?v=ec46a103",
-  "imageCredit": {
-   "author": "Miansari66",
-   "license": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Baghare_Baingan.JPG",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/bagara-baingan.jpg?v=3a0e3b41",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1786,13 +1756,8 @@
   "hindi": "आलू टिक्की छोले",
   "meal": "breakfast",
   "overview": "Crisp potato patties topped with chole and chutneys",
-  "image": "/dishes/aloo-tikki-chole.jpg?v=406e09a8",
-  "imageCredit": {
-   "author": "Raveesh Vyas from [Ahmedabad, Noida], India",
-   "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Aloo_Tikki_served_with_chutneys.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/aloo-tikki-chole.jpg?v=ff9dfae4",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1883,7 +1848,7 @@
   "hindi": "भिंडी दो प्याज़ा",
   "meal": "main",
   "overview": "Okra with plenty of onions",
-  "image": "/dishes/bhindi-do-pyaza.jpg?v=1a4f6bd1",
+  "image": "/dishes/bhindi-do-pyaza.jpg?v=1d3e52b3",
   "imageCredit": null,
   "genres": [],
   "cast": []
@@ -1895,13 +1860,8 @@
   "hindi": "भरवां भिंडी",
   "meal": "main",
   "overview": "Okra stuffed with besan-amchur masala",
-  "image": "/dishes/bharwa-bhindi.jpg?v=c9e7be35",
-  "imageCredit": {
-   "author": "Sonia Goyal Jaipur",
-   "license": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Stuffed_Okra_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/bharwa-bhindi.jpg?v=cd6cef43",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -1924,13 +1884,8 @@
   "hindi": "भरवां बैंगन",
   "meal": "main",
   "overview": "Small brinjals stuffed with spiced masala",
-  "image": "/dishes/bharwa-baingan.jpg?v=ed187126",
-  "imageCredit": {
-   "author": "Foodieseats",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bharwa-baingan-recipe.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/bharwa-baingan.jpg?v=ad8fa11a",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -2091,13 +2046,8 @@
   "hindi": "बाजरे की रोटी",
   "meal": "main",
   "overview": "Millet roti with garlic chutney and ghee",
-  "image": "/dishes/bajra-roti-and-lahsun-chutney.jpg?v=fd671289",
-  "imageCredit": {
-   "author": "Zeel Patel",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bajri_na_Rotla.JPG",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/bajra-roti-and-lahsun-chutney.jpg?v=f938e905",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
@@ -2142,13 +2092,8 @@
   "hindi": "अरहर दाल चावल",
   "meal": "main",
   "overview": "UP-style toor dal with ghee and rice",
-  "image": "/dishes/arhar-dal-chawal.jpg?v=e23f88a6",
-  "imageCredit": {
-   "author": "DineshGowd",
-   "license": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Rice_Dal.jpg",
-   "source": "Wikimedia Commons"
-  },
+  "image": "/dishes/arhar-dal-chawal.jpg?v=d5df6f43",
+  "imageCredit": null,
   "genres": [],
   "cast": []
  },
